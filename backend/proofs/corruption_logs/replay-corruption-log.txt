@@ -1,0 +1,30 @@
+
+=====================================
+REPLAY CORRUPTION SIMULATION
+=====================================
+
+EVENT 1
+Timestamp : 2026-05-14 11:00:00
+Type      : PACKET_DROP
+Message   : Replay packet dropped during synchronization
+-------------------------------------
+EVENT 2
+Timestamp : 2026-05-14 11:00:04
+Type      : CORRUPTED_EVENT
+Message   : Corrupted replay event detected
+-------------------------------------
+EVENT 3
+Timestamp : 2026-05-14 11:00:08
+Type      : OUT_OF_ORDER
+Message   : Replay events arrived out of order
+-------------------------------------
+EVENT 4
+Timestamp : 2026-05-14 11:00:12
+Type      : REPLAY_INTERRUPTION
+Message   : Replay interrupted during reconstruction
+-------------------------------------
+EVENT 5
+Timestamp : 2026-05-14 11:00:18
+Type      : PARTIAL_FAILURE
+Message   : Partial reconstruction failure detected
+-------------------------------------

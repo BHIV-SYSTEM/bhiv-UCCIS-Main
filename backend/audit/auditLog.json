@@ -1,0 +1,1558 @@
+[
+  {
+    "trace_id": "TRACE-1778133497159",
+    "zone_id": 4,
+    "dominant_domain": "flooding",
+    "final_score": 95,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "flooding override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778133497158",
+      "dominant_domain": "flooding",
+      "final_score": 95,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778133497158
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778133497159,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 105,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 50,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 60,
+        "level": "MEDIUM"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 35,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 100,
+      "confidence_reasoning": []
+    },
+    "persisted_at": 1778133497160
+  },
+  {
+    "trace_id": "TRACE-1778135768945",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778135768945",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778135768945
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778135768945,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778135768946
+  },
+  {
+    "trace_id": "TRACE-1778135782086",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778135782086",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778135782086
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778135782086,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778135782086
+  },
+  {
+    "trace_id": "TRACE-1778137048277",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778137048277",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778137048277
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778137048277,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778137048279
+  },
+  {
+    "trace_id": "TRACE-1778137051231",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778137051231",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778137051231
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778137051231,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778137051232
+  },
+  {
+    "trace_id": "TRACE-1778137335528",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778137335528",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778137335528
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778137335528,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778137335529
+  },
+  {
+    "trace_id": "TRACE-1778138014481",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778138014481",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778138014481
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778138014481,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778138014482
+  },
+  {
+    "trace_id": "TRACE-1778138198937",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778138198937",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778138198937
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778138198937,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778138198939
+  },
+  {
+    "trace_id": "TRACE-1778138203311",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778138203311",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778138203311
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778138203311,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778138203311
+  },
+  {
+    "trace_id": "TRACE-1778138341129",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778138341129",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778138341129
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778138341129,
+    "duration_in_state_ms": 4374,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778138341130
+  },
+  {
+    "trace_id": "TRACE-1778138489977",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778138489977",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778138489977
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778138489977,
+    "duration_in_state_ms": 142192,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778138489977
+  },
+  {
+    "trace_id": "TRACE-1778138681764",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778138681764",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778138681764
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778138681764,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778138681766
+  },
+  {
+    "trace_id": "TRACE-1778138703016",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778138703016",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778138703016
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778138703016,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778138703016
+  },
+  {
+    "trace_id": "TRACE-1778139324152",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778139324151",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778139324151
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778139324152,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778139324154
+  },
+  {
+    "trace_id": "TRACE-1778139524420",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778139524420",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778139524420
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778139524420,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778139524422
+  },
+  {
+    "trace_id": "TRACE-1778139637014",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1778139637014",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1778139637014
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1778139637014,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1778139637015
+  },
+  {
+    "trace_id": "TRACE-1780480511305",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1780480511305",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1780480511305
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1780480511305,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1780480511307
+  },
+  {
+    "trace_id": "TRACE-1780480518447",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1780480518447",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1780480518447
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1780480518447,
+    "duration_in_state_ms": 0,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1780480518447
+  },
+  {
+    "trace_id": "TRACE-1780480545036",
+    "zone_id": 4,
+    "dominant_domain": "complaints",
+    "final_score": 120,
+    "final_level": "HIGH",
+    "trend": "STABLE",
+    "behavior": "STABLE",
+    "reason": "complaints override activated",
+    "governance_request": {
+      "governance_id": "GOV-1780480545036",
+      "dominant_domain": "complaints",
+      "final_score": 120,
+      "final_level": "HIGH",
+      "requested_action": "EMERGENCY_RESPONSE",
+      "created_at": 1780480545036
+    },
+    "governance_response": {
+      "lifecycle_state": "ESCALATED",
+      "lifecycle_reason": "Critical urban condition"
+    },
+    "retry_data": {},
+    "timestamp": 1780480545036,
+    "duration_in_state_ms": 7142,
+    "influenced_domains": {
+      "traffic": {
+        "score": 102,
+        "level": "HIGH",
+        "influenced_by": "flooding"
+      },
+      "flooding": {
+        "score": 95,
+        "level": "HIGH"
+      },
+      "water_shortage": {
+        "score": 70,
+        "level": "MEDIUM"
+      },
+      "waste_overload": {
+        "score": 40,
+        "level": "LOW"
+      },
+      "complaints": {
+        "score": 120,
+        "level": "HIGH"
+      }
+    },
+    "anomalies": [],
+    "cluster_intelligence": {
+      "propagated_zones": [
+        {
+          "influenced_zone": 2,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 2"
+        },
+        {
+          "influenced_zone": 3,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 3"
+        },
+        {
+          "influenced_zone": 5,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 5"
+        },
+        {
+          "influenced_zone": 6,
+          "propagated_risk": 20,
+          "propagation_reason": "Zone 4 influenced neighboring zone 6"
+        }
+      ],
+      "cluster_score": 40,
+      "cluster_state": "STABLE_CLUSTER"
+    },
+    "confidence": {
+      "confidence_score": 90,
+      "confidence_reasoning": [
+        "High multi-domain conflict severity"
+      ]
+    },
+    "persisted_at": 1780480545037
+  }
+]

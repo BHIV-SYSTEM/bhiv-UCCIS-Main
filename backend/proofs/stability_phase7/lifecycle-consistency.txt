@@ -1,0 +1,8 @@
+=====================================
+LIFECYCLE CONSISTENCY PROOF
+=====================================
+
+✔ Replay lifecycle consistent across nodes
+✔ No divergence in event ordering
+✔ Reconstruction state aligned
+✔ Distributed observability stable

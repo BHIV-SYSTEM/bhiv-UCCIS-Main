@@ -1,0 +1,27 @@
+[
+    {
+        "node": "Operator-1",
+        "view": "LIVE_REPLAY",
+        "latency_ms": 120
+    },
+    {
+        "node": "Operator-2",
+        "view": "LIVE_REPLAY",
+        "latency_ms": 180
+    },
+    {
+        "node": "Operator-3",
+        "view": "DELAYED_REPLAY",
+        "latency_ms": 450
+    },
+    {
+        "node": "Operator-4",
+        "view": "STALE_TELEMETRY",
+        "latency_ms": 1200
+    },
+    {
+        "node": "Operator-5",
+        "view": "RECONSTRUCTED_REPLAY",
+        "latency_ms": 200
+    }
+]

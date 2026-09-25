@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "district": "Pune",
+        "population": 7200000,
+        "risk_level": "MEDIUM"
+    },
+    {
+        "id": 2,
+        "district": "Mumbai",
+        "population": 12500000,
+        "risk_level": "HIGH"
+    },
+    {
+        "id": 3,
+        "district": "Nagpur",
+        "population": 2800000,
+        "risk_level": "LOW"
+    },
+    {
+        "id": 4,
+        "district": "Nashik",
+        "population": 2100000,
+        "risk_level": "MEDIUM"
+    }
+]

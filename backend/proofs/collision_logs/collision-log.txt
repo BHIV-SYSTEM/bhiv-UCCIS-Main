@@ -1,0 +1,53 @@
+
+=====================================
+CONCURRENT OPERATOR SIMULATION
+=====================================
+
+EVENT 1
+Timestamp : 2026-05-14 10:00:00
+Operator  : Operator-A
+Type      : ESCALATION
+Message   : Emergency escalation submitted
+-------------------------------------
+EVENT 2
+Timestamp : 2026-05-14 10:00:02
+Operator  : Operator-B
+Type      : ESCALATION
+Message   : Duplicate escalation submitted
+-------------------------------------
+EVENT 3
+Timestamp : 2026-05-14 10:00:04
+Operator  : Operator-C
+Type      : ACKNOWLEDGEMENT
+Message   : Acknowledgement accepted
+-------------------------------------
+EVENT 4
+Timestamp : 2026-05-14 10:00:05
+Operator  : Operator-D
+Type      : ACKNOWLEDGEMENT
+Message   : Conflicting acknowledgement received
+-------------------------------------
+EVENT 5
+Timestamp : 2026-05-14 10:00:07
+Operator  : Operator-E
+Type      : SESSION
+Message   : Stale operator session detected
+-------------------------------------
+EVENT 6
+Timestamp : 2026-05-14 10:00:10
+Operator  : Operator-F
+Type      : DISCONNECT
+Message   : Operator disconnected during update
+-------------------------------------
+EVENT 7
+Timestamp : 2026-05-14 10:00:15
+Operator  : Operator-G
+Type      : DELAY
+Message   : Delayed governance update received
+-------------------------------------
+EVENT 8
+Timestamp : 2026-05-14 10:00:20
+Operator  : Operator-H
+Type      : REPLAY
+Message   : Replay reconstruction triggered during active write
+-------------------------------------

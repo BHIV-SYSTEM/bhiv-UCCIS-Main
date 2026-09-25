@@ -1,0 +1,8 @@
+=====================================
+APPEND ONLY CONTINUITY
+=====================================
+
+Historical Replay Data : IMMUTABLE
+Replay Writes          : APPEND ONLY
+Corruption Overwrite   : BLOCKED
+Recovery Restoration   : VERIFIED

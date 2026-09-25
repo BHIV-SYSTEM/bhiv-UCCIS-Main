@@ -1,0 +1,68 @@
+[
+  {
+    "zone_id": "Z1",
+    "risk_score": 57.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1778063695966
+  },
+  {
+    "zone_id": "Z1",
+    "risk_score": 57.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1778064742854
+  },
+  {
+    "zone_id": "ZONE_1",
+    "risk_score": 59,
+    "current_state": "MEDIUM",
+    "timestamp": 1778064940449
+  },
+  {
+    "zone_id": "ZONE_1",
+    "risk_score": 52.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1778065608236
+  },
+  {
+    "zone_id": "ZONE_1",
+    "risk_score": 52.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1778065620579
+  },
+  {
+    "zone_id": "ZONE_1",
+    "risk_score": 52.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1778065629215
+  },
+  {
+    "zone_id": "Z1",
+    "risk_score": 57.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1778067471679
+  },
+  {
+    "zone_id": "Z1",
+    "risk_score": 57.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1778067924079
+  },
+  {
+    "zone_id": "Z1",
+    "risk_score": 57.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1779258425841
+  },
+  {
+    "zone_id": "Z1",
+    "risk_score": 57.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1780471547052
+  },
+  {
+    "zone_id": "Z1",
+    "risk_score": 57.5,
+    "current_state": "MEDIUM",
+    "timestamp": 1780479349334
+  }
+]

@@ -1,0 +1,49 @@
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Keep example environment files
+!.env.example
+!**/.env.example
+
+# IDE and editor settings
+.vscode/
+**/.vscode/
+.idea/
+**/.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+
+# Cache
+.cache/
+**/.cache/
+
+# Coverage reports
+coverage/
+**/coverage/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp

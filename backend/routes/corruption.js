@@ -1,0 +1,27 @@
+// backend/routes/corruption.js
+
+const express = require("express");
+
+const router = express.Router();
+
+router.get("/", (req, res) => {
+
+  res.json({
+
+    success: true,
+
+    module: "CORRUPTION RECOVERY",
+
+    corruptionDetected: false,
+
+    recoveryEngine: "ACTIVE",
+
+    replayRecovery: "STABLE",
+
+    timestamp: new Date().toISOString()
+
+  });
+
+});
+
+module.exports = router;

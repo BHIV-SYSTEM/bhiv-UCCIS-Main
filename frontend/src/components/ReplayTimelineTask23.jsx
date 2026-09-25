@@ -1,0 +1,1 @@
+const ReplayTimelineTask23 = ({ replay }) => { return ( <div className="timeline-container"> <h2>Operational Replay Timeline</h2> {replay.map((item) => ( <div className="timeline-card" key={item.replay_id}> <div className="timeline-dot"></div> <div> <h3>{item.event}</h3> <p>{item.timestamp}</p> </div> </div> ))} </div> ); }; export default ReplayTimelineTask23;

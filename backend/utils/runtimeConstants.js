@@ -1,0 +1,25 @@
+module.exports = {
+  SIGNAL_SEVERITY: {
+    LOW: "LOW",
+    MEDIUM: "MEDIUM",
+    HIGH: "HIGH",
+    CRITICAL: "CRITICAL"
+  },
+
+  INCIDENT_STATUS: {
+    OPEN: "OPEN",
+    IN_PROGRESS: "IN_PROGRESS",
+    RESOLVED: "RESOLVED"
+  },
+
+  ESCALATION_STATUS: {
+    PENDING: "PENDING",
+    ACTIVE: "ACTIVE",
+    CLOSED: "CLOSED"
+  },
+
+  REPLAY_STATUS: {
+    READY: "READY",
+    EXECUTED: "EXECUTED"
+  }
+};

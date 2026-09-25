@@ -1,0 +1,1 @@
+const express = require("express"); const router = express.Router(); router.get("/", async (req, res) => { res.json({ status: "ACTIVE", activeOperators: Math.floor(Math.random() * 20), escalations: Math.floor(Math.random() * 50), telemetrySignals: Math.floor(Math.random() * 500), timestamp: new Date() }); }); module.exports = router;

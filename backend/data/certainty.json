@@ -1,0 +1,18 @@
+[
+  {
+    "incident": "Flood Escalation",
+    "certainty": 94
+  },
+  {
+    "incident": "Traffic Reconstruction",
+    "certainty": 88
+  },
+  {
+    "incident": "Utility Failure Replay",
+    "certainty": 91
+  },
+  {
+    "incident": "Field Continuity Replay",
+    "certainty": 86
+  }
+]

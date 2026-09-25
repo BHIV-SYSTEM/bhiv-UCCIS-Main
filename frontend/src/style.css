@@ -1,0 +1,988 @@
+/* =========================================================
+   UCCIS COMMAND INTERFACE
+   Full CSS
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background: #f4f6f9;
+  color: #1f2937;
+}
+
+/* =========================================================
+   MAIN DASHBOARD
+========================================================= */
+
+.executive-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.main-container {
+  display: grid;
+
+  grid-template-columns:
+    2fr
+    2fr
+    1.5fr;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  width: 100%;
+}
+
+/* =========================================================
+   PANELS
+========================================================= */
+
+.panel {
+  background: white;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  min-width: 0;
+}
+
+/* =========================================================
+   PANEL HEADINGS
+========================================================= */
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  color: #1f2937;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.panel h3 {
+  color: #1f2937;
+}
+
+/* =========================================================
+   ZONES
+========================================================= */
+
+.zone-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  max-height: 600px;
+
+  overflow-y: auto;
+
+  padding-right: 4px;
+}
+
+/* =========================================================
+   ZONE CARD
+========================================================= */
+
+.zone-card {
+  padding: 13px;
+
+  border-radius: 8px;
+
+  color: #1f2937;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.zone-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   ZONE STATUS BORDERS
+========================================================= */
+
+.zone-card.green {
+  border-left: 5px solid #16a34a;
+}
+
+.zone-card.yellow {
+  border-left: 5px solid #f59e0b;
+}
+
+.zone-card.red {
+  border-left: 5px solid #dc2626;
+}
+
+.zone-card.unknown {
+  border-left: 5px solid #64748b;
+}
+
+/* =========================================================
+   ZONE HEADER
+========================================================= */
+
+.zone-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.zone-card-header h3 {
+  margin: 0;
+
+  font-size: 16px;
+
+  color: #111827;
+}
+
+/* =========================================================
+   ZONE STATUS BADGE
+========================================================= */
+
+.zone-status {
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.zone-status.green {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+.zone-status.yellow {
+  background: #fef3c7;
+
+  color: #92400e;
+}
+
+.zone-status.red {
+  background: #fee2e2;
+
+  color: #991b1b;
+}
+
+.zone-status.unknown {
+  background: #e5e7eb;
+
+  color: #374151;
+}
+
+/* =========================================================
+   ZONE METRICS
+========================================================= */
+
+.zone-data-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 8px;
+}
+
+.zone-metric {
+  padding: 9px;
+
+  border-radius: 6px;
+
+  background: #f1f5f9;
+}
+
+.zone-metric span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #64748b;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.zone-metric strong {
+  color: #1f2937;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.alerts-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  max-height: 600px;
+
+  overflow-y: auto;
+}
+
+/* =========================================================
+   ALERT CARD
+========================================================= */
+
+.alert-card {
+  padding: 12px;
+
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-left: 4px solid #f59e0b;
+}
+
+.alert-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.alert-header strong {
+  color: #111827;
+
+  font-size: 13px;
+}
+
+.alert-card p {
+  margin: 7px 0;
+
+  color: #4b5563;
+
+  font-size: 12px;
+}
+
+.alert-card small {
+  color: #6b7280;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   ALERT SEVERITY
+========================================================= */
+
+.severity {
+  padding: 3px 8px;
+
+  border-radius: 12px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.severity.high {
+  background: #fee2e2;
+
+  color: #991b1b;
+}
+
+.severity.medium {
+  background: #fef3c7;
+
+  color: #92400e;
+}
+
+.severity.low {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+/* =========================================================
+   COMMAND PANEL
+========================================================= */
+
+.control-panel {
+  min-width: 0;
+}
+
+/* =========================================================
+   BUTTON CONTAINER
+========================================================= */
+
+.actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   COMMAND BUTTONS
+========================================================= */
+
+.actions button {
+  width: 100%;
+
+  padding: 12px;
+
+  margin: 0;
+
+  border: none;
+
+  background: #3b82f6;
+
+  color: white;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.actions button:hover {
+  background: #2563eb;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.actions button:active {
+  transform: translateY(0);
+}
+
+.actions button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   COMMAND ACTIVITY
+========================================================= */
+
+.command-activity {
+  margin-top: 15px;
+
+  margin-bottom: 20px;
+
+  padding: 16px;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe3ec;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+  animation: commandAppear 0.3s ease;
+}
+
+/* =========================================================
+   ACTIVITY HEADER
+========================================================= */
+
+.activity-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.activity-indicator {
+  width: 36px;
+
+  height: 36px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #dbeafe;
+}
+
+.activity-dot {
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #3b82f6;
+
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.7);
+
+  animation: commandPulse 1.4s infinite;
+}
+
+/* =========================================================
+   ACTIVITY TITLE
+========================================================= */
+
+.activity-title {
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.activity-subtitle {
+  margin-top: 3px;
+
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.activity-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 14px 0;
+
+  background: #e2e8f0;
+}
+
+/* =========================================================
+   ACTIVITY DESCRIPTION
+========================================================= */
+
+.activity-description {
+  margin-bottom: 14px;
+
+  color: #475569;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ACTIVITY DETAILS
+========================================================= */
+
+.activity-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.activity-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.activity-row span {
+  color: #64748b;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+.activity-row strong {
+  color: #1f2937;
+
+  font-size: 10px;
+
+  text-align: right;
+}
+
+/* =========================================================
+   ACTIVE STATUS
+========================================================= */
+
+.status-live {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #16a34a !important;
+}
+
+.status-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.6);
+}
+
+/* =========================================================
+   COMMAND PROCESSING
+========================================================= */
+
+.command-processing {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+}
+
+.processing-line {
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #3b82f6;
+
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.7);
+
+  animation: commandPulse 1s infinite;
+}
+
+/* =========================================================
+   SUCCESS COMMAND
+========================================================= */
+
+.command-activity.success {
+  border-color: #bbf7d0;
+
+  background: #f0fdf4;
+}
+
+.command-activity.success .activity-indicator {
+  background: #dcfce7;
+}
+
+.command-activity.success .activity-dot {
+  background: #16a34a;
+
+  box-shadow: 0 0 8px rgba(22, 163, 74, 0.7);
+}
+
+.command-activity.success .activity-title {
+  color: #15803d;
+}
+
+/* =========================================================
+   PROCESSING COMMAND
+========================================================= */
+
+.command-activity.processing {
+  border-color: #bfdbfe;
+
+  background: #eff6ff;
+}
+
+/* =========================================================
+   BACKEND STATUS
+========================================================= */
+
+.backend-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 14px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #e2e8f0;
+
+  color: #64748b;
+
+  font-size: 9px;
+}
+
+.backend-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+.backend-dot.online {
+  background: #16a34a;
+
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.6);
+}
+
+.backend-dot.offline {
+  background: #f59e0b;
+
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.6);
+}
+
+/* =========================================================
+   SYSTEM RECOMMENDATIONS
+========================================================= */
+
+.control-panel h3 {
+  margin-top: 18px;
+
+  margin-bottom: 12px;
+
+  color: #1f2937;
+
+  font-size: 20px;
+
+  line-height: 1.2;
+}
+
+.recommendations {
+  width: 100%;
+}
+
+/* =========================================================
+   ALL SYSTEMS STABLE
+========================================================= */
+
+.recommendation-clear {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  border-radius: 9px;
+
+  background: #f0fdf4;
+
+  border: 1px solid #bbf7d0;
+}
+
+.recommendation-icon {
+  width: 29px;
+
+  height: 29px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  font-weight: 800;
+}
+
+.recommendation-clear strong {
+  color: #166534;
+
+  font-size: 12px;
+}
+
+.recommendation-clear p {
+  margin: 3px 0 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   WARNING RECOMMENDATION
+========================================================= */
+
+.recommendation-warning {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 12px;
+
+  margin-bottom: 8px;
+
+  border-radius: 9px;
+
+  background: #fffbeb;
+
+  border: 1px solid #fde68a;
+}
+
+.warning-icon {
+  width: 27px;
+
+  height: 27px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #fef3c7;
+
+  color: #d97706;
+
+  font-weight: 800;
+}
+
+.recommendation-warning strong {
+  color: #92400e;
+
+  font-size: 11px;
+}
+
+.recommendation-warning p {
+  margin: 3px 0 0;
+
+  color: #78716c;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+  padding: 20px 10px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  border: 1px dashed #cbd5e1;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 12px;
+
+  background: #222;
+
+  color: white;
+
+  font-size: 11px;
+}
+
+.footer-status-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+}
+
+.footer-separator {
+  color: #777;
+}
+
+/* =========================================================
+   SCROLLBARS
+========================================================= */
+
+.zone-list::-webkit-scrollbar,
+.alerts-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.zone-list::-webkit-scrollbar-track,
+.alerts-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.zone-list::-webkit-scrollbar-thumb,
+.alerts-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 10px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes commandAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes commandPulse {
+  0% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+
+    transform: scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .main-container {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+  .control-panel {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .control-panel {
+    grid-column: span 1;
+  }
+
+  .zone-data-grid {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "timestamp": "2026-05-14 09:00:00",
+        "type": "SIGNAL",
+        "message": "Citizen escalation received",
+        "operator": "Monitoring Operator"
+    },
+    {
+        "timestamp": "2026-05-14 09:03:00",
+        "type": "ESCALATION",
+        "message": "Escalated to district governance",
+        "operator": "Escalation Officer"
+    },
+    {
+        "timestamp": "2026-05-14 09:06:00",
+        "type": "VISIBILITY",
+        "message": "Governance dashboard updated",
+        "operator": "Governance Control"
+    },
+    {
+        "timestamp": "2026-05-14 09:10:00",
+        "type": "ASSIGNMENT",
+        "message": "Assigned to response unit",
+        "operator": "Assignment Manager"
+    },
+    {
+        "timestamp": "2026-05-14 09:15:00",
+        "type": "ACKNOWLEDGEMENT",
+        "message": "Response unit acknowledged task",
+        "operator": "Field Unit"
+    },
+    {
+        "timestamp": "2026-05-14 09:25:00",
+        "type": "FAILURE",
+        "message": "Temporary network disruption detected",
+        "operator": "Infrastructure Monitor"
+    },
+    {
+        "timestamp": "2026-05-14 09:30:00",
+        "type": "RECOVERY",
+        "message": "Fallback communication restored",
+        "operator": "Recovery Controller"
+    },
+    {
+        "timestamp": "2026-05-14 09:40:00",
+        "type": "RESOLUTION",
+        "message": "Issue resolved successfully",
+        "operator": "Resolution Team"
+    },
+    {
+        "timestamp": "2026-05-14 09:45:00",
+        "type": "VALIDATION",
+        "message": "Replay validation completed",
+        "operator": "Audit Validator"
+    }
+]

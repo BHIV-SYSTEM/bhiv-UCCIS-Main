@@ -1,0 +1,23 @@
+[
+    {
+        "id": 101,
+        "type": "Traffic Congestion",
+        "district": "Pune",
+        "confidence": 0.95,
+        "severity": "HIGH"
+    },
+    {
+        "id": 102,
+        "type": "Flood Warning",
+        "district": "Mumbai",
+        "confidence": 0.91,
+        "severity": "CRITICAL"
+    },
+    {
+        "id": 103,
+        "type": "Waste Overflow",
+        "district": "Nagpur",
+        "confidence": 0.88,
+        "severity": "MEDIUM"
+    }
+]

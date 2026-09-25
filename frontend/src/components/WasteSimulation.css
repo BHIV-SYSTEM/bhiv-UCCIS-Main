@@ -1,0 +1,425 @@
+/* =========================================================
+WASTE OVERFLOW RUNTIME
+WasteSimulation.css
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+BODY
+========================================================= */
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+/* =========================================================
+MAIN PAGE
+========================================================= */
+
+.waste-page {
+  min-height: 100vh;
+
+  padding: 40px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(34, 197, 94, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(239, 68, 68, 0.14),
+      transparent 40%
+    ),
+    #020617;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.waste-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  padding: 28px;
+
+  border-radius: 24px;
+
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.waste-header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.waste-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #22c55e, #15803d);
+
+  color: white;
+
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.45);
+}
+
+.waste-header h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.waste-header p {
+  margin-top: 6px;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+BACK BUTTON
+========================================================= */
+
+.back-btn {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+}
+
+/* =========================================================
+OVERVIEW GRID
+========================================================= */
+
+.waste-overview-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 24px;
+
+  margin-bottom: 30px;
+}
+
+.overview-card {
+  padding: 24px;
+
+  border-radius: 22px;
+
+  background: rgba(15, 23, 42, 0.88);
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.overview-card:hover {
+  transform: translateY(-5px);
+}
+
+.overview-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  margin-bottom: 18px;
+
+  background: linear-gradient(135deg, #22c55e, #15803d);
+
+  color: white;
+}
+
+.overview-card h2 {
+  font-size: 34px;
+  font-weight: 800;
+
+  margin-bottom: 8px;
+}
+
+.overview-card p {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* =========================================================
+CHART GRID
+========================================================= */
+
+.waste-chart-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+
+  gap: 28px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================================================
+CHART CARD
+========================================================= */
+
+.chart-card {
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.chart-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  color: #f8fafc;
+}
+
+/* =========================================================
+INFORMATION PANEL
+========================================================= */
+
+.info-panel {
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  margin-bottom: 30px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.info-panel h2 {
+  font-size: 24px;
+  font-weight: 800;
+
+  margin-bottom: 16px;
+
+  color: #f8fafc;
+}
+
+.info-panel p {
+  color: #cbd5e1;
+
+  line-height: 1.8;
+
+  margin-bottom: 14px;
+}
+
+.info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 18px;
+
+  margin-top: 24px;
+}
+
+.info-box {
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: rgba(30, 41, 59, 0.7);
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.info-box h4 {
+  margin-bottom: 10px;
+
+  color: #f8fafc;
+
+  font-size: 16px;
+}
+
+.info-box p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+LOGS PANEL
+========================================================= */
+
+.logs-panel {
+  background: rgba(15, 23, 42, 0.92);
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  padding: 24px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.logs-panel h2 {
+  margin-bottom: 18px;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.log-line {
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  background: rgba(30, 41, 59, 0.7);
+
+  border: 1px solid rgba(148, 163, 184, 0.08);
+
+  margin-bottom: 12px;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  font-family: monospace;
+
+  transition: 0.2s ease;
+}
+
+.log-line:hover {
+  background: rgba(51, 65, 85, 0.8);
+}
+
+/* =========================================================
+SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .waste-chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .waste-page {
+    padding: 20px;
+  }
+
+  .waste-header {
+    flex-direction: column;
+
+    gap: 20px;
+
+    align-items: flex-start;
+  }
+
+  .waste-header h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .waste-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    padding: 18px;
+  }
+
+  .info-panel {
+    padding: 20px;
+  }
+
+  .waste-header {
+    padding: 20px;
+  }
+
+  .waste-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .waste-header h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "timestamp": "2026-05-14 13:00:00",
+        "stage": "SIGNAL",
+        "message": "incident detected"
+    },
+    {
+        "timestamp": "2026-05-14 13:00:02",
+        "stage": "ESCALATION",
+        "message": "escalated to governance layer"
+    },
+    {
+        "timestamp": "2026-05-14 13:00:04",
+        "stage": "GOVERNANCE_VISIBILITY",
+        "message": "incident visible in dashboard"
+    },
+    {
+        "timestamp": "2026-05-14 13:00:06",
+        "stage": "ENFORCEMENT_REQUEST",
+        "message": "enforcement request issued (non-executive)"
+    },
+    {
+        "timestamp": "2026-05-14 13:00:08",
+        "stage": "ACKNOWLEDGEMENT",
+        "message": "enforcement unit acknowledged request"
+    },
+    {
+        "timestamp": "2026-05-14 13:00:12",
+        "stage": "REPLAY_RECONSTRUCTION",
+        "message": "replay rebuilt from enforcement-linked event chain"
+    }
+]

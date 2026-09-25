@@ -1,0 +1,9 @@
+[
+    {
+        "escalation_id": "ESC-2001",
+        "telemetry_id": "TEL-1001",
+        "status": "ACTIVE",
+        "assigned_operator": "Operator A",
+        "severity": "HIGH"
+    }
+]

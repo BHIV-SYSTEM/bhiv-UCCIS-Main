@@ -1,0 +1,30 @@
+[
+    {
+        "zone": "Z1",
+        "type": "rain",
+        "value": 80,
+        "timestamp": "08:00",
+        "source": "openweather"
+    },
+    {
+        "zone": "Z1",
+        "type": "traffic",
+        "value": 65,
+        "timestamp": "08:00",
+        "source": "osm"
+    },
+    {
+        "zone": "Z1",
+        "type": "aqi",
+        "value": 120,
+        "timestamp": "08:00",
+        "source": "aqi_api"
+    },
+    {
+        "zone": "Z1",
+        "type": "complaints",
+        "value": 55,
+        "timestamp": "08:00",
+        "source": "civic"
+    }
+]

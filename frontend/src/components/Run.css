@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin: 20px 0;
+  color: #1f2a44;
+}
+
+/* Zone Card */
+.zone-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Chart row */
+.chart-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Chart container */
+.chart-box {
+  flex: 1;
+  min-width: 300px;
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  background: #1f6feb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0d4ed8;
+}

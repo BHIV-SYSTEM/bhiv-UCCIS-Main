@@ -1,0 +1,9 @@
+[
+  {
+    "signal": "Flood Detection",
+    "telemetry": "Water Level Rising",
+    "escalation": "District Escalated",
+    "replay": "Replay Generated",
+    "status": "Critical"
+  }
+]

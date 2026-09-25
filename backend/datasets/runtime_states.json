@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "service": "Backend Service",
+        "status": "RUNNING",
+        "uptime_hours": 124
+    },
+    {
+        "id": 2,
+        "service": "Telemetry Engine",
+        "status": "RUNNING",
+        "uptime_hours": 118
+    },
+    {
+        "id": 3,
+        "service": "Replay Engine",
+        "status": "RUNNING",
+        "uptime_hours": 117
+    },
+    {
+        "id": 4,
+        "service": "Escalation Service",
+        "status": "RUNNING",
+        "uptime_hours": 120
+    }
+]

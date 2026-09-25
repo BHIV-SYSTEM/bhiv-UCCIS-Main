@@ -1,0 +1,43 @@
+.command-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #081225;
+  border: 1px solid #17304d;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.command-header h1 {
+  font-size: 32px;
+}
+
+.command-header p {
+  margin-top: 10px;
+  color: #94a3b8;
+}
+
+.header-metrics {
+  display: flex;
+  gap: 20px;
+}
+
+.metric-card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 14px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.metric-card h2 {
+  font-size: 30px;
+}
+
+.metric-card.critical {
+  border: 1px solid #ef4444;
+}
+
+.metric-card.stable {
+  border: 1px solid #22c55e;
+}

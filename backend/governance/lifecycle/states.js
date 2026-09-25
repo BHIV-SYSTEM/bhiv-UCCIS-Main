@@ -1,0 +1,14 @@
+const GOVERNANCE_STATES = {
+
+  APPROVED: "APPROVED",
+
+  REJECTED: "REJECTED",
+
+  HOLD: "HOLD",
+
+  ESCALATED: "ESCALATED",
+
+  RETRY: "RETRY"
+};
+
+module.exports = GOVERNANCE_STATES;

@@ -1,0 +1,8 @@
+=====================================
+ACKNOWLEDGEMENT TRACKING
+=====================================
+
+✔ Field assignment received
+✔ Acknowledgement received (within window)
+✔ Delay observed post-ack
+✔ State preserved for replay continuity

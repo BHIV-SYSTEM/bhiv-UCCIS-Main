@@ -1,0 +1,27 @@
+[
+    {
+        "timestamp": "2026-05-14 11:00:00",
+        "type": "PACKET_DROP",
+        "message": "Replay packet dropped during synchronization"
+    },
+    {
+        "timestamp": "2026-05-14 11:00:04",
+        "type": "CORRUPTED_EVENT",
+        "message": "Corrupted replay event detected"
+    },
+    {
+        "timestamp": "2026-05-14 11:00:08",
+        "type": "OUT_OF_ORDER",
+        "message": "Replay events arrived out of order"
+    },
+    {
+        "timestamp": "2026-05-14 11:00:12",
+        "type": "REPLAY_INTERRUPTION",
+        "message": "Replay interrupted during reconstruction"
+    },
+    {
+        "timestamp": "2026-05-14 11:00:18",
+        "type": "PARTIAL_FAILURE",
+        "message": "Partial reconstruction failure detected"
+    }
+]

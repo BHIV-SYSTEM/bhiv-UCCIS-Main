@@ -1,0 +1,87 @@
+/* =====================================================
+   SUMMARY CARD GRID
+===================================================== */
+
+.card-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 15px;
+}
+
+/* =====================================================
+   SUMMARY CARD
+===================================================== */
+
+.summary-card {
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  transition: 0.3s;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.summary-card h3 {
+  font-size: 15px;
+
+  color: #6b7280;
+
+  margin-bottom: 10px;
+}
+
+.summary-card h1 {
+  font-size: 36px;
+
+  color: #111827;
+}
+
+/* =====================================================
+   STATUS COLORS
+===================================================== */
+
+.status-active {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.status-open {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.status-ready {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.status-executed {
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+/* =====================================================
+   COMMAND CENTER
+===================================================== */
+
+.command-center-card {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}

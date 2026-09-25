@@ -1,0 +1,8 @@
+[
+    {
+        "escalation_id": "ESC001",
+        "priority": "HIGH",
+        "status": "OPEN",
+        "district": "Pune"
+    }
+]

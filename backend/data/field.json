@@ -1,0 +1,17 @@
+[
+  {
+    "team": "Drainage Response Unit",
+    "district": "Mumbai",
+    "status": "Deploying"
+  },
+  {
+    "team": "Traffic Coordination Cell",
+    "district": "Thane",
+    "status": "Active"
+  },
+  {
+    "team": "Utility Recovery Team",
+    "district": "MMR",
+    "status": "Escalated"
+  }
+]

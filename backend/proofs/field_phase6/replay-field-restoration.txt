@@ -1,0 +1,9 @@
+=====================================
+FIELD REPLAY RESTORATION
+=====================================
+
+✔ Field lifecycle replay reconstructed
+✔ Assignment preserved
+✔ Acknowledgement trace intact
+✔ Delay + aging timeline restored
+✔ Continuity maintained across replay

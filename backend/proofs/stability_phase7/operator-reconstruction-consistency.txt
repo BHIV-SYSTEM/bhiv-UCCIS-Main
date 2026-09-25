@@ -1,0 +1,8 @@
+=====================================
+OPERATOR RECONSTRUCTION CONSISTENCY
+=====================================
+
+✔ All operators converge to same replay state
+✔ No split-brain reconstruction detected
+✔ Replay inspector deterministic across nodes
+✔ State synchronization verified

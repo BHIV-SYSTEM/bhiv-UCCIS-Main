@@ -1,0 +1,62 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.18.1",
+    "chart.js": "^4.5.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.25.0",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^7.18.1",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.15.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "ws": "^8.14.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "ws-server": "node websocket-server.js",
+    "dev": "concurrently \"npm start\" \"npm run ws-server\"",
+    "dev:frontend-only": "npm start",
+    "dev:ws-only": "npm run ws-server"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "comments": {
+    "ws": "WebSocket library for real-time features. Optional - app works without it.",
+    "concurrently": "Run React dev server and WebSocket server simultaneously.",
+    "scripts": {
+      "start": "React app only (default)",
+      "dev": "React app + WebSocket server (best for development)",
+      "dev:frontend-only": "React app without WebSocket",
+      "dev:ws-only": "WebSocket server only",
+      "ws-server": "Start WebSocket server standalone",
+      "build": "Production build",
+      "test": "Run tests"
+    }
+  }
+}

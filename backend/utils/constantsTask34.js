@@ -1,0 +1,30 @@
+const LAYERS = {
+  SIGNAL: "Signal",
+  TELEMETRY: "Telemetry",
+  INCIDENT: "Incident",
+  ESCALATION: "Escalation",
+  REPLAY: "Replay",
+  EVIDENCE: "Evidence"
+};
+
+const STATUS = {
+  SUCCESS: "SUCCESS",
+  FAILED: "FAILED",
+  PENDING: "PENDING",
+  RUNNING: "RUNNING"
+};
+
+const DASHBOARD = {
+  TOTAL_SIGNALS: 12,
+  TOTAL_TELEMETRY: 25,
+  TOTAL_INCIDENTS: 10,
+  TOTAL_ESCALATIONS: 12,
+  TOTAL_REPLAYS: 18,
+  TOTAL_EVIDENCE: 32
+};
+
+module.exports = {
+  LAYERS,
+  STATUS,
+  DASHBOARD
+};

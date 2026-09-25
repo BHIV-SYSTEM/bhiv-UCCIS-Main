@@ -1,0 +1,961 @@
+/* ===================================================
+   GLOBAL
+=================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #020617;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background: #020617;
+  color: #ffffff;
+}
+
+/* ===================================================
+   GLOBAL TEXT FIX
+   Fixes black text on dark dashboard
+=================================================== */
+
+.dashboard h1,
+.dashboard h2,
+.dashboard h3,
+.dashboard h4,
+.dashboard h5,
+.dashboard h6,
+.dashboard p,
+.dashboard span,
+.dashboard label,
+.dashboard li,
+.dashboard td,
+.dashboard th,
+.dashboard strong,
+.dashboard small {
+  color: #ffffff;
+}
+
+/* ===================================================
+   HEADER
+=================================================== */
+
+.dashboard-header {
+  width: 100%;
+  background: linear-gradient(90deg, #0f172a, #1e3a8a);
+  color: #ffffff;
+  text-align: center;
+  padding: 25px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+}
+
+.dashboard-header p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #cbd5e1 !important;
+}
+
+/* ===================================================
+   NAVIGATION
+=================================================== */
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-buttons button {
+  width: 180px;
+  height: 70px;
+
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: #ffffff !important;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+  background: #2563eb;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.active-btn {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   SIDEBAR
+=================================================== */
+
+.sidebar {
+  background: #0b1220;
+  color: #ffffff;
+}
+
+.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar p,
+.sidebar span,
+.sidebar a,
+.sidebar li {
+  color: #ffffff !important;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #00f5ff !important;
+}
+
+/* Common sidebar/menu class support */
+
+.sidebar-menu a,
+.sidebar-menu li,
+.menu-item,
+.nav-item,
+.nav-link {
+  color: #ffffff !important;
+}
+
+.sidebar-menu a:hover,
+.menu-item:hover,
+.nav-item:hover,
+.nav-link:hover {
+  color: #00f5ff !important;
+}
+
+/* ===================================================
+   MAIN CONTENT
+=================================================== */
+
+.dashboard-section {
+  width: 95%;
+
+  margin: 30px auto;
+
+  background: #020617;
+
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+.section-title {
+  font-size: 28px;
+
+  color: #ffffff !important;
+
+  margin-bottom: 20px;
+
+  border-bottom: 2px solid #00e5ff;
+
+  padding-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+
+  color: #cbd5e1 !important;
+
+  margin-bottom: 20px;
+}
+
+/* ===================================================
+   STATE MESSAGES
+=================================================== */
+
+.state-box {
+  padding: 16px 20px;
+
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+.state-loading {
+  background: #172554;
+  color: #ffffff !important;
+}
+
+.state-error {
+  background: #450a0a;
+
+  color: #ffffff !important;
+
+  border-left: 5px solid #dc2626;
+}
+
+.state-empty {
+  background: #111827;
+
+  color: #ffffff !important;
+
+  text-align: center;
+}
+
+/* ===================================================
+   BUTTONS
+=================================================== */
+
+.action-btn {
+  padding: 12px 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #00e5e5;
+
+  color: #000000 !important;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.action-btn:hover {
+  background: #22d3ee;
+
+  color: #000000 !important;
+
+  transform: translateY(-1px);
+}
+
+.action-btn:disabled {
+  background: #64748b;
+
+  color: #ffffff !important;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.action-btn.danger {
+  background: #dc2626;
+
+  color: #ffffff !important;
+}
+
+.action-btn.danger:hover {
+  background: #b91c1c;
+}
+
+.action-row {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+}
+
+/* ===================================================
+   FORMS
+=================================================== */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  color: #ffffff !important;
+
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #334155;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  background: #111827;
+
+  color: #ffffff !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: #00e5ff;
+
+  background: #0f172a;
+
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   CARDS
+=================================================== */
+
+.card-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: #111827;
+
+  border: 1px solid #263244;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  color: #ffffff;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h4 {
+  font-size: 18px;
+
+  color: #00f5ff !important;
+
+  margin-bottom: 12px;
+
+  text-transform: none;
+
+  font-weight: 700;
+}
+
+.stat-card p {
+  font-size: 30px;
+
+  font-weight: bold;
+
+  color: #ffffff !important;
+}
+
+/* Support other card names */
+
+.card,
+.metric-card,
+.summary-card,
+.dashboard-card {
+  background: #111827;
+
+  color: #ffffff;
+
+  border: 1px solid #263244;
+
+  border-radius: 16px;
+}
+
+.card p,
+.metric-card p,
+.summary-card p,
+.dashboard-card p {
+  color: #ffffff !important;
+}
+
+.card h2,
+.card h3,
+.metric-card h2,
+.metric-card h3,
+.summary-card h2,
+.summary-card h3 {
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   CHART CONTAINERS
+=================================================== */
+
+.chart-container,
+.chart-card,
+.chart-box {
+  background: #111827;
+
+  color: #ffffff;
+
+  border-radius: 18px;
+
+  padding: 24px;
+}
+
+.chart-container h2,
+.chart-container h3,
+.chart-card h2,
+.chart-card h3,
+.chart-box h2,
+.chart-box h3 {
+  color: #ffffff !important;
+}
+
+/* Specifically fixes screenshot chart titles */
+
+.chart-title {
+  color: #ffffff !important;
+
+  font-weight: bold;
+}
+
+/* ===================================================
+   TABLES
+=================================================== */
+
+.data-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-bottom: 10px;
+
+  background: #111827;
+
+  color: #ffffff;
+}
+
+.data-table thead {
+  background: #1e293b;
+}
+
+.data-table th {
+  text-align: left;
+
+  padding: 14px 16px;
+
+  font-size: 14px;
+
+  color: #ffffff !important;
+
+  border-bottom: 2px solid #334155;
+}
+
+.data-table td {
+  padding: 14px 16px;
+
+  font-size: 14px;
+
+  color: #ffffff !important;
+
+  border-bottom: 1px solid #334155;
+}
+
+.data-table tbody tr {
+  background: #111827;
+}
+
+.data-table tbody tr:hover {
+  background: #1e293b;
+}
+
+/* ===================================================
+   STATUS BADGES
+=================================================== */
+
+.badge {
+  display: inline-block;
+
+  padding: 5px 14px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  color: #ffffff !important;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+.badge-red,
+.badge-high,
+.badge-critical {
+  background: #dc2626;
+}
+
+.badge-yellow,
+.badge-medium,
+.badge-moderate {
+  background: #f59e0b;
+}
+
+.badge-green,
+.badge-low,
+.badge-stable {
+  background: #16a34a;
+}
+
+.badge-neutral {
+  background: #6b7280;
+}
+
+/* ===================================================
+   GOVERNANCE INTELLIGENCE FEED
+=================================================== */
+
+.governance-feed {
+  background: #111827;
+
+  color: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.governance-feed h1,
+.governance-feed h2,
+.governance-feed h3,
+.governance-feed h4 {
+  color: #ffffff !important;
+}
+
+.governance-feed p,
+.governance-feed span,
+.governance-feed li,
+.governance-feed div {
+  color: #ffffff !important;
+}
+
+/* If feed uses generic classes */
+
+.feed,
+.feed-container,
+.feed-item,
+.intelligence-feed {
+  color: #ffffff !important;
+}
+
+.feed *,
+.feed-container *,
+.feed-item *,
+.intelligence-feed * {
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   REPLAY / EXECUTION / ESCALATION
+=================================================== */
+
+.replay-card,
+.execution-card,
+.escalation-card,
+.replay-container,
+.execution-container,
+.escalation-container {
+  background: #111827;
+
+  color: #ffffff;
+
+  border: 1px solid #263244;
+
+  border-radius: 12px;
+}
+
+.replay-card *,
+.execution-card *,
+.escalation-card *,
+.replay-container *,
+.execution-container *,
+.escalation-container * {
+  color: #ffffff;
+}
+
+/* ===================================================
+   JSON / RAW API OUTPUT
+=================================================== */
+
+.json-output {
+  background: #0f172a;
+
+  color: #ffffff !important;
+
+  border: 1px solid #334155;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  overflow-x: auto;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+}
+
+pre,
+code {
+  color: #ffffff;
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+.dashboard-footer {
+  margin-top: 40px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #0b1220;
+
+  color: #ffffff !important;
+}
+
+.dashboard-footer h3,
+.dashboard-footer p {
+  color: #ffffff !important;
+}
+
+.dashboard-footer h3 {
+  margin-bottom: 10px;
+}
+
+/* ===================================================
+   IMPORTANT FINAL TEXT OVERRIDES
+   These fix remaining black text
+=================================================== */
+
+/* Sidebar text */
+
+.dashboard .sidebar a,
+.dashboard .sidebar li,
+.dashboard .sidebar span,
+.dashboard .sidebar p {
+  color: #ffffff !important;
+}
+
+/* Dashboard numbers */
+
+.dashboard .stat-card p,
+.dashboard .metric-value,
+.dashboard .stat-value,
+.dashboard .card-value {
+  color: #ffffff !important;
+}
+
+/* Chart headings */
+
+.dashboard .chart-container h1,
+.dashboard .chart-container h2,
+.dashboard .chart-container h3,
+.dashboard .chart-card h1,
+.dashboard .chart-card h2,
+.dashboard .chart-card h3,
+.dashboard .chart-box h1,
+.dashboard .chart-box h2,
+.dashboard .chart-box h3 {
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media (max-width: 1200px) {
+  .nav-buttons button {
+    width: 160px;
+    height: 60px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .nav-buttons button {
+    width: 150px;
+    height: 55px;
+    font-size: 13px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+
+  .dashboard-header p {
+    font-size: 16px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+  }
+
+  .nav-buttons button {
+    width: 90%;
+  }
+
+  .dashboard-section {
+    width: 98%;
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-row {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  /* ===================================================
+   APP LAYOUT FIX
+=================================================== */
+
+  .app {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: #020617;
+  }
+
+  /* ===================================================
+   SIDEBAR
+=================================================== */
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    min-width: 280px;
+    height: 100vh;
+
+    background: #0f172a;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-right: 1px solid #1e293b;
+
+    z-index: 1000;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 10px;
+  }
+
+  .sidebar h1,
+  .sidebar h2,
+  .sidebar h3,
+  .sidebar h4,
+  .sidebar p,
+  .sidebar span,
+  .sidebar li,
+  .sidebar a {
+    color: #fff;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar li {
+    margin: 8px 0;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    background: #2563eb;
+  }
+
+  /* ===================================================
+   CONTENT
+=================================================== */
+
+  .content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+
+    min-height: 100vh;
+
+    padding: 25px;
+
+    overflow-x: hidden;
+
+    background: #020617;
+  }
+
+  /* ===================================================
+   DASHBOARD
+=================================================== */
+
+  .dashboard {
+    width: 100%;
+  }
+
+  .dashboard-section {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+  }
+
+  /* ===================================================
+   CHARTS
+=================================================== */
+
+  .recharts-wrapper,
+  .recharts-responsive-container {
+    width: 100% !important;
+  }
+
+  /* ===================================================
+   TABLES
+=================================================== */
+
+  table {
+    width: 100%;
+  }
+
+  /* ===================================================
+   RESPONSIVE
+=================================================== */
+
+  @media (max-width: 900px) {
+    .sidebar {
+      position: relative;
+
+      width: 100%;
+
+      height: auto;
+    }
+
+    .content {
+      margin-left: 0;
+
+      width: 100%;
+    }
+
+    .app {
+      flex-direction: column;
+    }
+  }
+}

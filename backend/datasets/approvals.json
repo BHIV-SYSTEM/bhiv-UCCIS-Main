@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "decision": "Deploy Additional Traffic Units",
+        "approved_by": "Regional Controller",
+        "status": "APPROVED"
+    },
+    {
+        "id": 2,
+        "decision": "Activate Flood Response Teams",
+        "approved_by": "Emergency Commissioner",
+        "status": "APPROVED"
+    }
+]

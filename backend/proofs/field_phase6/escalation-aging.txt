@@ -1,0 +1,8 @@
+=====================================
+ESCALATION AGING TRACKING
+=====================================
+
+Age Factor      : INCREASING
+Threshold Status : BREACHED WARNING LEVEL
+Escalation State : ACTIVE MONITORING
+Recovery State   : PENDING STABILIZATION

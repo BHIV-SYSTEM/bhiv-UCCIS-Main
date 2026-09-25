@@ -1,0 +1,9 @@
+[
+    {
+        "source": "osm_simulated",
+        "timestamp": "2026-05-07T08:00:00Z",
+        "zone": "Zone-1",
+        "vehicle_count": 1200,
+        "congestion_level": "HIGH"
+    }
+]

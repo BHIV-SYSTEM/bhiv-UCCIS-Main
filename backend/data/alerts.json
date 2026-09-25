@@ -1,0 +1,2883 @@
+[
+  {
+    "id": 1,
+    "type": "Waste Overflow",
+    "severity": "HIGH",
+    "zoneId": 3,
+    "timestamp": "2026-05-02 09:30"
+  },
+  {
+    "id": 2,
+    "type": "Water Leakage",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2026-05-02 09:45"
+  },
+  {
+    "id": 3,
+    "type": "Traffic Congestion",
+    "severity": "HIGH",
+    "zoneId": 6,
+    "timestamp": "2026-05-02 10:00"
+  },
+  {
+    "id": 4,
+    "type": "Emergency Call",
+    "severity": "CRITICAL",
+    "zoneId": 6,
+    "timestamp": "2026-05-02 10:05"
+  },
+  {
+    "id": 5,
+    "type": "Low Water Pressure",
+    "severity": "LOW",
+    "zoneId": 5,
+    "timestamp": "2026-05-02 10:10"
+  },
+  {
+    "id": 1777704225456,
+    "type": "deploy_waste_collection",
+    "severity": "INFO",
+    "timestamp": "2/5/2026, 12:13:45 pm"
+  },
+  {
+    "id": 1777704231337,
+    "type": "reroute_water",
+    "severity": "INFO",
+    "timestamp": "2/5/2026, 12:13:51 pm"
+  },
+  {
+    "id": 1777704234553,
+    "type": "send_field_team",
+    "severity": "INFO",
+    "timestamp": "2/5/2026, 12:13:54 pm"
+  },
+  {
+    "id": 1777704738937,
+    "type": "deploy_waste_collection",
+    "severity": "INFO",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:22:18 pm"
+  },
+  {
+    "id": 1777704742281,
+    "type": "reroute_water",
+    "severity": "INFO",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:22:22 pm"
+  },
+  {
+    "id": 1777704744559,
+    "type": "send_field_team",
+    "severity": "INFO",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:22:24 pm"
+  },
+  {
+    "id": 1777704747405,
+    "type": "reroute_water",
+    "severity": "INFO",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:22:27 pm"
+  },
+  {
+    "id": 1777704748083,
+    "type": "deploy_waste_collection",
+    "severity": "INFO",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:22:28 pm"
+  },
+  {
+    "id": 1777704752805,
+    "type": "reroute_water",
+    "severity": "INFO",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:22:32 pm"
+  },
+  {
+    "id": 1777704754002,
+    "type": "send_field_team",
+    "severity": "INFO",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:22:34 pm"
+  },
+  {
+    "id": 1777704974174,
+    "type": "deploy_waste_collection",
+    "severity": "INFO",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:26:14 pm"
+  },
+  {
+    "id": 1777704975157,
+    "type": "reroute_water",
+    "severity": "INFO",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:26:15 pm"
+  },
+  {
+    "id": 1777704975873,
+    "type": "send_field_team",
+    "severity": "INFO",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:26:15 pm"
+  },
+  {
+    "id": 1777704976627,
+    "type": "reroute_water",
+    "severity": "INFO",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:26:16 pm"
+  },
+  {
+    "id": 1777704977009,
+    "type": "deploy_waste_collection",
+    "severity": "INFO",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:26:17 pm"
+  },
+  {
+    "id": 1777704977417,
+    "type": "reroute_water",
+    "severity": "INFO",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:26:17 pm"
+  },
+  {
+    "id": 1777704977720,
+    "type": "send_field_team",
+    "severity": "INFO",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:26:17 pm"
+  },
+  {
+    "id": 1777705080985,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:28:00 pm"
+  },
+  {
+    "id": 1777705083772,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:28:03 pm"
+  },
+  {
+    "id": 1777705085423,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:28:05 pm"
+  },
+  {
+    "id": 1777705089282,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:28:09 pm"
+  },
+  {
+    "id": 1777705091673,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:28:11 pm"
+  },
+  {
+    "id": 1777705680808,
+    "type": "deploy_waste_collection",
+    "severity": "HIGH",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:00 pm"
+  },
+  {
+    "id": 1777705687345,
+    "type": "reroute_water",
+    "severity": "HIGH",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:07 pm"
+  },
+  {
+    "id": 1777705690136,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:10 pm"
+  },
+  {
+    "id": 1777705712432,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:32 pm"
+  },
+  {
+    "id": 1777705715944,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:35 pm"
+  },
+  {
+    "id": 1777705717146,
+    "type": "deploy_waste_collection",
+    "severity": "HIGH",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:37 pm"
+  },
+  {
+    "id": 1777705718059,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:38 pm"
+  },
+  {
+    "id": 1777705718886,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:38 pm"
+  },
+  {
+    "id": 1777705720310,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:40 pm"
+  },
+  {
+    "id": 1777705721080,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:41 pm"
+  },
+  {
+    "id": 1777705721722,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:41 pm"
+  },
+  {
+    "id": 1777705722258,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:42 pm"
+  },
+  {
+    "id": 1777705722756,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:42 pm"
+  },
+  {
+    "id": 1777705723198,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:43 pm"
+  },
+  {
+    "id": 1777705723587,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:43 pm"
+  },
+  {
+    "id": 1777705724011,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:44 pm"
+  },
+  {
+    "id": 1777705724631,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:44 pm"
+  },
+  {
+    "id": 1777705724854,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:44 pm"
+  },
+  {
+    "id": 1777705725053,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:45 pm"
+  },
+  {
+    "id": 1777705725346,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:45 pm"
+  },
+  {
+    "id": 1777705725877,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:45 pm"
+  },
+  {
+    "id": 1777705726090,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:46 pm"
+  },
+  {
+    "id": 1777705726839,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:46 pm"
+  },
+  {
+    "id": 1777705727077,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:47 pm"
+  },
+  {
+    "id": 1777705727644,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:47 pm"
+  },
+  {
+    "id": 1777705727874,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:47 pm"
+  },
+  {
+    "id": 1777705728134,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:48 pm"
+  },
+  {
+    "id": 1777705728358,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:48 pm"
+  },
+  {
+    "id": 1777705728558,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:48 pm"
+  },
+  {
+    "id": 1777705728800,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:48 pm"
+  },
+  {
+    "id": 1777705729033,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:49 pm"
+  },
+  {
+    "id": 1777705729407,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:49 pm"
+  },
+  {
+    "id": 1777705729716,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:49 pm"
+  },
+  {
+    "id": 1777705729967,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:49 pm"
+  },
+  {
+    "id": 1777705730385,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:50 pm"
+  },
+  {
+    "id": 1777705730875,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:50 pm"
+  },
+  {
+    "id": 1777705731106,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:51 pm"
+  },
+  {
+    "id": 1777705731296,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:51 pm"
+  },
+  {
+    "id": 1777705731499,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:51 pm"
+  },
+  {
+    "id": 1777705731687,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:51 pm"
+  },
+  {
+    "id": 1777705731886,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:51 pm"
+  },
+  {
+    "id": 1777705732080,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:52 pm"
+  },
+  {
+    "id": 1777705732286,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:52 pm"
+  },
+  {
+    "id": 1777705732496,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:52 pm"
+  },
+  {
+    "id": 1777705732697,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:52 pm"
+  },
+  {
+    "id": 1777705732883,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:52 pm"
+  },
+  {
+    "id": 1777705733082,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:53 pm"
+  },
+  {
+    "id": 1777705733277,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:53 pm"
+  },
+  {
+    "id": 1777705733460,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:53 pm"
+  },
+  {
+    "id": 1777705734715,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:54 pm"
+  },
+  {
+    "id": 1777705735260,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:55 pm"
+  },
+  {
+    "id": 1777705735812,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:55 pm"
+  },
+  {
+    "id": 1777705736151,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:56 pm"
+  },
+  {
+    "id": 1777705736856,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:56 pm"
+  },
+  {
+    "id": 1777705737422,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:38:57 pm"
+  },
+  {
+    "id": 1777705737931,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:57 pm"
+  },
+  {
+    "id": 1777705739092,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:38:59 pm"
+  },
+  {
+    "id": 1777705739526,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:59 pm"
+  },
+  {
+    "id": 1777705739962,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:38:59 pm"
+  },
+  {
+    "id": 1777705740494,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:39:00 pm"
+  },
+  {
+    "id": 1777705740969,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:39:00 pm"
+  },
+  {
+    "id": 1777705741414,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:39:01 pm"
+  },
+  {
+    "id": 1777705741966,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:39:01 pm"
+  },
+  {
+    "id": 1777705742889,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:39:02 pm"
+  },
+  {
+    "id": 1777705743438,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:39:03 pm"
+  },
+  {
+    "id": 1777705743940,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:39:03 pm"
+  },
+  {
+    "id": 1777705744396,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:39:04 pm"
+  },
+  {
+    "id": 1777705745499,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:39:05 pm"
+  },
+  {
+    "id": 1777705747199,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:39:07 pm"
+  },
+  {
+    "id": 1777705747645,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:39:07 pm"
+  },
+  {
+    "id": 1777705748186,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:39:08 pm"
+  },
+  {
+    "id": 1777705749337,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:39:09 pm"
+  },
+  {
+    "id": 1777705752359,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:39:12 pm"
+  },
+  {
+    "id": 1777706605811,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:25 pm"
+  },
+  {
+    "id": 1777706606648,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:26 pm"
+  },
+  {
+    "id": 1777706607418,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:27 pm"
+  },
+  {
+    "id": 1777706608250,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:28 pm"
+  },
+  {
+    "id": 1777706608782,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:28 pm"
+  },
+  {
+    "id": 1777706609477,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:29 pm"
+  },
+  {
+    "id": 1777706609981,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:29 pm"
+  },
+  {
+    "id": 1777706610500,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:30 pm"
+  },
+  {
+    "id": 1777706611113,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:31 pm"
+  },
+  {
+    "id": 1777706611673,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:31 pm"
+  },
+  {
+    "id": 1777706612260,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:32 pm"
+  },
+  {
+    "id": 1777706612855,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:32 pm"
+  },
+  {
+    "id": 1777706613367,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:33 pm"
+  },
+  {
+    "id": 1777706613944,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:33 pm"
+  },
+  {
+    "id": 1777706614495,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:34 pm"
+  },
+  {
+    "id": 1777706615033,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:35 pm"
+  },
+  {
+    "id": 1777706615642,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:35 pm"
+  },
+  {
+    "id": 1777706616248,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:36 pm"
+  },
+  {
+    "id": 1777706617275,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:37 pm"
+  },
+  {
+    "id": 1777706618061,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:38 pm"
+  },
+  {
+    "id": 1777706618604,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:38 pm"
+  },
+  {
+    "id": 1777706619766,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:39 pm"
+  },
+  {
+    "id": 1777706620245,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:40 pm"
+  },
+  {
+    "id": 1777706621150,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:41 pm"
+  },
+  {
+    "id": 1777706622044,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:42 pm"
+  },
+  {
+    "id": 1777706622279,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:42 pm"
+  },
+  {
+    "id": 1777706622474,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:42 pm"
+  },
+  {
+    "id": 1777706622661,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:42 pm"
+  },
+  {
+    "id": 1777706622864,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:42 pm"
+  },
+  {
+    "id": 1777706623052,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:43 pm"
+  },
+  {
+    "id": 1777706623511,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:43 pm"
+  },
+  {
+    "id": 1777706623706,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:43 pm"
+  },
+  {
+    "id": 1777706623891,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:43 pm"
+  },
+  {
+    "id": 1777706624077,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:44 pm"
+  },
+  {
+    "id": 1777706624249,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:44 pm"
+  },
+  {
+    "id": 1777706624428,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:44 pm"
+  },
+  {
+    "id": 1777706624606,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 12:53:44 pm"
+  },
+  {
+    "id": 1777706625139,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:45 pm"
+  },
+  {
+    "id": 1777706625350,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:45 pm"
+  },
+  {
+    "id": 1777706625539,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:45 pm"
+  },
+  {
+    "id": 1777706625730,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:45 pm"
+  },
+  {
+    "id": 1777706625896,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:45 pm"
+  },
+  {
+    "id": 1777706626089,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:46 pm"
+  },
+  {
+    "id": 1777706626287,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:46 pm"
+  },
+  {
+    "id": 1777706626472,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:46 pm"
+  },
+  {
+    "id": 1777706626715,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:46 pm"
+  },
+  {
+    "id": 1777706626898,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 12:53:46 pm"
+  },
+  {
+    "id": 1777706627469,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:47 pm"
+  },
+  {
+    "id": 1777706627664,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:47 pm"
+  },
+  {
+    "id": 1777706627841,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:47 pm"
+  },
+  {
+    "id": 1777706627999,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:47 pm"
+  },
+  {
+    "id": 1777706628210,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:48 pm"
+  },
+  {
+    "id": 1777706628392,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:48 pm"
+  },
+  {
+    "id": 1777706628592,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 12:53:48 pm"
+  },
+  {
+    "id": 1777708952907,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 1:32:32 pm"
+  },
+  {
+    "id": 1777708953511,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 1:32:33 pm"
+  },
+  {
+    "id": 1777708954160,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 1:32:34 pm"
+  },
+  {
+    "id": 1777708954765,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 1:32:34 pm"
+  },
+  {
+    "id": 1777708955307,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 1:32:35 pm"
+  },
+  {
+    "id": 1777708955958,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 1:32:35 pm"
+  },
+  {
+    "id": 1777708956966,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 1:32:36 pm"
+  },
+  {
+    "id": 1777708957530,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 1:32:37 pm"
+  },
+  {
+    "id": 1777708958077,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 1:32:38 pm"
+  },
+  {
+    "id": 1777708958554,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "2/5/2026, 1:32:38 pm"
+  },
+  {
+    "id": 1777708959066,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "2/5/2026, 1:32:39 pm"
+  },
+  {
+    "id": 1777708959930,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "2/5/2026, 1:32:39 pm"
+  },
+  {
+    "id": 1784118286630,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "15/7/2026, 5:54:46 pm"
+  },
+  {
+    "id": 1784118287408,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "15/7/2026, 5:54:47 pm"
+  },
+  {
+    "id": 1784118288207,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "15/7/2026, 5:54:48 pm"
+  },
+  {
+    "id": 1784139580557,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "15/7/2026, 11:49:40 pm"
+  },
+  {
+    "id": 1784139582650,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "15/7/2026, 11:49:42 pm"
+  },
+  {
+    "id": 1784139583715,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "15/7/2026, 11:49:43 pm"
+  },
+  {
+    "id": 1784139585401,
+    "type": "deploy_waste_collection",
+    "severity": "HIGH",
+    "zoneId": 4,
+    "timestamp": "15/7/2026, 11:49:45 pm"
+  },
+  {
+    "id": 1784139586359,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "15/7/2026, 11:49:46 pm"
+  },
+  {
+    "id": 1784140055824,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "15/7/2026, 11:57:35 pm"
+  },
+  {
+    "id": 1784140056597,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "15/7/2026, 11:57:36 pm"
+  },
+  {
+    "id": 1784140057611,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "15/7/2026, 11:57:37 pm"
+  },
+  {
+    "id": 1784140059142,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "15/7/2026, 11:57:39 pm"
+  },
+  {
+    "id": 1784140059758,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "15/7/2026, 11:57:39 pm"
+  },
+  {
+    "id": 1784140240135,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "16/7/2026, 12:00:40 am"
+  },
+  {
+    "id": 1784140241300,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "16/7/2026, 12:00:41 am"
+  },
+  {
+    "id": 1784140242153,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "16/7/2026, 12:00:42 am"
+  },
+  {
+    "id": 1784140244237,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "16/7/2026, 12:00:44 am"
+  },
+  {
+    "id": 1784140244803,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "16/7/2026, 12:00:44 am"
+  },
+  {
+    "id": 1784140313872,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "16/7/2026, 12:01:53 am"
+  },
+  {
+    "id": 1784140315734,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "16/7/2026, 12:01:55 am"
+  },
+  {
+    "id": 1784140316437,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "16/7/2026, 12:01:56 am"
+  },
+  {
+    "id": 1784140318399,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "16/7/2026, 12:01:58 am"
+  },
+  {
+    "id": 1784140319013,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "16/7/2026, 12:01:59 am"
+  },
+  {
+    "id": 1784140607593,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "16/7/2026, 12:06:47 am"
+  },
+  {
+    "id": 1784140608673,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "16/7/2026, 12:06:48 am"
+  },
+  {
+    "id": 1784140609673,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "16/7/2026, 12:06:49 am"
+  },
+  {
+    "id": 1784140611532,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "16/7/2026, 12:06:51 am"
+  },
+  {
+    "id": 1784140612206,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "16/7/2026, 12:06:52 am"
+  },
+  {
+    "id": 1784140884401,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "16/7/2026, 12:11:24 am"
+  },
+  {
+    "id": 1784140885656,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "16/7/2026, 12:11:25 am"
+  },
+  {
+    "id": 1784140886504,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "16/7/2026, 12:11:26 am"
+  },
+  {
+    "id": 1784140888872,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "16/7/2026, 12:11:28 am"
+  },
+  {
+    "id": 1784140889712,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "16/7/2026, 12:11:29 am"
+  },
+  {
+    "id": 1784179768185,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "16/7/2026, 10:59:28 am"
+  },
+  {
+    "id": 1784179769118,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "16/7/2026, 10:59:29 am"
+  },
+  {
+    "id": 1784179770148,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "16/7/2026, 10:59:30 am"
+  },
+  {
+    "id": 1784179771956,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "16/7/2026, 10:59:31 am"
+  },
+  {
+    "id": 1784179772747,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "16/7/2026, 10:59:32 am"
+  },
+  {
+    "id": 1784206480845,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "16/7/2026, 6:24:40 pm"
+  },
+  {
+    "id": 1784229176532,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "17/7/2026, 12:42:56 am"
+  },
+  {
+    "id": 1784270560782,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "17/7/2026, 12:12:40 pm"
+  },
+  {
+    "id": 1784270562592,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "17/7/2026, 12:12:42 pm"
+  },
+  {
+    "id": 1784270564382,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "17/7/2026, 12:12:44 pm"
+  },
+  {
+    "id": 1784270567545,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "17/7/2026, 12:12:47 pm"
+  },
+  {
+    "id": 1784270568804,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "17/7/2026, 12:12:48 pm"
+  },
+  {
+    "id": 1784568713932,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "20/7/2026, 11:01:53 pm"
+  },
+  {
+    "id": 1784568715039,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "20/7/2026, 11:01:55 pm"
+  },
+  {
+    "id": 1784568716077,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "20/7/2026, 11:01:56 pm"
+  },
+  {
+    "id": 1784568716870,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "20/7/2026, 11:01:56 pm"
+  },
+  {
+    "id": 1784568718760,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "20/7/2026, 11:01:58 pm"
+  },
+  {
+    "id": 1785214817013,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 0,
+    "timestamp": "28/7/2026, 10:30:17 am"
+  },
+  {
+    "id": 1785215037569,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "28/7/2026, 10:33:57 am"
+  },
+  {
+    "id": 1785215039191,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "28/7/2026, 10:33:59 am"
+  },
+  {
+    "id": 1785215040670,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "28/7/2026, 10:34:00 am"
+  },
+  {
+    "id": 1785215041984,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "28/7/2026, 10:34:01 am"
+  },
+  {
+    "id": 1785215042209,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "28/7/2026, 10:34:02 am"
+  },
+  {
+    "id": 1785215042389,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "28/7/2026, 10:34:02 am"
+  },
+  {
+    "id": 1785215042561,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "28/7/2026, 10:34:02 am"
+  },
+  {
+    "id": 1785215043170,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "28/7/2026, 10:34:03 am"
+  },
+  {
+    "id": 1785215043327,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "28/7/2026, 10:34:03 am"
+  },
+  {
+    "id": 1785215043494,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "28/7/2026, 10:34:03 am"
+  },
+  {
+    "id": 1785215043651,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "28/7/2026, 10:34:03 am"
+  },
+  {
+    "id": 1785215548069,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "28/7/2026, 10:42:28 am"
+  },
+  {
+    "id": 1785215550943,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "28/7/2026, 10:42:30 am"
+  },
+  {
+    "id": 1785215553220,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "28/7/2026, 10:42:33 am"
+  },
+  {
+    "id": 1785215556633,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "28/7/2026, 10:42:36 am"
+  },
+  {
+    "id": 1785215558586,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "28/7/2026, 10:42:38 am"
+  },
+  {
+    "id": 1785215560799,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "28/7/2026, 10:42:40 am"
+  },
+  {
+    "id": 1785215563889,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "28/7/2026, 10:42:43 am"
+  },
+  {
+    "id": 1785215566072,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "28/7/2026, 10:42:46 am"
+  },
+  {
+    "id": 1785216302653,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "28/7/2026, 10:55:02 am"
+  },
+  {
+    "id": 1785216304505,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "28/7/2026, 10:55:04 am"
+  },
+  {
+    "id": 1785216306215,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "28/7/2026, 10:55:06 am"
+  },
+  {
+    "id": 1785216309028,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "28/7/2026, 10:55:09 am"
+  },
+  {
+    "id": 1785216310734,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "28/7/2026, 10:55:10 am"
+  },
+  {
+    "id": 1785216312578,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "28/7/2026, 10:55:12 am"
+  },
+  {
+    "id": 1785216316074,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "28/7/2026, 10:55:16 am"
+  },
+  {
+    "id": 1785216317959,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "28/7/2026, 10:55:17 am"
+  },
+  {
+    "id": 1785216561750,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "28/7/2026, 10:59:21 am"
+  },
+  {
+    "id": 1785216564090,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "28/7/2026, 10:59:24 am"
+  },
+  {
+    "id": 1785216566622,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "28/7/2026, 10:59:26 am"
+  },
+  {
+    "id": 1785216570050,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "28/7/2026, 10:59:30 am"
+  },
+  {
+    "id": 1785216572181,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "28/7/2026, 10:59:32 am"
+  },
+  {
+    "id": 1785216574486,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "28/7/2026, 10:59:34 am"
+  },
+  {
+    "id": 1785216577185,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "28/7/2026, 10:59:37 am"
+  },
+  {
+    "id": 1785216579269,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "28/7/2026, 10:59:39 am"
+  },
+  {
+    "id": 1785483374239,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "31/7/2026, 1:06:14 pm"
+  },
+  {
+    "id": 1785483376514,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "31/7/2026, 1:06:16 pm"
+  },
+  {
+    "id": 1785483378268,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "31/7/2026, 1:06:18 pm"
+  },
+  {
+    "id": 1785483381497,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "31/7/2026, 1:06:21 pm"
+  },
+  {
+    "id": 1785483383252,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "31/7/2026, 1:06:23 pm"
+  },
+  {
+    "id": 1785483385214,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "31/7/2026, 1:06:25 pm"
+  },
+  {
+    "id": 1785483388259,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "31/7/2026, 1:06:28 pm"
+  },
+  {
+    "id": 1785483390772,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "31/7/2026, 1:06:30 pm"
+  },
+  {
+    "id": 1785823648880,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "4/8/2026, 11:37:28 am"
+  },
+  {
+    "id": 1785823659201,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "4/8/2026, 11:37:39 am"
+  },
+  {
+    "id": 1785823666522,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "4/8/2026, 11:37:46 am"
+  },
+  {
+    "id": 1785823669979,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "4/8/2026, 11:37:49 am"
+  },
+  {
+    "id": 1785823674063,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "4/8/2026, 11:37:54 am"
+  },
+  {
+    "id": 1785823676666,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "4/8/2026, 11:37:56 am"
+  },
+  {
+    "id": 1785823679892,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "4/8/2026, 11:37:59 am"
+  },
+  {
+    "id": 1785823682524,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "4/8/2026, 11:38:02 am"
+  },
+  {
+    "id": 1787114778810,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "19/8/2026, 10:16:18 am"
+  },
+  {
+    "id": 1787114781235,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "19/8/2026, 10:16:21 am"
+  },
+  {
+    "id": 1787114783359,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "19/8/2026, 10:16:23 am"
+  },
+  {
+    "id": 1787114788998,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "19/8/2026, 10:16:28 am"
+  },
+  {
+    "id": 1787114790850,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "19/8/2026, 10:16:30 am"
+  },
+  {
+    "id": 1787114792606,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "19/8/2026, 10:16:32 am"
+  },
+  {
+    "id": 1787114795801,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "19/8/2026, 10:16:35 am"
+  },
+  {
+    "id": 1787114798279,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "19/8/2026, 10:16:38 am"
+  },
+  {
+    "id": 1787306942067,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "21/8/2026, 3:39:02 pm"
+  },
+  {
+    "id": 1787306942948,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "21/8/2026, 3:39:02 pm"
+  },
+  {
+    "id": 1787306943675,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "21/8/2026, 3:39:03 pm"
+  },
+  {
+    "id": 1787306944197,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "21/8/2026, 3:39:04 pm"
+  },
+  {
+    "id": 1787306944528,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "21/8/2026, 3:39:04 pm"
+  },
+  {
+    "id": 1787306944921,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "21/8/2026, 3:39:04 pm"
+  },
+  {
+    "id": 1788413275007,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "3/9/2026, 10:57:55 am"
+  },
+  {
+    "id": 1788413277363,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "3/9/2026, 10:57:57 am"
+  },
+  {
+    "id": 1788413279628,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "3/9/2026, 10:57:59 am"
+  },
+  {
+    "id": 1788413284226,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "3/9/2026, 10:58:04 am"
+  },
+  {
+    "id": 1788413286152,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "3/9/2026, 10:58:06 am"
+  },
+  {
+    "id": 1788413288015,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "3/9/2026, 10:58:08 am"
+  },
+  {
+    "id": 1788413291288,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "3/9/2026, 10:58:11 am"
+  },
+  {
+    "id": 1788413293063,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "3/9/2026, 10:58:13 am"
+  },
+  {
+    "id": 1788420394303,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "3/9/2026, 12:56:34 pm"
+  },
+  {
+    "id": 1788420400514,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "3/9/2026, 12:56:40 pm"
+  },
+  {
+    "id": 1788509802567,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "4/9/2026, 1:46:42 pm"
+  },
+  {
+    "id": 1788509804737,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "4/9/2026, 1:46:44 pm"
+  },
+  {
+    "id": 1788509806530,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "4/9/2026, 1:46:46 pm"
+  },
+  {
+    "id": 1788509810584,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "4/9/2026, 1:46:50 pm"
+  },
+  {
+    "id": 1788509812746,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "4/9/2026, 1:46:52 pm"
+  },
+  {
+    "id": 1788509815230,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "4/9/2026, 1:46:55 pm"
+  },
+  {
+    "id": 1788509819162,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "4/9/2026, 1:46:59 pm"
+  },
+  {
+    "id": 1788509821909,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "4/9/2026, 1:47:01 pm"
+  },
+  {
+    "id": 1788518112787,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "4/9/2026, 4:05:12 pm"
+  },
+  {
+    "id": 1788518115124,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "4/9/2026, 4:05:15 pm"
+  },
+  {
+    "id": 1788518115670,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "4/9/2026, 4:05:15 pm"
+  },
+  {
+    "id": 1788518118922,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "4/9/2026, 4:05:18 pm"
+  },
+  {
+    "id": 1788518119385,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "4/9/2026, 4:05:19 pm"
+  },
+  {
+    "id": 1788518121107,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "4/9/2026, 4:05:21 pm"
+  },
+  {
+    "id": 1788518124405,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "4/9/2026, 4:05:24 pm"
+  },
+  {
+    "id": 1788518124772,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "4/9/2026, 4:05:24 pm"
+  },
+  {
+    "id": 1788773681061,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "7/9/2026, 3:04:41 pm"
+  },
+  {
+    "id": 1788773682889,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "7/9/2026, 3:04:42 pm"
+  },
+  {
+    "id": 1788773684546,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "7/9/2026, 3:04:44 pm"
+  },
+  {
+    "id": 1788773687790,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "7/9/2026, 3:04:47 pm"
+  },
+  {
+    "id": 1788773689757,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "7/9/2026, 3:04:49 pm"
+  },
+  {
+    "id": 1788773691811,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "7/9/2026, 3:04:51 pm"
+  },
+  {
+    "id": 1788773694397,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "7/9/2026, 3:04:54 pm"
+  },
+  {
+    "id": 1788773696157,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "7/9/2026, 3:04:56 pm"
+  },
+  {
+    "id": 1788979219133,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "10/9/2026, 12:10:19 am"
+  },
+  {
+    "id": 1788979223258,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "10/9/2026, 12:10:23 am"
+  },
+  {
+    "id": 1788979225018,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "10/9/2026, 12:10:25 am"
+  },
+  {
+    "id": 1788979227979,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "10/9/2026, 12:10:27 am"
+  },
+  {
+    "id": 1788979229836,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "10/9/2026, 12:10:29 am"
+  },
+  {
+    "id": 1788979230647,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "10/9/2026, 12:10:30 am"
+  },
+  {
+    "id": 1788979234647,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "10/9/2026, 12:10:34 am"
+  },
+  {
+    "id": 1788979235170,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "10/9/2026, 12:10:35 am"
+  },
+  {
+    "id": 1788979824896,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "10/9/2026, 12:20:24 am"
+  },
+  {
+    "id": 1788979825371,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "10/9/2026, 12:20:25 am"
+  },
+  {
+    "id": 1788979825986,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "10/9/2026, 12:20:25 am"
+  },
+  {
+    "id": 1788979828915,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "10/9/2026, 12:20:28 am"
+  },
+  {
+    "id": 1788979829479,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "10/9/2026, 12:20:29 am"
+  },
+  {
+    "id": 1788979830098,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "10/9/2026, 12:20:30 am"
+  },
+  {
+    "id": 1788979832795,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "10/9/2026, 12:20:32 am"
+  },
+  {
+    "id": 1788979833438,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "10/9/2026, 12:20:33 am"
+  },
+  {
+    "id": 1789043445981,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "10/9/2026, 6:00:45 pm"
+  },
+  {
+    "id": 1789043447842,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "10/9/2026, 6:00:47 pm"
+  },
+  {
+    "id": 1789043449464,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "10/9/2026, 6:00:49 pm"
+  },
+  {
+    "id": 1789043452232,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "10/9/2026, 6:00:52 pm"
+  },
+  {
+    "id": 1789043453965,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "10/9/2026, 6:00:53 pm"
+  },
+  {
+    "id": 1789043455696,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "10/9/2026, 6:00:55 pm"
+  },
+  {
+    "id": 1789043458868,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "10/9/2026, 6:00:58 pm"
+  },
+  {
+    "id": 1789043460560,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "10/9/2026, 6:01:00 pm"
+  },
+  {
+    "id": 1789109624323,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "11/9/2026, 12:23:44 pm"
+  },
+  {
+    "id": 1789109626984,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "11/9/2026, 12:23:46 pm"
+  },
+  {
+    "id": 1789109629009,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "11/9/2026, 12:23:49 pm"
+  },
+  {
+    "id": 1789109632777,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "11/9/2026, 12:23:52 pm"
+  },
+  {
+    "id": 1789109644027,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "11/9/2026, 12:24:04 pm"
+  },
+  {
+    "id": 1789109646177,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "11/9/2026, 12:24:06 pm"
+  },
+  {
+    "id": 1789110300954,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "11/9/2026, 12:35:00 pm"
+  },
+  {
+    "id": 1789112819882,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "11/9/2026, 1:16:59 pm"
+  },
+  {
+    "id": 1789112820593,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "11/9/2026, 1:17:00 pm"
+  },
+  {
+    "id": 1789112821704,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "11/9/2026, 1:17:01 pm"
+  },
+  {
+    "id": 1789112825399,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "11/9/2026, 1:17:05 pm"
+  },
+  {
+    "id": 1789112825776,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "11/9/2026, 1:17:05 pm"
+  },
+  {
+    "id": 1789112826553,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "11/9/2026, 1:17:06 pm"
+  },
+  {
+    "id": 1789112829416,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "11/9/2026, 1:17:09 pm"
+  },
+  {
+    "id": 1789112829847,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "11/9/2026, 1:17:09 pm"
+  },
+  {
+    "id": 1789113038225,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "11/9/2026, 1:20:38 pm"
+  },
+  {
+    "id": 1789113039896,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "11/9/2026, 1:20:39 pm"
+  },
+  {
+    "id": 1789113040953,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "11/9/2026, 1:20:40 pm"
+  },
+  {
+    "id": 1789113044405,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "11/9/2026, 1:20:44 pm"
+  },
+  {
+    "id": 1789113044760,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "11/9/2026, 1:20:44 pm"
+  },
+  {
+    "id": 1789113045301,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "11/9/2026, 1:20:45 pm"
+  },
+  {
+    "id": 1789113047963,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "11/9/2026, 1:20:47 pm"
+  },
+  {
+    "id": 1789113048503,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "11/9/2026, 1:20:48 pm"
+  },
+  {
+    "id": 1789194150908,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "12/9/2026, 11:52:30 am"
+  },
+  {
+    "id": 1789194165070,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "12/9/2026, 11:52:45 am"
+  },
+  {
+    "id": 1789194181048,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "12/9/2026, 11:53:01 am"
+  },
+  {
+    "id": 1789194185165,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "12/9/2026, 11:53:05 am"
+  },
+  {
+    "id": 1789194187490,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "12/9/2026, 11:53:07 am"
+  },
+  {
+    "id": 1789194189575,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "12/9/2026, 11:53:09 am"
+  },
+  {
+    "id": 1789194194302,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "12/9/2026, 11:53:14 am"
+  },
+  {
+    "id": 1789194197248,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "12/9/2026, 11:53:17 am"
+  },
+  {
+    "id": 1789196094919,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "12/9/2026, 12:24:54 pm"
+  },
+  {
+    "id": 1789196215418,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "12/9/2026, 12:26:55 pm"
+  },
+  {
+    "id": 1789196418139,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "12/9/2026, 12:30:18 pm"
+  },
+  {
+    "id": 1789196542624,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "12/9/2026, 12:32:22 pm"
+  },
+  {
+    "id": 1789196542977,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "12/9/2026, 12:32:22 pm"
+  },
+  {
+    "id": 1789196543527,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "12/9/2026, 12:32:23 pm"
+  },
+  {
+    "id": 1789196546469,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "12/9/2026, 12:32:26 pm"
+  },
+  {
+    "id": 1789196546839,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "12/9/2026, 12:32:26 pm"
+  },
+  {
+    "id": 1789196547388,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "12/9/2026, 12:32:27 pm"
+  },
+  {
+    "id": 1789196550053,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "12/9/2026, 12:32:30 pm"
+  },
+  {
+    "id": 1789196550519,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "12/9/2026, 12:32:30 pm"
+  },
+  {
+    "id": 1789200236540,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "12/9/2026, 1:33:56 pm"
+  },
+  {
+    "id": 1789200236861,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "12/9/2026, 1:33:56 pm"
+  },
+  {
+    "id": 1789200239001,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "12/9/2026, 1:33:59 pm"
+  },
+  {
+    "id": 1789200240595,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "12/9/2026, 1:34:00 pm"
+  },
+  {
+    "id": 1789200241039,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "12/9/2026, 1:34:01 pm"
+  },
+  {
+    "id": 1789200242033,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "12/9/2026, 1:34:02 pm"
+  },
+  {
+    "id": 1789200242674,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "12/9/2026, 1:34:02 pm"
+  },
+  {
+    "id": 1789200243382,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "12/9/2026, 1:34:03 pm"
+  },
+  {
+    "id": 1789201039735,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "12/9/2026, 1:47:19 pm"
+  },
+  {
+    "id": 1789201041922,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "12/9/2026, 1:47:21 pm"
+  },
+  {
+    "id": 1789201042418,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "12/9/2026, 1:47:22 pm"
+  },
+  {
+    "id": 1789475190794,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "15/9/2026, 5:56:30 pm"
+  },
+  {
+    "id": 1789475191514,
+    "type": "reroute_water",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "15/9/2026, 5:56:31 pm"
+  },
+  {
+    "id": 1789475192151,
+    "type": "send_field_team",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "15/9/2026, 5:56:32 pm"
+  },
+  {
+    "id": 1789475202146,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "15/9/2026, 5:56:42 pm"
+  },
+  {
+    "id": 1789475202863,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "15/9/2026, 5:56:42 pm"
+  },
+  {
+    "id": 1789475204551,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "15/9/2026, 5:56:44 pm"
+  },
+  {
+    "id": 1789475207152,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "15/9/2026, 5:56:47 pm"
+  },
+  {
+    "id": 1789475207572,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "15/9/2026, 5:56:47 pm"
+  },
+  {
+    "id": 1789475208285,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "15/9/2026, 5:56:48 pm"
+  },
+  {
+    "id": 1789475211218,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "15/9/2026, 5:56:51 pm"
+  },
+  {
+    "id": 1789475211584,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "15/9/2026, 5:56:51 pm"
+  },
+  {
+    "id": 1789476943538,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 1,
+    "timestamp": "15/9/2026, 6:25:43 pm"
+  },
+  {
+    "id": 1789476953251,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 2,
+    "timestamp": "15/9/2026, 6:25:53 pm"
+  },
+  {
+    "id": 1789476955163,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 3,
+    "timestamp": "15/9/2026, 6:25:55 pm"
+  },
+  {
+    "id": 1789476955776,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 4,
+    "timestamp": "15/9/2026, 6:25:55 pm"
+  },
+  {
+    "id": 1789477107277,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 5,
+    "timestamp": "15/9/2026, 6:28:27 pm"
+  },
+  {
+    "id": 1789477107927,
+    "type": "deploy_waste_collection",
+    "severity": "MEDIUM",
+    "zoneId": 6,
+    "timestamp": "15/9/2026, 6:28:27 pm"
+  },
+  {
+    "id": 1789477108617,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 7,
+    "timestamp": "15/9/2026, 6:28:28 pm"
+  },
+  {
+    "id": 1789477109568,
+    "type": "deploy_waste_collection",
+    "severity": "LOW",
+    "zoneId": 8,
+    "timestamp": "15/9/2026, 6:28:29 pm"
+  }
+]

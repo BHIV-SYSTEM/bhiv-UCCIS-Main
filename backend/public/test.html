@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>UCCIS Test Panel</title>
+  </head>
+  <body style="font-family: Arial; padding: 20px">
+    <h2>UCCIS Backend Test Panel</h2>
+
+    <button onclick="runIntelligence()">Run Intelligence</button>
+    <button onclick="runExecution()">Run Execution</button>
+    <button onclick="loadMemory()">Load Memory</button>
+
+    <pre id="output"></pre>
+
+    <script>
+      const API = "http://localhost:5000";
+
+      let lastResult = null;
+
+      async function runIntelligence() {
+        const res = await fetch(API + "/intelligence/evaluate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            zone_id: "Z1",
+            traffic: 70,
+            water: 40,
+            flood: 80,
+            waste: 20,
+            complaint: 60,
+          }),
+        });
+
+        const data = await res.json();
+        lastResult = data;
+
+        document.getElementById("output").innerText =
+          "INTELLIGENCE RESULT:\n" + JSON.stringify(data, null, 2);
+      }
+
+      async function runExecution() {
+        const res = await fetch(API + "/execute/request", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            trace_id: "TRACE_" + Date.now(),
+            zone_id: lastResult.zone_id,
+            current_state: lastResult.current_state,
+          }),
+        });
+
+        const data = await res.json();
+
+        document.getElementById("output").innerText =
+          "EXECUTION RESULT:\n" + JSON.stringify(data, null, 2);
+      }
+
+      async function loadMemory() {
+        const res = await fetch(API + "/memory");
+        const data = await res.json();
+
+        document.getElementById("output").innerText =
+          "MEMORY:\n" + JSON.stringify(data, null, 2);
+      }
+    </script>
+  </body>
+</html>

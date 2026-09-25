@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "timestamp": "2026-05-14 12:00:00",
+        "event": "SIGNAL",
+        "value": "incident detected"
+    },
+    {
+        "id": 2,
+        "timestamp": "2026-05-14 12:00:02",
+        "event": "ESCALATION",
+        "value": "escalated to control"
+    },
+    {
+        "id": 3,
+        "timestamp": "2026-05-14 12:00:05",
+        "event": "ASSIGNMENT",
+        "value": "unit assigned"
+    },
+    {
+        "id": 4,
+        "timestamp": "2026-05-14 12:00:08",
+        "event": "ACK",
+        "value": "acknowledged"
+    },
+    {
+        "id": 5,
+        "timestamp": "2026-05-14 12:00:12",
+        "event": "RESOLUTION",
+        "value": "resolved"
+    }
+]

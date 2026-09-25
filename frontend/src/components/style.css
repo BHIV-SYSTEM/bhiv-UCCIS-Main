@@ -1,0 +1,214 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f6fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.task5-dashboard {
+  width: 95%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 30px 20px 50px;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.task5-dashboard h1 {
+  text-align: center;
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   REFRESH BUTTON
+========================================== */
+
+.refresh-container {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.refresh-container button {
+  padding: 10px 22px;
+  font-size: 17px;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.refresh-container button:hover {
+  background: #efefef;
+}
+
+/* ==========================================
+   CHART SECTION
+========================================== */
+
+.charts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.chart-box {
+  width: 360px;
+  height: 320px;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ==========================================
+   ZONE GRID
+========================================== */
+
+.zone-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.zone-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  min-height: 300px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: 0.25s;
+}
+
+.zone-card:hover {
+  transform: translateY(-4px);
+}
+
+.zone-card h2 {
+  font-size: 34px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.zone-card p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.zone-card strong {
+  font-weight: bold;
+}
+
+/* ==========================================
+   RISK COLORS
+========================================== */
+
+.zone-card.high {
+  border-left: 8px solid #ff0000;
+}
+
+.zone-card.medium {
+  border-left: 8px solid orange;
+}
+
+.zone-card.low {
+  border-left: 8px solid #00aa22;
+}
+
+/* Zone 2/5/8 special-case override (solid orange themed card) */
+.zone-card.orange {
+  background: #f5a04a;
+  border-left: 8px solid #d97f1e;
+}
+
+.zone-card.orange h2,
+.zone-card.orange p,
+.zone-card.orange strong {
+  color: #ffffff;
+}
+
+/* Zone 1/4/7 special-case override (solid red themed card) */
+.zone-card.red {
+  background: #e04b4b;
+  border-left: 8px solid #a52121;
+}
+
+.zone-card.red h2,
+.zone-card.red p,
+.zone-card.red strong {
+  color: #ffffff;
+}
+
+/* Zone 3/6 special-case override (solid blue themed card) */
+.zone-card.blue {
+  background: #3fa2e6;
+  border-left: 8px solid #1e6fa5;
+}
+
+.zone-card.blue h2,
+.zone-card.blue p,
+.zone-card.blue strong {
+  color: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1300px) {
+  .zone-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .charts {
+    flex-direction: column;
+  }
+
+  .chart-box {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .zone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task5-dashboard h1 {
+    font-size: 34px;
+  }
+
+  .zone-card h2 {
+    font-size: 24px;
+  }
+
+  .zone-card p {
+    font-size: 18px;
+  }
+}

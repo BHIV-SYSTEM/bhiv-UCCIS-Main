@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "source": "Traffic Camera",
+        "signal": "Traffic Congestion",
+        "telemetry": "Density 92%",
+        "validation": "Verified",
+        "recommendation": "Deploy Traffic Unit",
+        "escalation": "Level 2",
+        "operator_review": "Approved",
+        "decision": "Dispatch Team",
+        "intervention": "Traffic Diversion",
+        "dashboard_projection": "Active",
+        "replay": "Available",
+        "runtime_evidence": "Captured"
+    },
+    {
+        "id": 2,
+        "source": "Water Sensor",
+        "signal": "Flood Alert",
+        "telemetry": "Level 88%",
+        "validation": "Verified",
+        "recommendation": "Issue Warning",
+        "escalation": "Level 3",
+        "operator_review": "Approved",
+        "decision": "Emergency Response",
+        "intervention": "Pump Activation",
+        "dashboard_projection": "Active",
+        "replay": "Available",
+        "runtime_evidence": "Captured"
+    }
+]

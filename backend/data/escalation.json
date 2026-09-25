@@ -1,0 +1,20 @@
+[
+  {
+    "district": "Mumbai",
+    "risk": 82,
+    "entropy": 12,
+    "trend": "Rising"
+  },
+  {
+    "district": "Thane",
+    "risk": 68,
+    "entropy": 18,
+    "trend": "Stable"
+  },
+  {
+    "district": "MMR",
+    "risk": 74,
+    "entropy": 14,
+    "trend": "Elevated"
+  }
+]

@@ -1,0 +1,29 @@
+=====================================
+DISTRIBUTED OBSERVABILITY INSPECTOR
+=====================================
+
+NODE 1
+Operator : Operator-1
+View     : LIVE_REPLAY
+Latency  : 120ms
+-------------------------------------
+NODE 2
+Operator : Operator-2
+View     : LIVE_REPLAY
+Latency  : 180ms
+-------------------------------------
+NODE 3
+Operator : Operator-3
+View     : DELAYED_REPLAY
+Latency  : 450ms
+-------------------------------------
+NODE 4
+Operator : Operator-4
+View     : STALE_TELEMETRY
+Latency  : 1200ms
+-------------------------------------
+NODE 5
+Operator : Operator-5
+View     : RECONSTRUCTED_REPLAY
+Latency  : 200ms
+-------------------------------------

@@ -1,0 +1,14 @@
+const DOMAIN_WEIGHTS = {
+
+  FLOODING: 100,
+
+  WATER_SHORTAGE: 90,
+
+  TRAFFIC: 70,
+
+  WASTE_OVERLOAD: 60,
+
+  CIVIC_COMPLAINTS: 50
+};
+
+module.exports = DOMAIN_WEIGHTS;

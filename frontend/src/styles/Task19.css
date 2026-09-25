@@ -1,0 +1,533 @@
+/* =========================================================
+UCCIS GOVERNANCE COMMAND CENTER
+PHASE 1 → PHASE 5
+dashboard.css
+========================================================= */
+
+/* =========================================================
+GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background: #020817;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* =========================================================
+ROOT LAYOUT
+========================================================= */
+
+.dashboard-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #020817, #071226);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.command-header {
+  width: 100%;
+  background: #081224;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.command-header h1 {
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+}
+
+.command-header p {
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* =========================================================
+HEADER METRICS
+========================================================= */
+
+.header-metrics {
+  display: flex;
+  gap: 16px;
+}
+
+.metric-card {
+  min-width: 180px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+}
+
+.metric-card h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.metric-card span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.metric-card.critical {
+  border-left: 5px solid #ef4444;
+}
+
+.metric-card.stable {
+  border-left: 5px solid #22c55e;
+}
+
+/* =========================================================
+ALERT TICKER
+========================================================= */
+
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #091325;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 12px 0;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 40px;
+  animation: tickerMove 20s linear infinite;
+}
+
+.ticker-item {
+  white-space: nowrap;
+  color: #facc15;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@keyframes tickerMove {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* =========================================================
+GRIDS
+========================================================= */
+
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mid-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.triple-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.executive-command-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.primitive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* =========================================================
+PANEL CARD
+========================================================= */
+
+.panel-card {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 22px;
+  backdrop-filter: blur(10px);
+}
+
+.panel-card h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* =========================================================
+ALERT PANEL
+========================================================= */
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111c33;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.alert-item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.alert-item p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.alert-item span {
+  color: #f87171;
+  font-weight: bold;
+}
+
+/* =========================================================
+TELEMETRY
+========================================================= */
+
+.telemetry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111c33;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.telemetry-row h3 {
+  font-size: 15px;
+}
+
+.telemetry-row p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.telemetry-row span {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* =========================================================
+ESCALATION
+========================================================= */
+
+.escalation-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #111c33;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.risk-bar-container {
+  flex: 1;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.risk-bar {
+  height: 100%;
+  background: linear-gradient(to right, #facc15, #ef4444);
+}
+
+/* =========================================================
+HEATMAP
+========================================================= */
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.heatmap-cell {
+  height: 120px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2563eb, #ef4444);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.heatmap-cell h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.heatmap-cell span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* =========================================================
+REPLAY
+========================================================= */
+
+.replay-card {
+  background: #111c33;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.replay-card h3 {
+  margin-bottom: 14px;
+}
+
+.replay-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  color: #94a3b8;
+}
+
+.replay-progress {
+  width: 100%;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.replay-fill {
+  height: 100%;
+  background: linear-gradient(to right, #22c55e, #3b82f6);
+}
+
+/* =========================================================
+HEALTH
+========================================================= */
+
+.health-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.health-score {
+  font-size: 56px;
+  font-weight: bold;
+  color: #22c55e;
+  margin-bottom: 25px;
+}
+
+.health-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.health-item {
+  background: #111c33;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.health-item strong {
+  color: #22c55e;
+}
+
+/* =========================================================
+CERTAINTY
+========================================================= */
+
+.certainty-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #111c33;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.certainty-bar-container {
+  flex: 1;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.certainty-bar {
+  height: 100%;
+  background: linear-gradient(to right, #22c55e, #3b82f6);
+}
+
+/* =========================================================
+GOVERNANCE TIMELINE
+========================================================= */
+
+.governance-row {
+  display: flex;
+  gap: 20px;
+  padding: 14px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.governance-row span {
+  color: #3b82f6;
+  min-width: 80px;
+  font-weight: bold;
+}
+
+.governance-row p {
+  color: white;
+}
+
+/* =========================================================
+PRIMITIVES
+========================================================= */
+
+.executive-card,
+.kpi-block,
+.alert-card,
+.telemetry-card,
+.escalation-card,
+.timeline-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.executive-card h1 {
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.executive-card span {
+  color: #22c55e;
+}
+
+.kpi-block h2 {
+  margin-top: 14px;
+  font-size: 34px;
+  color: #3b82f6;
+}
+
+/* =========================================================
+MAP
+========================================================= */
+
+.map-panel {
+  width: 100%;
+  height: 500px;
+  background: #0f172a;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
+  overflow: hidden;
+}
+
+/* =========================================================
+LOADING
+========================================================= */
+
+.loading-screen,
+.error-screen,
+.degraded-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #020817;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 28px;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1400px) {
+  .executive-command-grid,
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .top-grid,
+  .mid-grid,
+  .triple-grid,
+  .primitive-grid,
+  .heatmap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .command-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .header-metrics {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .executive-command-grid,
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .command-header h1 {
+    font-size: 24px;
+  }
+}

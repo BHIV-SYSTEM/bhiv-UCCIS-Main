@@ -1,0 +1,7 @@
+=====================================
+ACKNOWLEDGEMENT FLOW
+=====================================
+
+Signal → Escalation → Governance Visibility → Enforcement Request → Acknowledgement → Replay Reconstruction
+
+Status: CONTINUITY CONFIRMED

@@ -1,0 +1,587 @@
+/* =====================================================
+   GOVERNANCE TASK 15
+   GOVERNANCE COMMAND CENTER
+===================================================== */
+
+.gcc-dashboard {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 28px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 224, 143, 0.05),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #0b1118 0%, #101923 55%, #0b1118 100%);
+
+  color: #d6dde5;
+
+  font-family: Inter, Arial, sans-serif;
+
+  box-sizing: border-box;
+}
+
+.gcc-dashboard *,
+.gcc-dashboard *::before,
+.gcc-dashboard *::after {
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.gcc-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.gcc-eyebrow {
+  margin-bottom: 7px;
+
+  color: #00e08f;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.gcc-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(26px, 3vw, 40px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.gcc-header p {
+  margin: 9px 0 0;
+
+  color: #8291a3;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.gcc-live-status {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border: 1px solid rgba(0, 224, 143, 0.25);
+
+  border-radius: 999px;
+
+  background: rgba(0, 224, 143, 0.06);
+
+  color: #00e08f;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.gcc-live-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #00e08f;
+
+  box-shadow: 0 0 10px rgba(0, 224, 143, 0.7);
+}
+
+/* =====================================================
+   STAT GRID
+===================================================== */
+
+.gcc-stat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.gcc-stat-card {
+  min-width: 0;
+
+  min-height: 112px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 18px;
+
+  background: #0f1721;
+
+  border: 1px solid #243242;
+
+  border-radius: 10px;
+
+  border-left: 3px solid #64748b;
+}
+
+.gcc-stat-success {
+  border-left-color: #00e08f;
+}
+
+.gcc-stat-primary {
+  border-left-color: #3b82f6;
+}
+
+.gcc-stat-info {
+  border-left-color: #60a5fa;
+}
+
+.gcc-stat-label {
+  color: #71839a;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+
+  margin-bottom: 10px;
+}
+
+.gcc-stat-value {
+  color: #ffffff;
+
+  font-size: 25px;
+
+  font-weight: 800;
+}
+
+.gcc-stat-value.verified,
+.gcc-stat-value.low {
+  color: #00e08f;
+}
+
+/* =====================================================
+   ROWS
+===================================================== */
+
+.gcc-row {
+  width: 100%;
+
+  display: grid;
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+
+.gcc-row-3 {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.35fr)
+    minmax(0, 1.35fr);
+}
+
+.gcc-row-2 {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+}
+
+/* =====================================================
+   PANEL
+===================================================== */
+
+.gcc-panel {
+  min-width: 0;
+
+  background: linear-gradient(145deg, #111c28, #0d1721);
+
+  border: 1px solid #243242;
+
+  border-radius: 10px;
+
+  padding: 18px;
+
+  overflow: hidden;
+}
+
+.gcc-panel-header {
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 8px;
+}
+
+.gcc-panel-header h3 {
+  margin: 0;
+
+  color: #dce5ee;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.gcc-panel-header p {
+  margin: 5px 0 0;
+
+  color: #68798d;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+.gcc-panel-badge {
+  flex-shrink: 0;
+
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.7px;
+}
+
+.gcc-panel-badge.success {
+  background: rgba(0, 224, 143, 0.08);
+
+  border: 1px solid rgba(0, 224, 143, 0.2);
+
+  color: #00e08f;
+}
+
+/* =====================================================
+   CHARTS
+===================================================== */
+
+.gcc-chart {
+  width: 100%;
+
+  height: 270px;
+
+  min-width: 0;
+
+  position: relative;
+}
+
+.gcc-pie-chart {
+  height: 270px;
+}
+
+.gcc-chart .recharts-responsive-container {
+  width: 100% !important;
+
+  height: 100% !important;
+
+  min-width: 0 !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #8b9aac;
+}
+
+.recharts-text {
+  font-family: Inter, Arial, sans-serif;
+}
+
+.recharts-legend-item-text {
+  color: #b7c2cf !important;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* =====================================================
+   VALIDATION LOG
+===================================================== */
+
+.gcc-log {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-top: 8px;
+}
+
+.gcc-log-line {
+  min-height: 47px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  border-bottom: 1px solid #1b2835;
+
+  color: #9fb0c0;
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.gcc-log-line:last-child {
+  border-bottom: none;
+}
+
+.gcc-log-index {
+  width: 22px;
+
+  color: #4f6275;
+
+  font-size: 9px;
+}
+
+.gcc-log-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #00e08f;
+
+  box-shadow: 0 0 7px rgba(0, 224, 143, 0.5);
+}
+
+.gcc-log-line span:last-child {
+  color: #b8c5d1;
+}
+
+/* =====================================================
+   GOVERNANCE METRICS
+===================================================== */
+
+.gcc-metrics {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-top: 8px;
+}
+
+.gcc-metric-line {
+  min-height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border-bottom: 1px solid #1b2835;
+}
+
+.gcc-metric-line:last-child {
+  border-bottom: none;
+}
+
+.gcc-metric-label {
+  color: #8495a8;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.gcc-metric-value {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #00e08f;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+}
+
+.gcc-metric-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #00e08f;
+
+  box-shadow: 0 0 7px rgba(0, 224, 143, 0.5);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.gcc-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 16px 3px 4px;
+
+  border-top: 1px solid #1e2b39;
+
+  color: #5f7082;
+
+  font-size: 9px;
+
+  letter-spacing: 0.2px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+  .gcc-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gcc-row-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gcc-row-3 .gcc-panel:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .gcc-pie-chart {
+    height: 260px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+  .gcc-dashboard {
+    padding: 16px;
+  }
+
+  .gcc-header {
+    flex-direction: column;
+  }
+
+  .gcc-live-status {
+    align-self: flex-start;
+  }
+
+  .gcc-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gcc-row-3,
+  .gcc-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .gcc-row-3 .gcc-panel:first-child {
+    grid-column: auto;
+  }
+
+  .gcc-chart {
+    height: 290px;
+  }
+
+  .gcc-pie-chart {
+    height: 290px;
+  }
+
+  .gcc-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .gcc-dashboard {
+    padding: 12px;
+  }
+
+  .gcc-panel {
+    padding: 14px;
+  }
+
+  .gcc-header h1 {
+    font-size: 25px;
+  }
+
+  .gcc-chart,
+  .gcc-pie-chart {
+    height: 270px;
+  }
+
+  .gcc-panel-header {
+    flex-direction: column;
+  }
+
+  .gcc-panel-badge {
+    align-self: flex-start;
+  }
+}

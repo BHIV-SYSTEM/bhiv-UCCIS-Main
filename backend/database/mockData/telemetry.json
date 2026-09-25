@@ -1,0 +1,16 @@
+[
+    {
+        "telemetry_id": "TEL-1001",
+        "signal_source": "Pune CCTV Grid",
+        "severity": "HIGH",
+        "district": "Pune",
+        "created_at": "2026-05-28 10:12:00"
+    },
+    {
+        "telemetry_id": "TEL-1002",
+        "signal_source": "Traffic Monitoring",
+        "severity": "MEDIUM",
+        "district": "Mumbai",
+        "created_at": "2026-05-28 10:20:00"
+    }
+]

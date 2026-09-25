@@ -1,0 +1,323 @@
+/* =========================================================
+FLOOD SIMULATION PAGE
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #020617;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+/* =========================================================
+MAIN PAGE
+========================================================= */
+
+.flood-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.2),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(14, 165, 233, 0.15),
+      transparent 40%
+    ),
+    #020617;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.flood-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+.flood-header h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.flood-header p {
+  color: #94a3b8;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+BACK BUTTON
+========================================================= */
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.4);
+}
+
+/* =========================================================
+METRICS GRID
+========================================================= */
+
+.flood-metrics-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+/* =========================================================
+METRIC CARD
+========================================================= */
+
+.flood-metric-card {
+  background: rgba(15, 23, 42, 0.94);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1px solid rgba(59, 130, 246, 0.16);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.flood-metric-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+
+.flood-metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.flood-metric-card svg {
+  color: #38bdf8;
+  margin-bottom: 16px;
+}
+
+.flood-metric-card h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.flood-metric-card p {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* =========================================================
+CHART GRID
+========================================================= */
+
+.simulation-grid-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 28px;
+  margin-bottom: 35px;
+}
+
+/* =========================================================
+CHART CARD
+========================================================= */
+
+.simulation-chart-card {
+  background: rgba(15, 23, 42, 0.94);
+  border-radius: 22px;
+  padding: 28px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+
+.simulation-chart-card:hover {
+  transform: translateY(-4px);
+}
+
+.simulation-chart-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #f8fafc;
+}
+
+/* =========================================================
+LARGE CARD
+========================================================= */
+
+.large-card {
+  grid-column: span 2;
+}
+
+/* =========================================================
+INFORMATION PANEL
+========================================================= */
+
+.simulation-info-panel {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.94);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.simulation-info-panel h2 {
+  font-size: 28px;
+  margin-bottom: 28px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* =========================================================
+INFO GRID
+========================================================= */
+
+.info-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* =========================================================
+INFO CARD
+========================================================= */
+
+.info-card {
+  background: rgba(2, 6, 23, 0.8);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.info-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 14px;
+}
+
+.info-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* =========================================================
+RECHART TOOLTIP
+========================================================= */
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* =========================================================
+SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 20px;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media screen and (max-width: 1200px) {
+  .large-card {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .flood-page {
+    padding: 18px;
+  }
+
+  .flood-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .simulation-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .flood-header h1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flood-metric-card h2 {
+    font-size: 28px;
+  }
+
+  .simulation-chart-card {
+    padding: 20px;
+  }
+
+  .simulation-info-panel {
+    padding: 22px;
+  }
+}

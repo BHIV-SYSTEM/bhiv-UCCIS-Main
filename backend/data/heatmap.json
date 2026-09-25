@@ -1,0 +1,18 @@
+[
+  {
+    "zone": "South Mumbai",
+    "load": 92
+  },
+  {
+    "zone": "Thane West",
+    "load": 74
+  },
+  {
+    "zone": "Navi Mumbai",
+    "load": 61
+  },
+  {
+    "zone": "Kalyan",
+    "load": 85
+  }
+]

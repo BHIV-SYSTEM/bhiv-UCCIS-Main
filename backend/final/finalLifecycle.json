@@ -1,0 +1,57 @@
+[
+    {
+        "timestamp": "2026-05-14 15:00:00",
+        "stage": "SIGNAL",
+        "message": "operational signal detected"
+    },
+    {
+        "timestamp": "2026-05-14 15:00:04",
+        "stage": "INTELLIGENCE",
+        "message": "intelligence correlation established"
+    },
+    {
+        "timestamp": "2026-05-14 15:00:10",
+        "stage": "ESCALATION",
+        "message": "escalation chain activated"
+    },
+    {
+        "timestamp": "2026-05-14 15:00:15",
+        "stage": "CONCURRENT_OPERATORS",
+        "message": "multiple operators interacting simultaneously"
+    },
+    {
+        "timestamp": "2026-05-14 15:00:20",
+        "stage": "FIELD_ASSIGNMENT",
+        "message": "field assignment issued"
+    },
+    {
+        "timestamp": "2026-05-14 15:00:30",
+        "stage": "DELAYED_ACKNOWLEDGEMENT",
+        "message": "delayed acknowledgement detected"
+    },
+    {
+        "timestamp": "2026-05-14 15:00:40",
+        "stage": "REPLAY_RECONSTRUCTION",
+        "message": "replay reconstruction initiated"
+    },
+    {
+        "timestamp": "2026-05-14 15:00:50",
+        "stage": "RECOVERY_HANDLING",
+        "message": "recovery sequencing completed"
+    },
+    {
+        "timestamp": "2026-05-14 15:01:00",
+        "stage": "RESOLUTION",
+        "message": "incident lifecycle resolved"
+    },
+    {
+        "timestamp": "2026-05-14 15:01:10",
+        "stage": "IMMUTABLE_PERSISTENCE",
+        "message": "append-only lineage persisted"
+    },
+    {
+        "timestamp": "2026-05-14 15:01:20",
+        "stage": "REPLAY_VALIDATION",
+        "message": "replay validation completed successfully"
+    }
+]

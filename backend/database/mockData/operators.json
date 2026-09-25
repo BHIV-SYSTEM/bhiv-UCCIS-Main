@@ -1,0 +1,14 @@
+[
+    {
+        "operator_id": "OP-101",
+        "name": "Ananya",
+        "department": "Operations",
+        "status": "ACTIVE"
+    },
+    {
+        "operator_id": "OP-102",
+        "name": "Rohit",
+        "department": "Telemetry",
+        "status": "ACTIVE"
+    }
+]

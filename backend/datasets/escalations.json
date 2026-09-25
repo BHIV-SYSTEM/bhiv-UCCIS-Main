@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "incident": "Traffic Congestion",
+        "level": "L2",
+        "assigned_to": "Regional Traffic Controller",
+        "status": "OPEN"
+    },
+    {
+        "id": 2,
+        "incident": "Flood Warning",
+        "level": "L4",
+        "assigned_to": "State Emergency Cell",
+        "status": "CRITICAL"
+    }
+]

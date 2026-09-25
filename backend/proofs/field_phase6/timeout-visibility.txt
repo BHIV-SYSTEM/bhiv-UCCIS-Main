@@ -1,0 +1,8 @@
+=====================================
+TIMEOUT VISIBILITY
+=====================================
+
+✔ Field acknowledgement threshold: 5 minutes
+✔ Delay detected: YES
+✔ Timeout warning: ACTIVE
+✔ Response state: DEGRADED BUT TRACKED

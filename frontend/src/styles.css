@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* MAIN CONTAINER */
+.container {
+  padding: 20px;
+}
+
+/* TITLE */
+h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #f8fafc;
+}
+
+/* GRID FOR ZONES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* GENERAL CARD STYLE */
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* MAP CARD SPECIAL */
+.map {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mapHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* ZONE HOVER CARD EFFECT */
+.card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease-in-out;
+}
+
+/* ACTIVE ZONE HIGHLIGHT (optional use) */
+.active {
+  border: 2px solid #3b82f6;
+}
+
+/* EXECUTION LOG BOX */
+.logBox {
+  margin-top: 15px;
+}
+
+.logContainer {
+  max-height: 220px;
+  overflow-y: auto;
+  background: #0b1220;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* LOG ITEM */
+.logItem {
+  font-size: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
+}
+
+/* TIMELINE TEXT */
+.timeline {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* BUTTON STYLE (if used later) */
+button {
+  padding: 10px 14px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* SCROLLBAR (optional but makes it premium) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}

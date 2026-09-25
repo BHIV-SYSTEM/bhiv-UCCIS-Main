@@ -1,0 +1,17 @@
+{
+  "operationalHealth": 91,
+  "systems": [
+    {
+      "name": "Transport",
+      "status": "Stable"
+    },
+    {
+      "name": "Healthcare",
+      "status": "Operational"
+    },
+    {
+      "name": "Utilities",
+      "status": "Elevated"
+    }
+  ]
+}

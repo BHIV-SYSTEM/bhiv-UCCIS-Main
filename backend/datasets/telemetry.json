@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "signal_id": 101,
+        "metric": "Vehicle Density",
+        "value": 87,
+        "timestamp": "2026-06-01T09:00:00"
+    },
+    {
+        "id": 2,
+        "signal_id": 102,
+        "metric": "Water Level",
+        "value": 92,
+        "timestamp": "2026-06-01T09:05:00"
+    },
+    {
+        "id": 3,
+        "signal_id": 103,
+        "metric": "Overflow Volume",
+        "value": 76,
+        "timestamp": "2026-06-01T09:10:00"
+    }
+]

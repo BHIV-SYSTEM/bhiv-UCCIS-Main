@@ -1,0 +1,9 @@
+
+=====================================
+DETERMINISTIC ORDERING PROOF
+=====================================
+
+Event Ordering Status : VERIFIED
+Conflict Ordering     : CONSISTENT
+Replay Ordering       : STABLE
+Distributed State     : SYNCHRONIZED

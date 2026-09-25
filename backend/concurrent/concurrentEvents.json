@@ -1,0 +1,50 @@
+[
+    {
+        "timestamp": "2026-05-14 10:00:00",
+        "operator": "Operator-A",
+        "type": "ESCALATION",
+        "message": "Emergency escalation submitted"
+    },
+    {
+        "timestamp": "2026-05-14 10:00:02",
+        "operator": "Operator-B",
+        "type": "ESCALATION",
+        "message": "Duplicate escalation submitted"
+    },
+    {
+        "timestamp": "2026-05-14 10:00:04",
+        "operator": "Operator-C",
+        "type": "ACKNOWLEDGEMENT",
+        "message": "Acknowledgement accepted"
+    },
+    {
+        "timestamp": "2026-05-14 10:00:05",
+        "operator": "Operator-D",
+        "type": "ACKNOWLEDGEMENT",
+        "message": "Conflicting acknowledgement received"
+    },
+    {
+        "timestamp": "2026-05-14 10:00:07",
+        "operator": "Operator-E",
+        "type": "SESSION",
+        "message": "Stale operator session detected"
+    },
+    {
+        "timestamp": "2026-05-14 10:00:10",
+        "operator": "Operator-F",
+        "type": "DISCONNECT",
+        "message": "Operator disconnected during update"
+    },
+    {
+        "timestamp": "2026-05-14 10:00:15",
+        "operator": "Operator-G",
+        "type": "DELAY",
+        "message": "Delayed governance update received"
+    },
+    {
+        "timestamp": "2026-05-14 10:00:20",
+        "operator": "Operator-H",
+        "type": "REPLAY",
+        "message": "Replay reconstruction triggered during active write"
+    }
+]

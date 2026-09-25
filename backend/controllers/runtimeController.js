@@ -1,0 +1,1 @@
+const moment = require("moment"); const getRuntimeStatus = async (req, res) => { res.json({ status: "ACTIVE", timestamp: moment().format("YYYY-MM-DD HH:mm:ss"), activeOperators: 12, escalations: 8, telemetrySignals: 164 }); }; module.exports = { getRuntimeStatus };

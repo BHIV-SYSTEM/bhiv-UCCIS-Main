@@ -1,0 +1,221 @@
+.ais-module-panel {
+  margin: 0 0 20px;
+  padding: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.20);
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(12, 29, 48, 0.98), rgba(7, 18, 32, 0.98));
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.ais-module-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.ais-module-eyebrow {
+  color: #38bdf8;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.ais-module-header h3 {
+  margin: 5px 0 4px;
+  color: #f8fafc;
+  font-size: 19px;
+}
+
+.ais-module-header p {
+  margin: 0;
+  color: #7186a0;
+  font-size: 11px;
+}
+
+.ais-module-header p strong {
+  color: #a9bfd7;
+}
+
+.ais-module-live {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  border-radius: 999px;
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.07);
+  font-size: 9px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.ais-module-live span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 9px #4ade80;
+}
+
+.ais-module-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.ais-module-kpis > div {
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.10);
+  border-radius: 9px;
+  background: rgba(15, 31, 50, 0.72);
+}
+
+.ais-module-kpis span {
+  display: block;
+  color: #61758e;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .7px;
+}
+
+.ais-module-kpis strong {
+  display: block;
+  margin-top: 5px;
+  color: #eaf4ff;
+  font-size: 18px;
+}
+
+.ais-module-kpis small {
+  color: #7186a0;
+  font-size: 9px;
+}
+
+.ais-module-data {
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.10);
+  border-radius: 10px;
+  background: rgba(4, 14, 27, 0.55);
+}
+
+.ais-module-data-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.ais-module-data-head strong {
+  display: block;
+  color: #dbeafe;
+  font-size: 11px;
+}
+
+.ais-module-data-head span {
+  display: block;
+  margin-top: 2px;
+  color: #596e88;
+  font-size: 9px;
+}
+
+.ais-module-data-head button {
+  padding: 6px 9px;
+  border: 1px solid #29415d;
+  border-radius: 7px;
+  background: #0e2035;
+  color: #9dc8ed;
+  font-size: 9px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ais-module-data-head button:hover {
+  background: #153452;
+}
+
+.ais-module-data-head button:disabled {
+  opacity: .55;
+  cursor: wait;
+}
+
+.ais-module-table-wrap {
+  overflow-x: auto;
+}
+
+.ais-module-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.ais-module-table th {
+  padding: 8px 10px;
+  background: #0d1c30;
+  color: #607590;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .7px;
+  text-align: left;
+}
+
+.ais-module-table td {
+  padding: 8px 10px;
+  border-top: 1px solid rgba(148, 163, 184, 0.06);
+  color: #aebed1;
+  font-size: 9px;
+}
+
+.ais-module-table tbody tr:hover td {
+  background: rgba(56, 189, 248, 0.035);
+}
+
+.ais-vessel-type {
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 999px;
+  color: #67d3ff;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.ais-module-empty {
+  padding: 20px !important;
+  color: #61758e !important;
+  text-align: center;
+}
+
+.ais-module-error {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid rgba(248, 113, 113, .25);
+  border-radius: 9px;
+  background: rgba(127, 29, 29, .18);
+}
+
+.ais-module-error strong {
+  color: #fca5a5;
+  font-size: 11px;
+}
+
+.ais-module-error span {
+  color: #b98181;
+  font-size: 10px;
+}
+
+@media (max-width: 800px) {
+  .ais-module-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ais-module-header {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "telemetry_id": "TEL001",
+        "district": "Pune",
+        "status": "ACTIVE",
+        "health_score": 91,
+        "latency": 120
+    },
+    {
+        "telemetry_id": "TEL002",
+        "district": "Mumbai",
+        "status": "DEGRADED",
+        "health_score": 62,
+        "latency": 480
+    }
+]

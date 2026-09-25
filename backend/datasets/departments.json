@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "department": "Traffic Management",
+        "head": "Regional Traffic Controller",
+        "district": "Pune"
+    },
+    {
+        "id": 2,
+        "department": "Disaster Response",
+        "head": "Emergency Operations Officer",
+        "district": "Mumbai"
+    },
+    {
+        "id": 3,
+        "department": "Waste Management",
+        "head": "Municipal Operations Lead",
+        "district": "Nagpur"
+    },
+    {
+        "id": 4,
+        "department": "Water Resources",
+        "head": "Hydrology Coordinator",
+        "district": "Nashik"
+    }
+]

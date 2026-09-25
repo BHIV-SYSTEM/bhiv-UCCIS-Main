@@ -1,0 +1,1 @@
+const RuntimeTicker = () => { return ( <div className="runtime-ticker"> <marquee> LIVE • Pune Signal Escalation • Mumbai Traffic Spike • Nashik Telemetry Drift • Operator Escalation Triggered </marquee> </div> ); }; export default RuntimeTicker;

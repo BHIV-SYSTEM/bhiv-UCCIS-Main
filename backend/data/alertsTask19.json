@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Mumbai rainfall escalation detected",
+        "severity": "Critical",
+        "timestamp": "08:12"
+    },
+    {
+        "title": "Drainage overload in South Mumbai",
+        "severity": "Warning",
+        "timestamp": "08:24"
+    },
+    {
+        "title": "MMR utility instability observed",
+        "severity": "Moderate",
+        "timestamp": "08:41"
+    }
+]

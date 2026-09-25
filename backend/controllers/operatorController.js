@@ -1,0 +1,1 @@
+const operators = require("../database/mockData/operators.json"); const getOperators = async (req, res) => { res.json(operators); }; module.exports = { getOperators };

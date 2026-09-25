@@ -1,0 +1,661 @@
+/* =========================================================
+GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background: #020617;
+  font-family: "Inter", sans-serif;
+  color: white;
+  overflow-x: hidden; /* belt-and-braces: never let the page itself scroll sideways */
+}
+
+/* =========================================================
+LAYOUT
+========================================================= */
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #020617;
+  overflow-x: hidden; /* prevents the fixed sidebar from being "scrolled past" */
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 30px;
+  margin-left: 280px;
+  /* FIX: without an explicit width, this element could grow wider than the
+     viewport (long button labels, wide grids, etc.), which pushes the whole
+     page into horizontal scroll — and because the sidebar is `position:
+     fixed`, it stays put while this content slides left underneath it,
+     making the first column look "cut off". Locking the width to the
+     remaining space after the sidebar stops that from ever happening. */
+  width: calc(100% - 280px);
+  max-width: calc(100% - 280px);
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+SIDEBAR
+========================================================= */
+
+.sidebar {
+  width: 280px;
+  /* FIX: was `height: 100vh`, which always stretched the sidebar into one
+     big navy rectangle filling the whole screen height regardless of how
+     little content (logo + phase buttons) it actually held. `height: auto`
+     lets it size to its real content, while `max-height` + `overflow-y`
+     keep it safely scrollable on its own if the phase list ever grows
+     longer than the viewport. */
+  height: auto;
+  max-height: 100vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #0f172a, #111827);
+  border-right: 1px solid #1e293b;
+  padding: 30px 20px;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #38bdf8;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.phase-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #1e293b;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.phase-btn:hover {
+  background: #2563eb;
+  transform: translateX(5px);
+}
+
+.phase-btn.active {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+/* FIX: SidebarTask22.jsx actually renders a bare <h2>UCCIS</h2> and bare
+   <button> elements (with an "active-phase" class only when selected) —
+   none of which matched anything above (.sidebar-title / .sidebar-menu /
+   .phase-btn / .phase-btn.active are unused by this component). Without
+   these rules the buttons render as unstyled native <button> elements.
+   These target the real markup directly instead. */
+.sidebar h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #38bdf8;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 14px;
+  background: #1e293b;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background: #2563eb;
+  transform: translateX(5px);
+}
+
+.sidebar button.active-phase {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.top-header h1 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.top-header p {
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  border: none;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.refresh-btn:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+PHASE INFO
+========================================================= */
+
+.phase-info {
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 28px;
+  width: 100%;
+  min-width: 0;
+}
+
+.phase-info h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.phase-info p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* =========================================================
+BACKEND CARD
+========================================================= */
+
+.backend-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 30px;
+  width: 100%;
+  min-width: 0;
+}
+
+.backend-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.backend-header h2 {
+  font-size: 22px;
+}
+
+.backend-card pre {
+  background: #020617;
+  padding: 20px;
+  border-radius: 14px;
+  overflow-x: auto; /* long code/log lines scroll INSIDE the card, not the page */
+  color: #38bdf8;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* =========================================================
+RUNTIME STRIP
+========================================================= */
+
+.runtime-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.runtime-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid #334155;
+  transition: 0.3s;
+  min-width: 0; /* lets long labels wrap instead of forcing the grid wider */
+}
+
+.runtime-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.runtime-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  overflow-wrap: break-word;
+}
+
+.runtime-card p {
+  color: #38bdf8;
+  font-size: 20px;
+  font-weight: 700;
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+METRICS
+========================================================= */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.metric-card {
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border-radius: 18px;
+  border: 1px solid #334155;
+  padding: 30px;
+  transition: 0.3s;
+  min-width: 0;
+}
+
+.metric-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+}
+
+.metric-card h2 {
+  font-size: 40px;
+  margin: 18px 0 10px;
+  color: #38bdf8;
+  overflow-wrap: break-word;
+}
+
+.metric-card p {
+  color: #cbd5e1;
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+CHARTS
+========================================================= */
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.chart-card {
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border-radius: 20px;
+  border: 1px solid #334155;
+  padding: 24px;
+  min-width: 0;
+  overflow: hidden; /* keeps oversized chart canvases from blowing out the grid */
+}
+
+.chart-card h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* =========================================================
+SIMULATION PANEL
+========================================================= */
+
+.simulation-panel {
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border-radius: 22px;
+  border: 1px solid #334155;
+  padding: 28px;
+  margin-bottom: 30px;
+  width: 100%;
+  min-width: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.section-title h2 {
+  font-size: 24px;
+}
+
+.simulation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.scenario-btn {
+  border: none;
+  padding: 24px;
+  border-radius: 18px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.3s;
+  min-width: 0;
+  text-align: center;
+}
+
+.scenario-btn:hover {
+  transform: scale(1.04);
+}
+
+.flood {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+.traffic {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.waste {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+/* =========================================================
+TTG INFO
+========================================================= */
+
+.ttg-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.ttg-info-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 24px;
+  transition: 0.3s;
+  min-width: 0;
+}
+
+.ttg-info-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.ttg-info-card h3 {
+  margin-bottom: 14px;
+  font-size: 20px;
+  overflow-wrap: break-word;
+}
+
+.ttg-info-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+LOGS
+========================================================= */
+
+.logs-card {
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border-radius: 20px;
+  border: 1px solid #334155;
+  padding: 28px;
+  margin-bottom: 30px;
+  width: 100%;
+  min-width: 0;
+}
+
+.logs-card h2 {
+  margin-bottom: 20px;
+}
+
+.log-line {
+  background: #020617;
+  border-left: 4px solid #38bdf8;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  color: #cbd5e1;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.footer {
+  margin-top: 40px;
+  padding: 30px;
+  background: #0f172a;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
+  text-align: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  color: #94a3b8;
+}
+
+/* =========================================================
+TABLES
+========================================================= */
+
+.table-section {
+  background: linear-gradient(145deg, #111827, #1e293b);
+  border-radius: 20px;
+  border: 1px solid #334155;
+  padding: 24px;
+  margin-bottom: 30px;
+  width: 100%;
+  min-width: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* wide tables scroll INSIDE their own card, not the page */
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #1e293b;
+  padding: 16px;
+  text-align: left;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+table td {
+  padding: 16px;
+  border-top: 1px solid #334155;
+  color: #cbd5e1;
+}
+
+.status-badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ACTIVE {
+  background: #14532d;
+  color: #4ade80;
+}
+
+.DEGRADED {
+  background: #7f1d1d;
+  color: #f87171;
+}
+
+/* =========================================================
+ESCALATION
+========================================================= */
+
+.escalation-grid,
+.replay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.escalation-card,
+.replay-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 24px;
+  transition: 0.3s;
+  min-width: 0;
+}
+
+.escalation-card:hover,
+.replay-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.escalation-card h3,
+.replay-card h3 {
+  margin-bottom: 14px;
+  color: #38bdf8;
+  overflow-wrap: break-word;
+}
+
+.escalation-card p,
+.replay-card p {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .runtime-strip,
+  .metrics-grid,
+  .simulation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .top-header h1 {
+    font-size: 28px;
+  }
+}

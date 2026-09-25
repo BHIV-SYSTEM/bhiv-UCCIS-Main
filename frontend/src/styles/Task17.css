@@ -1,0 +1,2149 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #020817;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   ROOT LAYOUT
+   ========================================================= */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #020817;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+
+  background: linear-gradient(180deg, #03101f, #020817);
+
+  border-right: 1px solid rgba(0, 153, 255, 0.15);
+
+  padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+
+  overflow-y: auto;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+  color: #1ea7ff;
+
+  font-size: 44px;
+
+  font-weight: bold;
+
+  margin-bottom: 30px;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   SIDEBAR LINKS
+   ========================================================= */
+
+.sidebar a {
+  text-decoration: none;
+
+  color: white;
+
+  background: rgba(20, 33, 61, 0.7);
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  transition: 0.3s ease;
+
+  font-size: 17px;
+
+  border: 1px solid transparent;
+
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  background: rgba(0, 102, 255, 0.2);
+
+  border-color: rgba(0, 153, 255, 0.3);
+
+  transform: translateX(4px);
+
+  box-shadow: 0 0 18px rgba(0, 153, 255, 0.12);
+}
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.page-container {
+  flex: 1;
+
+  width: calc(100% - 260px);
+
+  padding: 30px;
+
+  overflow-y: auto;
+
+  background: #020817;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 52px;
+
+  margin: 0;
+
+  font-weight: bold;
+
+  color: white;
+}
+
+/* =========================================================
+   OLD STATUS STRIP
+   ========================================================= */
+
+.top-status-strip {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  flex-wrap: wrap;
+}
+
+.status-pill {
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  background: rgba(0, 102, 255, 0.12);
+
+  border: 1px solid rgba(0, 153, 255, 0.2);
+
+  color: #1ea7ff;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  backdrop-filter: blur(6px);
+}
+
+.warning-pill {
+  color: #ffcc00;
+
+  border-color: rgba(255, 204, 0, 0.3);
+
+  background: rgba(255, 204, 0, 0.08);
+}
+
+/* =========================================================
+   OLD EXECUTIVE GRID
+   ========================================================= */
+
+.executive-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.executive-card {
+  background: linear-gradient(
+    145deg,
+    rgba(5, 16, 38, 0.96),
+    rgba(3, 10, 28, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.18);
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  min-height: 170px;
+
+  transition: 0.3s ease;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 0 20px rgba(0, 153, 255, 0.08),
+    inset 0 0 12px rgba(255, 255, 255, 0.02);
+}
+
+.executive-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(0, 183, 255, 0.45);
+
+  box-shadow:
+    0 0 30px rgba(0, 183, 255, 0.18),
+    inset 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+.executive-card h4 {
+  color: #7d93b2;
+
+  font-size: 15px;
+
+  margin-bottom: 22px;
+
+  font-weight: 500;
+}
+
+.executive-card h1 {
+  color: #1ea7ff;
+
+  font-size: 44px;
+
+  margin-bottom: 16px;
+
+  font-weight: 700;
+}
+
+.executive-card span {
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+.positive {
+  color: #17d964;
+}
+
+.warning {
+  color: #ffcc00;
+}
+
+.danger {
+  color: #ff4d6d;
+}
+
+/* =========================================================
+   COMMON CARD
+   ========================================================= */
+
+.page-card {
+  background: linear-gradient(
+    145deg,
+    rgba(5, 16, 38, 0.96),
+    rgba(3, 10, 28, 0.98)
+  );
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  margin-bottom: 30px;
+
+  border: 1px solid rgba(0, 153, 255, 0.15);
+}
+
+.page-card h2 {
+  color: #1ea7ff;
+
+  margin-bottom: 18px;
+
+  font-size: 30px;
+}
+
+.page-card p {
+  color: #b7c7e3;
+
+  margin-bottom: 12px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CHART CARD
+   ========================================================= */
+
+.chart-card {
+  background: linear-gradient(
+    145deg,
+    rgba(5, 16, 38, 0.96),
+    rgba(3, 10, 28, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.18);
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  margin-bottom: 30px;
+}
+
+.chart-title {
+  font-size: 28px;
+
+  color: #1ea7ff;
+
+  margin-bottom: 20px;
+
+  font-weight: bold;
+}
+
+/* =========================================================
+   CUSTOM BAR CHART
+   ========================================================= */
+
+.custom-chart {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-around;
+
+  height: 320px;
+
+  padding: 20px;
+}
+
+.bar-wrapper {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.bar {
+  width: 60px;
+
+  background: linear-gradient(180deg, #1ea7ff, #0066ff);
+
+  border-radius: 12px 12px 0 0;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 0 20px rgba(0, 153, 255, 0.4);
+}
+
+.bar:hover {
+  transform: scaleY(1.05);
+}
+
+/* =========================================================
+   BACKEND RESPONSE
+   ========================================================= */
+
+.backend-response {
+  background: linear-gradient(145deg, #03101f, #020817);
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  margin-top: 30px;
+
+  border: 1px solid rgba(0, 153, 255, 0.15);
+}
+
+.backend-response h2 {
+  color: #1ea7ff;
+
+  margin-bottom: 18px;
+}
+
+.backend-response pre {
+  color: #17d964;
+
+  overflow-x: auto;
+
+  line-height: 1.8;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   LOG PANEL
+   ========================================================= */
+
+.log-panel {
+  background: linear-gradient(145deg, #03101f, #020817);
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  margin-top: 30px;
+
+  border: 1px solid rgba(0, 153, 255, 0.15);
+}
+
+.log-panel h3 {
+  color: #1ea7ff;
+
+  margin-bottom: 20px;
+
+  font-size: 26px;
+}
+
+.log-item {
+  background: rgba(255, 255, 255, 0.03);
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+
+  border-left: 4px solid #1ea7ff;
+
+  color: #dce7ff;
+}
+
+.warning-log {
+  border-left-color: #ffcc00;
+}
+
+.danger-log {
+  border-left-color: #ff4d6d;
+}
+
+.positive-log {
+  border-left-color: #17d964;
+}
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.map-container {
+  background: linear-gradient(
+    145deg,
+    rgba(5, 16, 38, 0.96),
+    rgba(3, 10, 28, 0.98)
+  );
+
+  border-radius: 20px;
+
+  padding: 22px;
+
+  border: 1px solid rgba(0, 153, 255, 0.18);
+
+  margin-top: 30px;
+}
+
+.map-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.map-header h2 {
+  font-size: 42px;
+
+  color: #1ea7ff;
+}
+
+.live-indicator {
+  color: #00ff88;
+
+  font-size: 16px;
+
+  font-weight: bold;
+}
+
+.map-image {
+  width: 100%;
+
+  height: 520px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(0, 153, 255, 0.15);
+}
+
+/* =========================================================
+   =========================================================
+   NEW EXECUTIVE OVERVIEW
+   PRINCIPAL SECRETARY DASHBOARD
+   =========================================================
+   ========================================================= */
+
+/* =========================================================
+   MAIN EXECUTIVE PAGE
+   ========================================================= */
+
+.executive-overview-page {
+  width: 100%;
+
+  min-height: 100%;
+
+  padding-bottom: 40px;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   GOVERNANCE TITLE
+   ========================================================= */
+
+.governance-title-section {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 22px 0;
+
+  padding: 24px 26px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(5, 19, 43, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.2);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 25px rgba(0, 153, 255, 0.07),
+    inset 0 0 20px rgba(0, 153, 255, 0.025);
+}
+
+.governance-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #6f8eae;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.governance-title-section h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+.governance-title-section p {
+  margin: 8px 0 0;
+
+  color: #8da4bf;
+
+  font-size: 13px;
+}
+
+.governance-live-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 14px;
+
+  border-radius: 20px;
+
+  background: rgba(0, 255, 136, 0.08);
+
+  border: 1px solid rgba(0, 255, 136, 0.18);
+
+  color: #00ff88;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.live-dot {
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #00ff88;
+
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.8);
+}
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.executive-section {
+  margin-top: 24px;
+}
+
+.executive-section-title {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.executive-section-title > div > span {
+  display: block;
+
+  color: #65809d;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  margin-bottom: 5px;
+}
+
+.executive-section-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   SYSTEM METRIC CARDS
+   ========================================================= */
+
+.executive-metric-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.executive-metric-card {
+  position: relative;
+
+  min-height: 170px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 42, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.18);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 22px rgba(0, 153, 255, 0.07),
+    inset 0 0 18px rgba(255, 255, 255, 0.015);
+
+  transition: 0.3s ease;
+}
+
+.executive-metric-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 4px;
+
+  height: 100%;
+}
+
+.executive-metric-card.success::before {
+  background: #00ff88;
+
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.35);
+}
+
+.executive-metric-card.blue::before {
+  background: #1ea7ff;
+
+  box-shadow: 0 0 12px rgba(30, 167, 255, 0.35);
+}
+
+.executive-metric-card.purple::before {
+  background: #a56cff;
+
+  box-shadow: 0 0 12px rgba(165, 108, 255, 0.35);
+}
+
+.executive-metric-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(30, 167, 255, 0.4);
+
+  box-shadow:
+    0 0 30px rgba(0, 153, 255, 0.14),
+    inset 0 0 18px rgba(255, 255, 255, 0.025);
+}
+
+.metric-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.metric-icon {
+  width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(30, 167, 255, 0.09);
+
+  border: 1px solid rgba(30, 167, 255, 0.14);
+
+  border-radius: 9px;
+
+  color: #1ea7ff;
+
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+.metric-header span {
+  color: #7891ad;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.9px;
+
+  text-transform: uppercase;
+}
+
+.executive-metric-card h2 {
+  margin: 20px 0 6px;
+
+  color: #1ea7ff;
+
+  font-size: 36px;
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+.executive-metric-card.success h2 {
+  color: #00ff88;
+}
+
+.executive-metric-card.purple h2 {
+  color: #b28aff;
+}
+
+.executive-metric-card p {
+  margin: 0;
+
+  color: #8da4bf;
+
+  font-size: 12px;
+}
+
+.metric-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 15px;
+
+  color: #00d978;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+}
+
+.metric-status span {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #00ff88;
+
+  box-shadow: 0 0 7px rgba(0, 255, 136, 0.65);
+}
+
+/* =========================================================
+   STATE GOVERNANCE SNAPSHOT
+   ========================================================= */
+
+.snapshot-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.snapshot-card {
+  display: flex;
+
+  gap: 14px;
+
+  min-height: 165px;
+
+  padding: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 42, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.16);
+
+  border-radius: 17px;
+
+  transition: 0.3s ease;
+}
+
+.snapshot-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(30, 167, 255, 0.35);
+
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.1);
+}
+
+.snapshot-icon {
+  width: 38px;
+
+  height: 38px;
+
+  min-width: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(30, 167, 255, 0.08);
+
+  border: 1px solid rgba(30, 167, 255, 0.14);
+
+  color: #1ea7ff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.snapshot-details {
+  min-width: 0;
+}
+
+.snapshot-title {
+  color: #7790ad;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+.snapshot-details h2 {
+  margin: 17px 0 5px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  line-height: 1.1;
+}
+
+.snapshot-details p {
+  margin: 0;
+
+  color: #839bb5;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   URBAN INTELLIGENCE MONITOR
+   ========================================================= */
+
+.intelligence-monitor-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(300px, 1fr);
+
+  gap: 18px;
+}
+
+.intelligence-map-card {
+  position: relative;
+
+  height: 360px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at center, rgba(0, 102, 255, 0.12), transparent 45%),
+    #030f20;
+
+  border: 1px solid rgba(0, 153, 255, 0.18);
+
+  border-radius: 18px;
+
+  box-shadow: inset 0 0 30px rgba(0, 102, 255, 0.04);
+}
+
+.intelligence-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.45;
+
+  background-image:
+    linear-gradient(rgba(30, 167, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 167, 255, 0.1) 1px, transparent 1px);
+
+  background-size: 38px 38px;
+}
+
+/* =========================================================
+   MONITOR CENTER
+   ========================================================= */
+
+.monitor-center {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 180px;
+
+  height: 180px;
+
+  transform: translate(-50%, -50%);
+}
+
+.monitor-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(30, 167, 255, 0.35);
+
+  box-shadow: 0 0 18px rgba(30, 167, 255, 0.08);
+}
+
+.ring-one {
+  inset: 0;
+
+  animation: monitorRotate 15s linear infinite;
+}
+
+.ring-two {
+  inset: 30px;
+
+  border-color: rgba(0, 255, 136, 0.3);
+
+  animation: monitorRotateReverse 10s linear infinite;
+}
+
+.monitor-core {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 82px;
+
+  height: 82px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 102, 255, 0.18),
+    rgba(3, 14, 31, 0.98)
+  );
+
+  border: 2px solid #1ea7ff;
+
+  box-shadow:
+    0 0 25px rgba(30, 167, 255, 0.25),
+    inset 0 0 18px rgba(30, 167, 255, 0.1);
+}
+
+.monitor-core strong {
+  color: #1ea7ff;
+
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+.monitor-core span {
+  margin-top: 5px;
+
+  color: #7f98b3;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+/* =========================================================
+   MONITOR NODES
+   ========================================================= */
+
+.monitor-node {
+  position: absolute;
+
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #1ea7ff;
+
+  box-shadow:
+    0 0 0 5px rgba(30, 167, 255, 0.09),
+    0 0 15px rgba(30, 167, 255, 0.7);
+
+  animation: nodePulse 2s ease-in-out infinite;
+}
+
+.node-one {
+  top: 16%;
+  left: 18%;
+}
+
+.node-two {
+  top: 22%;
+  right: 18%;
+}
+
+.node-three {
+  top: 48%;
+  left: 8%;
+}
+
+.node-four {
+  top: 53%;
+  right: 8%;
+}
+
+.node-five {
+  bottom: 16%;
+  left: 24%;
+}
+
+.node-six {
+  bottom: 18%;
+  right: 24%;
+}
+
+/* =========================================================
+   MONITOR LOCATION LABELS
+   ========================================================= */
+
+.monitor-location {
+  position: absolute;
+
+  padding: 5px 9px;
+
+  background: rgba(2, 12, 28, 0.85);
+
+  border: 1px solid rgba(30, 167, 255, 0.2);
+
+  border-radius: 5px;
+
+  color: #7290ad;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.location-one {
+  top: 11%;
+  left: 9%;
+}
+
+.location-two {
+  top: 17%;
+  right: 9%;
+}
+
+.location-three {
+  bottom: 18%;
+  left: 9%;
+}
+
+.location-four {
+  bottom: 13%;
+  right: 9%;
+}
+
+/* =========================================================
+   MONITOR OVERLAY
+   ========================================================= */
+
+.monitor-overlay {
+  position: absolute;
+
+  left: 18px;
+
+  right: 18px;
+
+  bottom: 15px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 11px 15px;
+
+  background: rgba(2, 12, 27, 0.92);
+
+  border: 1px solid rgba(30, 167, 255, 0.15);
+
+  border-radius: 9px;
+
+  backdrop-filter: blur(8px);
+}
+
+.monitor-overlay span {
+  display: block;
+
+  color: #6f89a4;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+.monitor-overlay strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #00ff88;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   MONITOR INFORMATION CARD
+   ========================================================= */
+
+.monitor-info-card {
+  padding: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 42, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.17);
+
+  border-radius: 18px;
+}
+
+.monitor-info-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.small-icon {
+  width: 36px;
+
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(30, 167, 255, 0.08);
+
+  border: 1px solid rgba(30, 167, 255, 0.15);
+
+  color: #1ea7ff;
+
+  font-size: 16px;
+}
+
+.monitor-info-header span {
+  display: block;
+
+  color: #7089a5;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.monitor-info-header h2 {
+  margin: 5px 0 0;
+
+  color: #ffffff;
+
+  font-size: 22px;
+}
+
+.monitor-info-card > p {
+  margin: 13px 0 18px;
+
+  color: #839ab4;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.monitor-stat-line {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.monitor-stat-line span {
+  color: #728ba6;
+
+  font-size: 10px;
+}
+
+.monitor-stat-line strong {
+  color: #1ea7ff;
+
+  font-size: 11px;
+}
+
+.monitor-progress {
+  height: 6px;
+
+  margin-top: 8px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.monitor-progress-fill {
+  height: 100%;
+
+  background: linear-gradient(90deg, #00b86b, #00ff88);
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.monitor-progress-fill.blue {
+  background: linear-gradient(90deg, #0066ff, #1ea7ff);
+
+  box-shadow: 0 0 10px rgba(30, 167, 255, 0.3);
+}
+
+.monitor-divider {
+  height: 1px;
+
+  margin: 24px 0;
+
+  background: rgba(0, 153, 255, 0.12);
+}
+
+.monitor-live {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 11px;
+
+  background: rgba(0, 255, 136, 0.07);
+
+  border: 1px solid rgba(0, 255, 136, 0.12);
+
+  border-radius: 15px;
+
+  color: #00ff88;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.monitor-live span {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #00ff88;
+
+  box-shadow: 0 0 7px rgba(0, 255, 136, 0.7);
+}
+
+/* =========================================================
+   STRATEGIC GOVERNANCE FOCUS
+   ========================================================= */
+
+.focus-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.focus-card {
+  padding: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 42, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.16);
+
+  border-radius: 17px;
+
+  transition: 0.3s ease;
+}
+
+.focus-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(30, 167, 255, 0.35);
+
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.1);
+}
+
+.focus-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.focus-icon {
+  width: 36px;
+
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(30, 167, 255, 0.08);
+
+  border: 1px solid rgba(30, 167, 255, 0.13);
+
+  border-radius: 9px;
+
+  color: #1ea7ff;
+
+  font-size: 15px;
+}
+
+.focus-title {
+  flex: 1;
+}
+
+.focus-title strong {
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.focus-value {
+  color: #1ea7ff;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.focus-progress {
+  height: 7px;
+
+  margin: 16px 0 11px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.focus-progress-fill {
+  height: 100%;
+
+  background: linear-gradient(90deg, #0066ff, #1ea7ff);
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(30, 167, 255, 0.25);
+}
+
+.focus-card p {
+  margin: 0;
+
+  color: #8299b3;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   GOVERNANCE PERFORMANCE ANALYTICS
+   ========================================================= */
+
+.performance-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.performance-card {
+  padding: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 42, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.16);
+
+  border-radius: 17px;
+}
+
+.performance-card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.performance-card-header span {
+  color: #738ba5;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.performance-card-header strong {
+  color: #1ea7ff;
+
+  font-size: 17px;
+}
+
+.performance-bar {
+  height: 8px;
+
+  margin: 17px 0 11px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.performance-fill {
+  height: 100%;
+
+  background: linear-gradient(90deg, #00a966, #00ff88);
+
+  border-radius: 10px;
+}
+
+.performance-fill.blue {
+  background: linear-gradient(90deg, #0066ff, #1ea7ff);
+}
+
+.performance-fill.purple {
+  background: linear-gradient(90deg, #7544d7, #b28aff);
+}
+
+.performance-card p {
+  margin: 0;
+
+  color: #8299b3;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CITIZEN EXPERIENCE
+   ========================================================= */
+
+.citizen-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.citizen-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 42, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.16);
+
+  border-radius: 17px;
+}
+
+.citizen-icon {
+  width: 46px;
+
+  height: 46px;
+
+  min-width: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(0, 255, 136, 0.08);
+
+  border: 1px solid rgba(0, 255, 136, 0.14);
+
+  color: #00ff88;
+
+  font-size: 19px;
+}
+
+.citizen-icon.blue {
+  background: rgba(30, 167, 255, 0.08);
+
+  border-color: rgba(30, 167, 255, 0.14);
+
+  color: #1ea7ff;
+}
+
+.citizen-card span {
+  display: block;
+
+  color: #7189a3;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.citizen-card h2 {
+  margin: 7px 0 4px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+}
+
+.citizen-card p {
+  margin: 0;
+
+  color: #8299b3;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   GOVERNANCE MILESTONES
+   ========================================================= */
+
+.calendar-button {
+  padding: 8px 14px;
+
+  background: rgba(30, 167, 255, 0.08);
+
+  border: 1px solid rgba(30, 167, 255, 0.2);
+
+  border-radius: 7px;
+
+  color: #1ea7ff;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.calendar-button:hover {
+  background: rgba(30, 167, 255, 0.15);
+
+  border-color: rgba(30, 167, 255, 0.35);
+}
+
+.milestone-list {
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 42, 0.98),
+    rgba(3, 11, 29, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.16);
+
+  border-radius: 17px;
+
+  overflow: hidden;
+}
+
+.milestone-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid rgba(0, 153, 255, 0.09);
+
+  transition: 0.25s ease;
+}
+
+.milestone-card:last-child {
+  border-bottom: none;
+}
+
+.milestone-card:hover {
+  background: rgba(30, 167, 255, 0.025);
+}
+
+.milestone-icon {
+  width: 36px;
+
+  height: 36px;
+
+  min-width: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(30, 167, 255, 0.08);
+
+  border: 1px solid rgba(30, 167, 255, 0.13);
+
+  border-radius: 9px;
+
+  color: #1ea7ff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.milestone-content {
+  flex: 1;
+}
+
+.milestone-content h3 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.milestone-content p {
+  margin: 0;
+
+  color: #8198b2;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+.milestone-status {
+  padding: 6px 10px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+}
+
+.milestone-status.completed {
+  background: rgba(0, 255, 136, 0.08);
+
+  border: 1px solid rgba(0, 255, 136, 0.14);
+
+  color: #00ff88;
+}
+
+.milestone-status.scheduled {
+  background: rgba(255, 204, 0, 0.08);
+
+  border: 1px solid rgba(255, 204, 0, 0.14);
+
+  color: #ffcc00;
+}
+
+.milestone-status.progress {
+  background: rgba(30, 167, 255, 0.08);
+
+  border: 1px solid rgba(30, 167, 255, 0.14);
+
+  color: #1ea7ff;
+}
+
+.milestone-status.upcoming {
+  background: rgba(165, 108, 255, 0.08);
+
+  border: 1px solid rgba(165, 108, 255, 0.14);
+
+  color: #b28aff;
+}
+
+/* =========================================================
+   EXECUTIVE FOOTER
+   ========================================================= */
+
+.executive-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 24px;
+
+  padding: 18px 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(4, 15, 33, 0.98),
+    rgba(2, 8, 22, 0.98)
+  );
+
+  border: 1px solid rgba(0, 153, 255, 0.12);
+
+  border-radius: 12px;
+}
+
+.executive-footer strong {
+  display: block;
+
+  color: #69839e;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+.executive-footer span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #506982;
+
+  font-size: 9px;
+}
+
+.footer-live {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #00ff88 !important;
+
+  font-size: 9px !important;
+
+  font-weight: 700;
+}
+
+.footer-live span {
+  width: 7px;
+
+  height: 7px;
+
+  margin: 0;
+
+  border-radius: 50%;
+
+  background: #00ff88;
+
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.7);
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes monitorRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes monitorRotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes nodePulse {
+  0%,
+  100% {
+    opacity: 0.7;
+
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.25);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 1200px) {
+  .snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .executive-metric-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .intelligence-monitor-grid {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    width: 90px;
+
+    min-width: 90px;
+
+    padding: 20px 12px;
+  }
+
+  .sidebar a {
+    font-size: 11px;
+
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+
+    letter-spacing: 1px;
+  }
+
+  .page-container {
+    width: calc(100% - 90px);
+
+    padding: 22px;
+  }
+
+  .page-title {
+    font-size: 34px;
+  }
+
+  .executive-card h1 {
+    font-size: 34px;
+  }
+
+  .map-header h2 {
+    font-size: 28px;
+  }
+
+  .custom-chart {
+    height: 220px;
+  }
+
+  .bar {
+    width: 35px;
+  }
+
+  .intelligence-monitor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .executive-metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .citizen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .governance-title-section {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .executive-section-title {
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .monitor-overlay {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .executive-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-container {
+    width: 100%;
+
+    padding: 15px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .governance-title-section {
+    padding: 18px;
+  }
+
+  .governance-title-section h1 {
+    font-size: 22px;
+  }
+
+  .executive-metric-card h2 {
+    font-size: 30px;
+  }
+
+  .intelligence-map-card {
+    height: 300px;
+  }
+
+  .milestone-card {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+}

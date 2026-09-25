@@ -1,0 +1,573 @@
+/* =========================================================
+   UCCIS TASK 38
+   GLOBAL THEME
+========================================================= */
+
+:root {
+  --bg: #0f172a;
+  --panel: #111c33;
+  --card: #16223d;
+  --card-hover: #1b2a4a;
+
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+
+  --green: #22c55e;
+  --red: #ef4444;
+  --orange: #f59e0b;
+  --blue: #3b82f6;
+
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+  --glow: 0 0 0 1px rgba(59, 130, 246, 0.15);
+
+  --border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   TASK 38 MAIN LAYOUT
+========================================================= */
+
+.task38-layout {
+  display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+  width: 230px;
+  min-width: 230px;
+
+  height: 100vh;
+
+  background: var(--panel);
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  box-shadow: var(--shadow);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+
+  position: sticky;
+  top: 0;
+}
+
+/* Sidebar title */
+
+.sidebar h2 {
+  margin-bottom: 12px;
+
+  color: var(--blue);
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar links */
+
+.sidebar a {
+  text-decoration: none;
+
+  color: var(--muted);
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+
+  position: relative;
+
+  display: block;
+}
+
+/* Hover */
+
+.sidebar a:hover {
+  background: var(--card);
+
+  color: var(--text);
+
+  transform: translateX(3px);
+}
+
+/* Active */
+
+.sidebar a.active {
+  background: rgba(59, 130, 246, 0.15);
+
+  color: var(--text);
+
+  border-left: 3px solid var(--blue);
+}
+
+/* =========================================================
+   TASK 38 MAIN CONTENT
+========================================================= */
+
+.task38-main {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100vh;
+
+  padding: 18px;
+
+  overflow-y: auto;
+
+  scroll-behavior: smooth;
+
+  background: var(--bg);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  width: 100%;
+
+  min-height: 78px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: var(--panel);
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  margin-bottom: 18px;
+
+  box-shadow: var(--shadow);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================================
+   UCCIS DASHBOARD TITLE
+========================================================= */
+
+.header-left {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 4px;
+}
+
+.uccis-dashboard-title {
+  color: var(--text);
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.2px;
+}
+
+.uccis-dashboard-subtitle {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   HEADER STATUS
+========================================================= */
+
+.header-right {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+.status-indicator {
+  width: 8px;
+
+  height: 8px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: var(--green);
+
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.65);
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search {
+  width: 320px;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  outline: none;
+
+  background: var(--card);
+
+  color: var(--text);
+
+  transition: 0.2s;
+}
+
+.search::placeholder {
+  color: var(--muted);
+}
+
+.search:focus {
+  border-color: var(--blue);
+
+  box-shadow: var(--glow);
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+  background: var(--card);
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+
+  transition: 0.25s ease;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  background: var(--card-hover);
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+
+  grid-template-columns: 140px 1fr 120px 120px;
+
+  background: var(--card);
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.03);
+
+  transition: 0.2s;
+}
+
+.row:hover {
+  background: var(--card-hover);
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  display: inline-block;
+}
+
+.badge.green {
+  background: rgba(34, 197, 94, 0.15);
+
+  color: var(--green);
+}
+
+.badge.red {
+  background: rgba(239, 68, 68, 0.15);
+
+  color: var(--red);
+}
+
+.badge.orange {
+  background: rgba(245, 158, 11, 0.15);
+
+  color: var(--orange);
+}
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.loader {
+  color: var(--muted);
+
+  padding: 20px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+  background: var(--blue);
+
+  border: none;
+
+  padding: 9px 14px;
+
+  color: white;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-weight: 500;
+}
+
+button:hover {
+  opacity: 0.9;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CHART BOX
+========================================================= */
+
+.chart-box {
+  background: var(--card);
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  box-shadow: var(--shadow);
+
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* =========================================================
+   RECHARTS
+========================================================= */
+
+.recharts-wrapper {
+  margin-top: 10px;
+}
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.page-title {
+  color: var(--text);
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  margin-bottom: 14px;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+  color: var(--text);
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   MUTED TEXT
+========================================================= */
+
+.muted {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+
+    min-width: 180px;
+  }
+
+  .search {
+    width: 180px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .task38-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+
+    min-width: 100%;
+
+    height: auto;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+  }
+
+  .sidebar h2 {
+    width: 100%;
+  }
+
+  .task38-main {
+    width: 100%;
+
+    height: auto;
+
+    padding: 12px;
+  }
+
+  .header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .header-right {
+    align-self: flex-start;
+  }
+}

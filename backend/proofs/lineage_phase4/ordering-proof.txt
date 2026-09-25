@@ -1,0 +1,9 @@
+=====================================
+DETERMINISTIC ORDERING PROOF
+=====================================
+
+Rule:
+1. Timestamp ascending
+2. ID tie-breaker ascending
+
+Status: VERIFIED

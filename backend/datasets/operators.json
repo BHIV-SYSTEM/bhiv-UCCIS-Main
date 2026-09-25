@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Operator A",
+        "role": "District Controller",
+        "shift": "Morning"
+    },
+    {
+        "id": 2,
+        "name": "Operator B",
+        "role": "Telemetry Analyst",
+        "shift": "Evening"
+    },
+    {
+        "id": 3,
+        "name": "Operator C",
+        "role": "Incident Commander",
+        "shift": "Night"
+    }
+]

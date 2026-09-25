@@ -1,0 +1,35 @@
+[
+    {
+        "zone_id": 1,
+        "zone_name": "Zone 1",
+        "traffic": 70,
+        "violations": 5,
+        "history": [
+            60,
+            65,
+            70
+        ]
+    },
+    {
+        "zone_id": 2,
+        "zone_name": "Zone 2",
+        "traffic": 40,
+        "violations": 2,
+        "history": [
+            30,
+            35,
+            40
+        ]
+    },
+    {
+        "zone_id": 3,
+        "zone_name": "Zone 3",
+        "traffic": 90,
+        "violations": 10,
+        "history": [
+            80,
+            85,
+            90
+        ]
+    }
+]

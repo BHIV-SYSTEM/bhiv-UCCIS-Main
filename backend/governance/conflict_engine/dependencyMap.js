@@ -1,0 +1,18 @@
+const DEPENDENCY_MAP = {
+
+  FLOODING: [
+    "TRAFFIC",
+    "WASTE_OVERLOAD",
+    "CIVIC_COMPLAINTS"
+  ],
+
+  WATER_SHORTAGE: [
+    "CIVIC_COMPLAINTS"
+  ],
+
+  TRAFFIC: [
+    "CIVIC_COMPLAINTS"
+  ]
+};
+
+module.exports = DEPENDENCY_MAP;

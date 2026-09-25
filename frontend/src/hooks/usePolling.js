@@ -1,0 +1,1 @@
+import { useEffect } from "react"; const usePolling = (callback, delay) => { useEffect(() => { callback(); const interval = setInterval(() => { callback(); }, delay); return () => clearInterval(interval); }, []); }; export default usePolling;
