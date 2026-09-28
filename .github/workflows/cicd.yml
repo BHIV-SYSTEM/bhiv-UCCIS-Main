@@ -1,0 +1,353 @@
+name: UCCIS Production Infrastructure CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate production deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set GitHub SHA
+        run: echo "short_sha=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
+      - name: Generate Compose file for validation
+        run: |
+          sed "s|IMG_TAG|$short_sha|g" docker-compose.production.template.yml > docker-compose.production.yml
+
+      - name: Create stub .env for compose validation
+        run: |
+          # Docker Compose config requires the referenced env_files to exist to validate schema
+          mkdir -p backend frontend
+          touch backend/.env frontend/.env
+
+      - name: Validate Docker Compose files
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI || secrets.MONGODB_URI }}
+        run: |
+          docker compose -f docker-compose.production.yml config
+
+      - name: Upload deployment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-artifacts
+          path: |
+            docker-compose.production.template.yml
+
+  build:
+    name: Build production images
+    runs-on: ubuntu-latest
+    needs: validate
+    outputs:
+      sha_short: ${{ steps.vars.outputs.sha_short }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set short git commit SHA
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short=7 HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push uccis-backend image
+        run: |
+          docker buildx build --push \
+            --tag bhiv/uccis-backend:${{ steps.vars.outputs.sha_short }} \
+            --tag bhiv/uccis-backend:latest \
+            -f backend/Dockerfile backend
+
+      - name: Build and push uccis-frontend image
+        run: |
+          REACT_APP_API_URL="${{ secrets.REACT_APP_API_URL }}"
+          if [ -z "$REACT_APP_API_URL" ]; then
+            REACT_APP_API_URL="https://uccis-backend.onrender.com"
+          fi
+          docker buildx build --push \
+            --tag bhiv/uccis-frontend:${{ steps.vars.outputs.sha_short }} \
+            --tag bhiv/uccis-frontend:latest \
+            --build-arg REACT_APP_API_URL="$REACT_APP_API_URL" \
+            -f frontend/Dockerfile frontend
+
+  deploy:
+    name: Deploy to remote production VM via SSH
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download deployment artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: deployment-artifacts
+
+      - name: Create env files from secrets
+        run: |
+          mkdir -p backend frontend
+          cat <<'EOF' > backend/.env
+          ${{ secrets.UCCIS_BACKEND_ENV_FILE || secrets.BACKEND_ENV_FILE }}
+          EOF
+          cat <<'EOF' > frontend/.env
+          ${{ secrets.UCCIS_FRONTEND_ENV_FILE || secrets.FRONTEND_ENV_FILE }}
+          EOF
+
+      - name: Tar deployment files
+        run: |
+          tar -czf deployment.tar.gz docker-compose.production.template.yml backend frontend
+
+      - name: Install sshpass
+        run: |
+          sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Create UCCIS directory on VM
+        run: |
+          sshpass -p "${{ secrets.VM_PASSWORD }}" ssh -p ${{ secrets.VM_PORT }} -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_IP }} "mkdir -p ~/UCCIS"
+
+      - name: Copy deployment tarball to VM
+        run: |
+          sshpass -p "${{ secrets.VM_PASSWORD }}" scp -P ${{ secrets.VM_PORT }} -o StrictHostKeyChecking=no deployment.tar.gz ${{ secrets.VM_USERNAME }}@${{ secrets.VM_IP }}:~/UCCIS/deployment.tar.gz
+
+      - name: Deploy production stack on VM
+        run: |
+          sshpass -p "${{ secrets.VM_PASSWORD }}" ssh -p ${{ secrets.VM_PORT }} -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_IP }} "bash -s" << 'EOF'
+            set -euo pipefail
+            cd ~/UCCIS
+            
+            # Clean directory first, preserving docs folder (Release History) and deployment tarball
+            find . -mindepth 1 ! -name docs ! -path './docs/*' ! -name deployment.tar.gz -exec rm -rf {} +
+            
+            # Extract deployment archive and clean up tarball
+            tar -xzf deployment.tar.gz
+            rm -f deployment.tar.gz
+            
+            # Confirm Docker availability
+            docker version
+            docker compose version
+            
+            # Log in to Docker Hub on the VM
+            echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+            
+            # Restore persistent Release History if present
+            mkdir -p docs
+            if [ -f /var/tmp/UCCIS/RELEASE_HISTORY.md ]; then
+              cp /var/tmp/UCCIS/RELEASE_HISTORY.md docs/RELEASE_HISTORY.md
+            fi
+            
+            # Generate target compose file from template with short SHA
+            sed "s|IMG_TAG|${{ needs.build.outputs.sha_short }}|g" docker-compose.production.template.yml > docker-compose.production.yml
+            
+            # Inject MongoDB URI
+            export MONGO_URI='${{ secrets.MONGO_URI || secrets.MONGODB_URI }}'
+            
+            # Validate compose config before deploy
+            docker compose -f docker-compose.production.yml config
+            
+            # Pull images
+            docker compose -f docker-compose.production.yml pull
+            
+            # Log out from Docker Hub
+            docker logout
+ 
+            # Create containers and volumes without starting them
+            docker compose -f docker-compose.production.yml create
+
+            # Fix SQLite volume permissions for nodejs user (UID 1001:GID 65533)
+            echo "Fixing SQLite volume permissions..."
+            chown -R 1001:65533 /var/lib/docker/volumes/uccis_uccis_sqlite_data/_data
+            chmod -R u+rwX /var/lib/docker/volumes/uccis_uccis_sqlite_data/_data
+
+            # Launch stack
+            docker compose -f docker-compose.production.yml up -d --remove-orphans
+            
+            # Verify deployment status
+            docker compose -f docker-compose.production.yml ps
+            
+            # Health Check loop (up to 12 iterations x 10s = 120s)
+            echo "Waiting for UCCIS services to be healthy..."
+            for i in {1..12}; do
+              if docker compose -f docker-compose.production.yml ps --filter "status=running" --filter "health=unhealthy" -q >/dev/null 2>&1; then
+                UNHEALTHY_COUNT=$(docker compose -f docker-compose.production.yml ps --filter "status=running" --filter "health=unhealthy" -q | wc -l)
+                STARTING_COUNT=$(docker compose -f docker-compose.production.yml ps --filter "status=running" --filter "health=starting" -q | wc -l)
+              else
+                UNHEALTHY_COUNT=0
+                STARTING_COUNT=0
+              fi
+              
+              # Backend Container & Port 5005 Health Check
+              BE_HEALTH=0
+              BE_STATUS=$(docker inspect --format='{{.State.Health.Status}}' uccis_backend 2>/dev/null || echo "missing")
+              if [ "$BE_STATUS" = "healthy" ] || curl -sf http://localhost:5005/api/health > /dev/null 2>&1; then
+                BE_HEALTH=1
+              fi
+
+              # Frontend Port 3010 Health Check
+              FE_HEALTH=0
+              if curl -sf http://localhost:3010 > /dev/null 2>&1; then
+                FE_HEALTH=1
+              fi
+              
+              if [ "$UNHEALTHY_COUNT" -eq 0 ] && [ "$STARTING_COUNT" -eq 0 ] && [ "$BE_HEALTH" -eq 1 ] && [ "$FE_HEALTH" -eq 1 ]; then
+                echo "All UCCIS containers, backend (5005), and frontend (3010) are healthy!"
+                break
+              fi
+              
+              if [ "$i" -eq 12 ]; then
+                echo "Health check failed after 120s!"
+                docker compose -f docker-compose.production.yml ps
+                docker compose -f docker-compose.production.yml logs --tail=100
+                exit 1
+              fi
+              
+              echo "Status: $STARTING_COUNT starting, $UNHEALTHY_COUNT unhealthy, backend=$BE_HEALTH, frontend=$FE_HEALTH. Retrying in 10s..."
+              sleep 10
+            done
+            
+            # Prune old images to conserve disk space
+            docker image prune -af --filter "until=168h"
+          EOF
+
+      - name: Update Release Documentation on Success
+        if: success()
+        run: |
+          sshpass -p "${{ secrets.VM_PASSWORD }}" ssh -p ${{ secrets.VM_PORT }} -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_IP }} "bash -s" << 'EOF'
+            set -euo pipefail
+            cd ~/UCCIS
+            if [ ! -f docs/RELEASE_HISTORY.md ]; then
+              mkdir -p docs
+              echo "# UCCIS Release History and Deployment Registry" > docs/RELEASE_HISTORY.md
+              echo "" >> docs/RELEASE_HISTORY.md
+              echo "| Timestamp | Image Tag (Git SHA) | Status | Description |" >> docs/RELEASE_HISTORY.md
+              echo "|---|---|---|---|" >> docs/RELEASE_HISTORY.md
+            fi
+            echo "| $(date -u +'%Y-%m-%d %H:%M:%S UTC') | ${{ needs.build.outputs.sha_short }} | SUCCESS | Stable deployment |" >> docs/RELEASE_HISTORY.md
+          EOF
+
+      - name: Save persistent Release History
+        if: always()
+        run: |
+          sshpass -p "${{ secrets.VM_PASSWORD }}" ssh -p ${{ secrets.VM_PORT }} -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_IP }} "bash -s" << 'EOF'
+            set -euo pipefail
+            cd ~/UCCIS
+            if [ -f docs/RELEASE_HISTORY.md ]; then
+              mkdir -p /var/tmp/UCCIS
+              cp docs/RELEASE_HISTORY.md /var/tmp/UCCIS/RELEASE_HISTORY.md
+            fi
+          EOF
+
+  rollback:
+    name: Rollback on deployment failure
+    needs: [build, deploy]
+    if: always() && needs.deploy.result == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install sshpass
+        run: |
+          sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Automatic Rollback on Failure
+        run: |
+          sshpass -p "${{ secrets.VM_PASSWORD }}" ssh -p ${{ secrets.VM_PORT }} -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_IP }} "bash -s" << 'EOF'
+            set -euo pipefail
+            cd ~/UCCIS
+            
+            # Robust parsing of Release History to extract last healthy SHA
+            if [ -f docs/RELEASE_HISTORY.md ] && grep -qE "SUCCESS|ROLLBACK_SUCCESS" docs/RELEASE_HISTORY.md; then
+              LAST_HEALTHY_TAG=$(grep -E "SUCCESS|ROLLBACK_SUCCESS" docs/RELEASE_HISTORY.md | tail -n 1 | awk -F '|' '{
+                for(i=1; i<=NF; i++) {
+                  gsub(/[[:space:]]/, "", $i);
+                  if ($i ~ /^[0-9a-f]{7}$/) {
+                    print $i;
+                    exit;
+                  }
+                }
+              }')
+              
+              if [ -z "$LAST_HEALTHY_TAG" ]; then
+                echo "⚠️ No last healthy tag extracted from Release History. Cannot perform automatic rollback."
+                exit 1
+              fi
+              
+              echo "🚨 Deployment failed! Rolling back to last healthy tag: $LAST_HEALTHY_TAG"
+              
+              sed "s|IMG_TAG|$LAST_HEALTHY_TAG|g" docker-compose.production.template.yml > docker-compose.production.yml
+              
+              export MONGO_URI='${{ secrets.MONGO_URI || secrets.MONGODB_URI }}'
+              
+              echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+              docker compose -f docker-compose.production.yml pull
+              docker logout
+              
+              docker compose -f docker-compose.production.yml up -d --remove-orphans
+              docker compose -f docker-compose.production.yml ps
+              
+              echo "Waiting for rollback services to be healthy..."
+              for i in {1..12}; do
+                if docker compose -f docker-compose.production.yml ps --filter "status=running" --filter "health=unhealthy" -q >/dev/null 2>&1; then
+                  UNHEALTHY_COUNT=$(docker compose -f docker-compose.production.yml ps --filter "status=running" --filter "health=unhealthy" -q | wc -l)
+                  STARTING_COUNT=$(docker compose -f docker-compose.production.yml ps --filter "status=running" --filter "health=starting" -q | wc -l)
+                else
+                  UNHEALTHY_COUNT=0
+                  STARTING_COUNT=0
+                fi
+                
+                BE_HEALTH=0
+                BE_STATUS=$(docker inspect --format='{{.State.Health.Status}}' uccis_backend 2>/dev/null || echo "missing")
+                if [ "$BE_STATUS" = "healthy" ] || curl -sf http://localhost:5005/api/health > /dev/null 2>&1; then
+                  BE_HEALTH=1
+                fi
+
+                FE_HEALTH=0
+                if curl -sf http://localhost:3010 > /dev/null 2>&1; then
+                  FE_HEALTH=1
+                fi
+                
+                if [ "$UNHEALTHY_COUNT" -eq 0 ] && [ "$STARTING_COUNT" -eq 0 ] && [ "$BE_HEALTH" -eq 1 ] && [ "$FE_HEALTH" -eq 1 ]; then
+                  echo "Rollback deployment is healthy!"
+                  echo "| $(date -u +'%Y-%m-%d %H:%M:%S UTC') | $LAST_HEALTHY_TAG | ROLLBACK_SUCCESS | Rollback from failed ${{ needs.build.outputs.sha_short }} is healthy |" >> docs/RELEASE_HISTORY.md
+                  exit 0
+                fi
+                
+                if [ "$i" -eq 12 ]; then
+                  echo "Rollback health check failed!"
+                  echo "| $(date -u +'%Y-%m-%d %H:%M:%S UTC') | $LAST_HEALTHY_TAG | ROLLBACK_FAILED | Rollback from failed ${{ needs.build.outputs.sha_short }} failed health check |" >> docs/RELEASE_HISTORY.md
+                  exit 1
+                fi
+                
+                echo "Status: $STARTING_COUNT starting, $UNHEALTHY_COUNT unhealthy, backend=$BE_HEALTH, frontend=$FE_HEALTH. Retrying in 10s..."
+                sleep 10
+              done
+            else
+              echo "⚠️ No last healthy tag found in Release History. Cannot perform automatic rollback."
+              if [ ! -f docs/RELEASE_HISTORY.md ]; then
+                mkdir -p docs
+                echo "# UCCIS Release History and Deployment Registry" > docs/RELEASE_HISTORY.md
+                echo "" >> docs/RELEASE_HISTORY.md
+                echo "| Timestamp | Image Tag (Git SHA) | Status | Description |" >> docs/RELEASE_HISTORY.md
+                echo "|---|---|---|---|" >> docs/RELEASE_HISTORY.md
+              fi
+              echo "| $(date -u +'%Y-%m-%d %H:%M:%S UTC') | ${{ needs.build.outputs.sha_short }} | FAILED | Deployment failed and no rollback tag was available |" >> docs/RELEASE_HISTORY.md
+              exit 1
+            fi
+          EOF
+
+      - name: Save persistent Release History
+        if: always()
+        run: |
+          sshpass -p "${{ secrets.VM_PASSWORD }}" ssh -p ${{ secrets.VM_PORT }} -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_IP }} "bash -s" << 'EOF'
+            set -euo pipefail
+            cd ~/UCCIS
+            if [ -f docs/RELEASE_HISTORY.md ]; then
+              mkdir -p /var/tmp/UCCIS
+              cp docs/RELEASE_HISTORY.md /var/tmp/UCCIS/RELEASE_HISTORY.md
+            fi
+          EOF
