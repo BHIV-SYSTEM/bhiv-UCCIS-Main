@@ -1166,7 +1166,7 @@ const ZoneIntelligenceDashboard = () => {
                   margin:
                     "0 0 12px 0",
                   color:
-                    "#000000",
+                    "#ffffff",
                   fontWeight:
                     "700",
                   fontSize:
