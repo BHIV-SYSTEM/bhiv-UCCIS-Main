@@ -1166,7 +1166,7 @@ const ZoneIntelligenceDashboard = () => {
                   margin:
                     "0 0 12px 0",
                   color:
-                    "#ffffff",
+                    "#000000",
                   fontWeight:
                     "700",
                   fontSize:
@@ -1218,7 +1218,7 @@ const ZoneIntelligenceDashboard = () => {
                               DECISION_COLORS[
                                 entry.name
                               ] ||
-                              "#94a3b8"
+                              "#ffffff"
                             }
                           />
                         )
