@@ -1,29 +1,29 @@
+import React from "react";
+
 import {
   PieChart,
   Pie,
   Cell,
   Tooltip,
   ResponsiveContainer,
-  Legend
+  Legend,
 } from "recharts";
 
 export default function FailurePieChart() {
-
   const data = [
     {
-      name: "Recovered",
-      value: 80
+      name: "Stationary",
+      value: 5724,
     },
-
     {
-      name: "Pending",
-      value: 20
-    }
+      name: "Moving",
+      value: 4276,
+    },
   ];
 
   const COLORS = [
     "#22c55e",
-    "#ef4444"
+    "#38bdf8",
   ];
 
   return (
@@ -50,7 +50,24 @@ export default function FailurePieChart() {
           ))}
         </Pie>
 
-        <Tooltip />
+        <Tooltip
+          contentStyle={{
+            background: "#102e56",
+            border: "1px solid #1b3f70",
+            borderRadius: "10px",
+            color: "#ffffff",
+          }}
+          labelStyle={{
+            color: "#ffffff",
+          }}
+          itemStyle={{
+            color: "#ffffff",
+          }}
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+        />
 
         <Legend
           verticalAlign="bottom"
@@ -59,7 +76,7 @@ export default function FailurePieChart() {
           wrapperStyle={{
             color: "#ffffff",
             fontSize: "13px",
-            fontWeight: "600"
+            fontWeight: "600",
           }}
         />
 
