@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   BarChart,
   Bar,
@@ -5,29 +7,36 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  Legend
+  Legend,
 } from "recharts";
 
 export default function OperatorConcurrencyChart() {
-
   const data = [
     {
-      operator: "OPERATOR_1",
-      acknowledgements: 12,
-      escalations: 8
+      time: "00:00",
+      moving: 1805,
+      stationary: 2424,
     },
-
     {
-      operator: "OPERATOR_2",
-      acknowledgements: 15,
-      escalations: 10
+      time: "00:01",
+      moving: 1667,
+      stationary: 2182,
     },
-
     {
-      operator: "OPERATOR_3",
-      acknowledgements: 9,
-      escalations: 6
-    }
+      time: "00:02",
+      moving: 647,
+      stationary: 916,
+    },
+    {
+      time: "00:03",
+      moving: 141,
+      stationary: 186,
+    },
+    {
+      time: "00:04",
+      moving: 16,
+      stationary: 16,
+    },
   ];
 
   return (
@@ -41,19 +50,19 @@ export default function OperatorConcurrencyChart() {
           top: 20,
           right: 20,
           left: 20,
-          bottom: 10
+          bottom: 10,
         }}
       >
 
         <XAxis
-          dataKey="operator"
+          dataKey="time"
           label={{
-            value: "Operator",
+            value: "AIS Time",
             position: "insideBottom",
             offset: -20,
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
@@ -64,24 +73,41 @@ export default function OperatorConcurrencyChart() {
             position: "outsideLeft",
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
-        <Tooltip />
+        <Tooltip
+          contentStyle={{
+            background: "#102e56",
+            border: "1px solid #1b3f70",
+            borderRadius: "10px",
+            color: "#ffffff",
+          }}
+          labelStyle={{
+            color: "#ffffff",
+          }}
+          itemStyle={{
+            color: "#ffffff",
+          }}
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+        />
 
         <Legend />
 
         <Bar
-          dataKey="acknowledgements"
-          name="Acknowledgements"
+          dataKey="moving"
+          name="Moving Vessels"
           fill="#38bdf8"
           radius={[5, 5, 0, 0]}
         />
 
         <Bar
-          dataKey="escalations"
-          name="Escalations"
+          dataKey="stationary"
+          name="Stationary Vessels"
           fill="#f59e0b"
           radius={[5, 5, 0, 0]}
         />
