@@ -1,34 +1,36 @@
+import React from "react";
+
 import {
   LineChart,
   Line,
   XAxis,
   YAxis,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
 export default function RecoveryLineChart() {
-
   const data = [
     {
-      recovery: "R1",
-      continuity: 40
+      recovery: "00:00",
+      continuity: 4229,
     },
-
     {
-      recovery: "R2",
-      continuity: 60
+      recovery: "00:01",
+      continuity: 3849,
     },
-
     {
-      recovery: "R3",
-      continuity: 80
+      recovery: "00:02",
+      continuity: 1563,
     },
-
     {
-      recovery: "R4",
-      continuity: 100
-    }
+      recovery: "00:03",
+      continuity: 327,
+    },
+    {
+      recovery: "00:04",
+      continuity: 32,
+    },
   ];
 
   return (
@@ -42,48 +44,64 @@ export default function RecoveryLineChart() {
           top: 20,
           right: 20,
           left: 20,
-          bottom: 40
+          bottom: 40,
         }}
       >
 
         <XAxis
           dataKey="recovery"
           label={{
-            value: "Recovery Stage",
+            value: "AIS Timeline",
             position: "insideBottom",
             offset: -20,
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
         <YAxis
-          domain={[0, 100]}
-          ticks={[0, 20, 40, 60, 80, 100]}
           label={{
-            value: "Continuity Score",
+            value: "AIS Record Count",
             angle: -90,
             position: "outsideLeft",
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
-        <Tooltip />
+        <Tooltip
+          contentStyle={{
+            background: "#102e56",
+            border: "1px solid #1b3f70",
+            borderRadius: "10px",
+            color: "#ffffff",
+          }}
+          labelStyle={{
+            color: "#ffffff",
+          }}
+          itemStyle={{
+            color: "#ffffff",
+          }}
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+          labelFormatter={(label) => `Time: ${label}`}
+        />
 
         <Line
           type="monotone"
           dataKey="continuity"
-          name="Continuity Score"
+          name="AIS Activity"
           stroke="#22c55e"
           strokeWidth={3}
           dot={{
-            r: 5
+            r: 5,
           }}
           activeDot={{
-            r: 7
+            r: 7,
           }}
         />
 
