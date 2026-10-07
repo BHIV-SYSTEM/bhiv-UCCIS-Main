@@ -1,31 +1,42 @@
+import React from "react";
+
 import {
   BarChart,
   Bar,
   XAxis,
   YAxis,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
 export default function LifecycleBarChart() {
+  /*
+   * AIS_file.csv
+   *
+   * Total AIS records: 10,000
+   *
+   * Stationary records: 5,724
+   * Moving records:     4,276
+   * AIS unavailable:       23
+   *
+   * SOG = 0       -> Stationary
+   * SOG > 0       -> Moving
+   * SOG = 102.3   -> AIS unavailable / sentinel value
+   */
 
   const data = [
     {
-      phase: "Signal",
-      value: 100
+      phase: "Stationary",
+      value: 5724,
     },
     {
-      phase: "Governance",
-      value: 92
+      phase: "Moving",
+      value: 4276,
     },
     {
-      phase: "Enforcement",
-      value: 87
+      phase: "AIS Unavailable",
+      value: 23,
     },
-    {
-      phase: "Replay",
-      value: 95
-    }
   ];
 
   return (
@@ -39,39 +50,55 @@ export default function LifecycleBarChart() {
           top: 20,
           right: 20,
           left: 20,
-          bottom: 40
+          bottom: 40,
         }}
       >
 
         <XAxis
           dataKey="phase"
           label={{
-            value: "Lifecycle Phase",
+            value: "AIS Activity State",
             position: "insideBottom",
             offset: -20,
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
         <YAxis
-          domain={[0, 100]}
           label={{
-            value: "Completion Score",
+            value: "Record Count",
             angle: -90,
             position: "outsideLeft",
             fill: "#ffffff",
             fontSize: 12,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
-        <Tooltip />
+        <Tooltip
+          contentStyle={{
+            background: "#102e56",
+            border: "1px solid #1b3f70",
+            borderRadius: "10px",
+            color: "#ffffff",
+          }}
+          labelStyle={{
+            color: "#ffffff",
+          }}
+          itemStyle={{
+            color: "#ffffff",
+          }}
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+        />
 
         <Bar
           dataKey="value"
-          name="Completion Score"
+          name="AIS Record Count"
           fill="#22c55e"
           radius={[6, 6, 0, 0]}
         />
