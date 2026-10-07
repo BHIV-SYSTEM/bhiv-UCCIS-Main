@@ -1,31 +1,52 @@
+import React from "react";
+
 import {
   AreaChart,
   Area,
   XAxis,
   YAxis,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
 export default function ReplayTimelineChart() {
+  /*
+   * AIS_file.csv
+   *
+   * Total AIS records: 10,000
+   *
+   * AIS record distribution by minute:
+   *
+   * 00:00 -> 4,229
+   * 00:01 -> 3,849
+   * 00:02 -> 1,563
+   * 00:03 ->   327
+   * 00:04 ->    32
+   *
+   * The chart represents the AIS observation/replay timeline.
+   */
 
   const data = [
     {
-      time: "10:00",
-      events: 12
+      time: "00:00",
+      events: 4229,
     },
     {
-      time: "10:05",
-      events: 22
+      time: "00:01",
+      events: 3849,
     },
     {
-      time: "10:10",
-      events: 30
+      time: "00:02",
+      events: 1563,
     },
     {
-      time: "10:15",
-      events: 40
-    }
+      time: "00:03",
+      events: 327,
+    },
+    {
+      time: "00:04",
+      events: 32,
+    },
   ];
 
   return (
@@ -39,34 +60,52 @@ export default function ReplayTimelineChart() {
           top: 15,
           right: 20,
           left: 20,
-          bottom: 35
+          bottom: 35,
         }}
       >
 
         <XAxis
           dataKey="time"
           label={{
-            value: "Time",
+            value: "AIS Time",
             position: "insideBottom",
             offset: -20,
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
         <YAxis
           label={{
-            value: "Event Count",
+            value: "AIS Record Count",
             angle: -90,
             position: "insideLeft",
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
-        <Tooltip />
+        <Tooltip
+          contentStyle={{
+            background: "#102e56",
+            border: "1px solid #1b3f70",
+            borderRadius: "10px",
+            color: "#ffffff",
+          }}
+          labelStyle={{
+            color: "#ffffff",
+          }}
+          itemStyle={{
+            color: "#ffffff",
+          }}
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+          labelFormatter={(label) => `Time: ${label}`}
+        />
 
         <Area
           type="monotone"
