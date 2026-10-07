@@ -1,57 +1,36 @@
+import React from "react";
+
 import {
   PieChart,
   Pie,
   Cell,
   Tooltip,
   Legend,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
-export default function
-OperationalDonutChart() {
-
+export default function OperationalDonutChart() {
   const data = [
     {
-      name: "Replay",
-      value: 25
+      name: "Stationary",
+      value: 5724,
     },
-
     {
-      name: "Lifecycle",
-      value: 20
+      name: "Moving",
+      value: 4276,
     },
-
-    {
-      name: "Concurrency",
-      value: 18
-    },
-
-    {
-      name: "Recovery",
-      value: 17
-    },
-
-    {
-      name: "Observability",
-      value: 20
-    }
   ];
 
   const COLORS = [
     "#38bdf8",
     "#22c55e",
-    "#f59e0b",
-    "#ef4444",
-    "#a855f7"
   ];
 
   return (
-
     <ResponsiveContainer
       width="100%"
       height={240}
     >
-
       <PieChart>
 
         <Pie
@@ -62,29 +41,42 @@ OperationalDonutChart() {
           outerRadius={90}
           paddingAngle={4}
           dataKey="value"
+          nameKey="name"
         >
-
-          {
-            data.map((entry, index) => (
-
-              <Cell
-                key={index}
-                fill={
-                  COLORS[index]
-                }
-              />
-
-            ))
-          }
-
+          {data.map((entry, index) => (
+            <Cell
+              key={`cell-${index}`}
+              fill={COLORS[index]}
+            />
+          ))}
         </Pie>
 
-        <Tooltip />
+        <Tooltip
+          contentStyle={{
+            background: "#102e56",
+            border: "1px solid #1b3f70",
+            borderRadius: "10px",
+            color: "#ffffff",
+          }}
+          labelStyle={{
+            color: "#ffffff",
+          }}
+          itemStyle={{
+            color: "#ffffff",
+          }}
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+        />
 
-        <Legend />
+        <Legend
+          wrapperStyle={{
+            color: "#ffffff",
+          }}
+        />
 
       </PieChart>
-
     </ResponsiveContainer>
   );
 }
