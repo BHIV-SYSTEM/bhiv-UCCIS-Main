@@ -1,19 +1,29 @@
+import React from "react";
+
 import {
   RadialBarChart,
   RadialBar,
   Legend,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
-export default function
-ObservabilityRadialChart() {
+export default function ObservabilityRadialChart() {
+  /*
+   * AIS_file.csv metrics
+   *
+   * Total records: 10,000
+   * AIS data quality: 99.77%
+   *
+   * The radial chart represents the quality /
+   * observability of the AIS dataset.
+   */
 
   const data = [
     {
-      name: "Health",
-      value: 96,
-      fill: "#38bdf8"
-    }
+      name: "AIS Data Quality",
+      value: 99.77,
+      fill: "#38bdf8",
+    },
   ];
 
   return (
@@ -32,9 +42,26 @@ ObservabilityRadialChart() {
         <RadialBar
           minAngle={15}
           dataKey="value"
+          background
+          clockWise
         />
 
-        <Legend />
+        <Legend
+          iconSize={10}
+          layout="horizontal"
+          verticalAlign="bottom"
+          align="center"
+          formatter={(value) => (
+            <span
+              style={{
+                color: "#b7c8df",
+                fontSize: "12px",
+              }}
+            >
+              {value}
+            </span>
+          )}
+        />
 
       </RadialBarChart>
     </ResponsiveContainer>
