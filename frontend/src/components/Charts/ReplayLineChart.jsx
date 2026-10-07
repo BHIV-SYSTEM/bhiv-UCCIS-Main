@@ -1,22 +1,36 @@
+import React from "react";
+
 import {
   LineChart,
   Line,
   XAxis,
   YAxis,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
 export default function ReplayLineChart() {
-
   const data = [
-    { name: "P1", replay: 12 },
-    { name: "P2", replay: 20 },
-    { name: "P3", replay: 28 },
-    { name: "P4", replay: 35 },
-    { name: "P5", replay: 40 },
-    { name: "P6", replay: 55 },
-    { name: "P7", replay: 72 }
+    {
+      name: "00:00",
+      replay: 4229,
+    },
+    {
+      name: "00:01",
+      replay: 3849,
+    },
+    {
+      name: "00:02",
+      replay: 1563,
+    },
+    {
+      name: "00:03",
+      replay: 327,
+    },
+    {
+      name: "00:04",
+      replay: 32,
+    },
   ];
 
   return (
@@ -30,28 +44,34 @@ export default function ReplayLineChart() {
           top: 20,
           right: 20,
           left: 20,
-          bottom: 40
+          bottom: 40,
         }}
       >
 
         <XAxis
           dataKey="name"
           label={{
-            value: "Replay Phase",
+            value: "AIS Time",
             position: "insideBottom",
-            offset: -15
+            offset: -15,
           }}
         />
 
         <YAxis
           label={{
-            value: "Replay Score",
+            value: "AIS Records",
             angle: -90,
-            position: "insideLeft"
+            position: "outsideRight",
           }}
         />
 
-        <Tooltip />
+        <Tooltip
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+          labelFormatter={(label) => `Time: ${label}`}
+        />
 
         <Line
           type="monotone"
@@ -59,6 +79,7 @@ export default function ReplayLineChart() {
           stroke="#38bdf8"
           strokeWidth={3}
           dot={{ r: 4 }}
+          activeDot={{ r: 6 }}
         />
 
       </LineChart>
