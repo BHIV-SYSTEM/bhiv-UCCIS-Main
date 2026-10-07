@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   BarChart,
   Bar,
@@ -5,36 +7,31 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  Cell
+  Cell,
 } from "recharts";
 
 export default function EnforcementBarChart() {
-
   const data = [
     {
-      stage: "Signal",
-      value: 100
+      stage: "Vessel Type 31",
+      value: 3394,
     },
-
     {
-      stage: "Governance",
-      value: 92
+      stage: "Vessel Type 37",
+      value: 1641,
     },
-
     {
-      stage: "Request",
-      value: 85
+      stage: "Vessel Type 60",
+      value: 954,
     },
-
     {
-      stage: "Acknowledged",
-      value: 78
+      stage: "Vessel Type 70",
+      value: 849,
     },
-
     {
-      stage: "Replay",
-      value: 95
-    }
+      stage: "Vessel Type 90",
+      value: 677,
+    },
   ];
 
   const colors = [
@@ -42,7 +39,7 @@ export default function EnforcementBarChart() {
     "#22c55e",
     "#f59e0b",
     "#ef4444",
-    "#a855f7"
+    "#a855f7",
   ];
 
   return (
@@ -56,7 +53,7 @@ export default function EnforcementBarChart() {
           top: 20,
           right: 20,
           left: 20,
-          bottom: 50
+          bottom: 50,
         }}
       >
 
@@ -65,54 +62,69 @@ export default function EnforcementBarChart() {
           interval={0}
           tick={{
             fill: "#cbd5e1",
-            fontSize: 12
+            fontSize: 12,
           }}
           axisLine={{
-            stroke: "#475569"
+            stroke: "#475569",
           }}
           tickLine={false}
           label={{
-            value: "Enforcement Stage",
+            value: "AIS Vessel Type",
             position: "insideBottom",
             offset: -25,
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
         <YAxis
-          domain={[0, 100]}
-          ticks={[0, 20, 40, 60, 80, 100]}
           tick={{
             fill: "#cbd5e1",
-            fontSize: 12
+            fontSize: 12,
           }}
           axisLine={{
-            stroke: "#475569"
+            stroke: "#475569",
           }}
           tickLine={false}
           label={{
-            value: "Performance Score",
+            value: "Record Count",
             angle: -90,
             position: "outsideLeft",
             fill: "#ffffff",
             fontSize: 14,
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         />
 
-        <Tooltip />
+        <Tooltip
+          contentStyle={{
+            background: "#102e56",
+            border: "1px solid #1b3f70",
+            borderRadius: "10px",
+            color: "#ffffff",
+          }}
+          labelStyle={{
+            color: "#ffffff",
+          }}
+          itemStyle={{
+            color: "#ffffff",
+          }}
+          formatter={(value) => [
+            `${Number(value).toLocaleString()} records`,
+            "AIS Activity",
+          ]}
+        />
 
         <Bar
           dataKey="value"
-          name="Performance Score"
+          name="AIS Record Count"
           radius={[6, 6, 0, 0]}
         >
           {data.map((entry, index) => (
             <Cell
               key={`cell-${index}`}
-              fill={colors[index]}
+              fill={colors[index % colors.length]}
             />
           ))}
         </Bar>
