@@ -1,12 +1,18 @@
 /* =========================================================
+
    UCCIS UNIFIED GOVERNANCE DASHBOARD
+
 ========================================================= */
 
 .uccis-dashboard {
   min-height: 100vh;
+
   width: 100%;
+
   background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+
   color: #111827;
+
   font-family:
     Inter,
     ui-sans-serif,
@@ -17,7 +23,7 @@
     sans-serif;
 }
 
-.uccis-dashboard *,
+.uccis-dashboard \*,
 .uccis-dashboard *::before,
 .uccis-dashboard *::after {
   box-sizing: border-box;
@@ -25,43 +31,60 @@
 
 .uccis-dashboard-main {
   width: 100%;
+
   max-width: 1700px;
+
   margin: 0 auto;
+
   padding: 30px;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
-
+/*
+  =========================================================
+  HEADER
+  =========================================================
+  */
 .uccis-dashboard-header {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   gap: 30px;
+
   margin-bottom: 28px;
 }
 
 .uccis-title-row {
   display: flex;
+
   align-items: center;
+
   gap: 16px;
 }
 
 .uccis-title-icon {
   width: 56px;
+
   height: 56px;
+
   border-radius: 15px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   background: linear-gradient(135deg, #111827, #374151);
 
   color: white;
+
   font-size: 13px;
+
   font-weight: 800;
+
   letter-spacing: 0.08em;
 
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
@@ -69,58 +92,81 @@
 
 .uccis-dashboard-title {
   margin: 0;
+
   font-size: 32px;
+
   line-height: 1.2;
+
   font-weight: 800;
+
   letter-spacing: -0.03em;
+
   color: #111827;
 }
 
 .uccis-dashboard-subtitle {
   margin: 7px 0 0;
+
   color: #64748b;
+
   font-size: 15px;
 }
 
 .uccis-data-source {
   display: flex;
+
   align-items: center;
+
   gap: 7px;
+
   margin-top: 10px;
 
   color: #64748b;
+
   font-size: 13px;
 }
 
 .uccis-data-source span:not(.uccis-live-badge) {
   color: #111827;
+
   font-weight: 700;
 }
 
 .uccis-live-badge {
   margin-left: 5px;
+
   padding: 4px 9px;
+
   border-radius: 999px;
 
   background: #dcfce7;
+
   color: #15803d;
 
   font-size: 10px;
+
   font-weight: 800;
+
   letter-spacing: 0.06em;
 }
 
 /* =========================================================
+
    REFRESH BUTTON
+
 ========================================================= */
 
 .uccis-refresh-button {
   border: none;
+
   outline: none;
 
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 9px;
 
   padding: 13px 19px;
@@ -128,9 +174,11 @@
   border-radius: 12px;
 
   background: #111827;
+
   color: white;
 
   font-size: 14px;
+
   font-weight: 700;
 
   cursor: pointer;
@@ -155,47 +203,60 @@
 
 .uccis-refresh-button:disabled {
   cursor: not-allowed;
+
   opacity: 0.6;
+
   transform: none;
 }
 
 .refresh-icon {
   font-size: 19px;
+
   line-height: 1;
 }
 
-/* =========================================================
-   ERROR
-========================================================= */
-
+/*
+  =========================================================
+  ERROR
+  =========================================================
+  */
 .uccis-error {
   display: flex;
+
   align-items: flex-start;
+
   gap: 13px;
 
   padding: 16px 18px;
+
   margin-bottom: 25px;
 
   border: 1px solid #fecaca;
+
   border-radius: 14px;
 
   background: #fef2f2;
+
   color: #991b1b;
 }
 
 .uccis-error-icon {
   width: 28px;
+
   height: 28px;
 
   flex-shrink: 0;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 50%;
 
   background: #dc2626;
+
   color: white;
 
   font-weight: 800;
@@ -207,11 +268,13 @@
 
 .uccis-error p {
   margin: 4px 0;
+
   font-size: 13px;
 }
 
 .uccis-error small {
   color: #b91c1c;
+
   font-size: 12px;
 }
 
@@ -219,16 +282,20 @@
   margin-left: 5px;
 }
 
-/* =========================================================
-   LOADING
-========================================================= */
-
+/*
+  =========================================================
+  LOADING
+  =========================================================
+  */
 .uccis-loading {
   min-height: 300px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 18px;
@@ -240,21 +307,27 @@
 
 .uccis-loading h3 {
   margin: 18px 0 5px;
+
   font-size: 18px;
+
   color: #111827;
 }
 
 .uccis-loading p {
   margin: 0;
+
   color: #64748b;
+
   font-size: 13px;
 }
 
 .uccis-spinner {
   width: 42px;
+
   height: 42px;
 
   border: 4px solid #e5e7eb;
+
   border-top-color: #111827;
 
   border-radius: 50%;
@@ -268,10 +341,12 @@
   }
 }
 
-/* =========================================================
-   SUMMARY CARDS
-========================================================= */
-
+/*
+  =========================================================
+  SUMMARY
+  CARDS
+  =========================================================
+  */
 .uccis-summary-grid {
   display: grid;
 
@@ -310,9 +385,11 @@
   position: absolute;
 
   right: -35px;
+
   bottom: -45px;
 
   width: 120px;
+
   height: 120px;
 
   border-radius: 50%;
@@ -360,12 +437,15 @@
 
 .summary-card-top {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   color: #64748b;
 
   font-size: 11px;
+
   font-weight: 800;
 
   letter-spacing: 0.08em;
@@ -373,10 +453,13 @@
 
 .summary-icon {
   width: 34px;
+
   height: 34px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 10px;
@@ -384,6 +467,7 @@
   background: #f8fafc;
 
   font-size: 18px;
+
   font-weight: 800;
 }
 
@@ -407,6 +491,7 @@
   margin: 14px 0 3px;
 
   font-size: 34px;
+
   line-height: 1;
 
   font-weight: 800;
@@ -422,10 +507,12 @@
   font-size: 12px;
 }
 
-/* =========================================================
-   CHART GRID
-========================================================= */
-
+/*
+  =========================================================
+  CHART
+  GRID
+  =========================================================
+  */
 .uccis-chart-grid {
   display: grid;
 
@@ -434,10 +521,12 @@
   gap: 22px;
 }
 
-/* =========================================================
-   CHART CARD
-========================================================= */
-
+/*
+  =========================================================
+  CHART
+  CARD
+  =========================================================
+  */
 .uccis-chart-card {
   min-width: 0;
 
@@ -454,7 +543,9 @@
 
 .uccis-chart-header {
   display: flex;
+
   align-items: flex-start;
+
   justify-content: space-between;
 
   gap: 15px;
@@ -466,6 +557,7 @@
   margin: 0;
 
   font-size: 19px;
+
   line-height: 1.3;
 
   font-weight: 800;
@@ -479,60 +571,73 @@
   color: #64748b;
 
   font-size: 12px;
+
   line-height: 1.5;
 }
 
 .chart-number {
   width: 35px;
+
   height: 35px;
 
   flex-shrink: 0;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 10px;
 
   font-size: 12px;
+
   font-weight: 800;
 }
 
 .chart-number.blue {
   color: #2563eb;
+
   background: #eff6ff;
 }
 
 .chart-number.green {
   color: #16a34a;
+
   background: #f0fdf4;
 }
 
 .chart-number.purple {
   color: #9333ea;
+
   background: #faf5ff;
 }
 
 .chart-number.orange {
   color: #d97706;
+
   background: #fffbeb;
 }
 
-/* =========================================================
-   CHART CONTAINER
-========================================================= */
-
+/*
+  =========================================================
+  CHART
+  CONTAINER
+  =========================================================
+  */
 .uccis-chart-container {
   width: 100%;
+
   height: 400px;
 
   margin-top: 5px;
 }
 
-/* =========================================================
-   RECHARTS
-========================================================= */
-
+/*
+  =========================================================
+  RECHARTS
+  =========================================================
+  */
 .uccis-chart-container .recharts-wrapper {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
@@ -545,10 +650,12 @@
   border-radius: 10px !important;
 }
 
-/* =========================================================
-   CUSTOM TOOLTIP
-========================================================= */
-
+/*
+  =========================================================
+  CUSTOM
+  TOOLTIP
+  =========================================================
+  */
 .uccis-tooltip {
   min-width: 180px;
 
@@ -573,6 +680,7 @@
   color: #111827;
 
   font-size: 12px;
+
   font-weight: 800;
 }
 
@@ -580,6 +688,7 @@
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   gap: 18px;
@@ -599,10 +708,12 @@
   color: #64748b;
 }
 
-/* =========================================================
-   TABLE CARD
-========================================================= */
-
+/*
+  =========================================================
+  TABLE
+  CARD
+  =========================================================
+  */
 .uccis-table-card {
   margin-top: 22px;
 
@@ -619,7 +730,9 @@
 
 .uccis-table-header {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 20px;
@@ -633,6 +746,7 @@
   color: #111827;
 
   font-size: 20px;
+
   font-weight: 800;
 }
 
@@ -654,13 +768,15 @@
   color: #475569;
 
   font-size: 11px;
+
   font-weight: 800;
 }
 
-/* =========================================================
-   TABLE
-========================================================= */
-
+/*
+  =========================================================
+  TABLE
+  =========================================================
+  */
 .uccis-table-wrapper {
   width: 100%;
 
@@ -729,12 +845,15 @@
   color: #111827;
 }
 
-/* =========================================================
-   ZONE NAME
-========================================================= */
-
+/*
+  =========================================================
+  ZONE
+  NAME
+  =========================================================
+  */
 .zone-name-cell {
   display: flex;
+
   align-items: center;
 
   gap: 10px;
@@ -742,10 +861,13 @@
 
 .zone-number {
   width: 30px;
+
   height: 30px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 8px;
@@ -755,6 +877,7 @@
   color: #64748b;
 
   font-size: 10px;
+
   font-weight: 800;
 }
 
@@ -764,10 +887,12 @@
   font-size: 13px;
 }
 
-/* =========================================================
-   MOVEMENT CELL
-========================================================= */
-
+/*
+  =========================================================
+  MOVEMENT
+  CELL
+  =========================================================
+  */
 .movement-cell {
   display: flex;
 
@@ -780,6 +905,7 @@
 
 .movement-bar {
   width: 75px;
+
   height: 7px;
 
   overflow: hidden;
@@ -799,13 +925,16 @@
   background: linear-gradient(90deg, #f59e0b, #f97316);
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
-
+/*
+  =========================================================
+  FOOTER
+  =========================================================
+  */
 .uccis-dashboard-footer {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 
   gap: 15px;
@@ -823,10 +952,14 @@
   font-weight: 700;
 }
 
-/* =========================================================
-   RESPONSIVE - LARGE TABLET
-========================================================= */
-
+/*
+  =========================================================
+  RESPONSIVE
+  -
+  LARGE
+  TABLET
+  =========================================================
+  */
 @media (max-width: 1200px) {
   .uccis-dashboard-main {
     padding: 25px;
@@ -841,10 +974,13 @@
   }
 }
 
-/* =========================================================
-   RESPONSIVE - TABLET
-========================================================= */
-
+/*
+  =========================================================
+  RESPONSIVE
+  -
+  TABLET
+  =========================================================
+  */
 @media (max-width: 768px) {
   .uccis-dashboard-main {
     padding: 18px;
@@ -866,6 +1002,7 @@
 
   .uccis-title-icon {
     width: 48px;
+
     height: 48px;
   }
 
@@ -898,10 +1035,13 @@
   }
 }
 
-/* =========================================================
-   RESPONSIVE - MOBILE
-========================================================= */
-
+/*
+  =========================================================
+  RESPONSIVE
+  -
+  MOBILE
+  =========================================================
+  */
 @media (max-width: 480px) {
   .uccis-dashboard-main {
     padding: 13px;
@@ -913,6 +1053,7 @@
 
   .uccis-title-icon {
     width: 43px;
+
     height: 43px;
 
     border-radius: 11px;
@@ -959,20 +1100,22 @@
   }
 }
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
+/*
+  =========================================================
+  ACCESSIBILITY
+  =========================================================
+  */
 .uccis-refresh-button:focus-visible {
   outline: 3px solid #93c5fd;
 
   outline-offset: 3px;
 }
 
-/* =========================================================
-   PRINT
-========================================================= */
-
+/*
+  =========================================================
+  PRINT
+  =========================================================
+  */
 @media print {
   .uccis-dashboard {
     background: white;
@@ -984,7 +1127,244 @@
 
   .uccis-dashboard-main {
     max-width: none;
+
     padding: 10px;
+  }
+
+  .uccis-summary-card,
+  .uccis-chart-card,
+  .uccis-table-card {
+    box-shadow: none;
+
+    border: 1px solid #d1d5db;
+  }
+}
+
+/* =========================================================
+   UCCIS UNIFIED GOVERNANCE DASHBOARD — DARK THEME OVERRIDES
+   Append-only overrides: preserves the existing layout.
+========================================================= */
+
+.uccis-dashboard {
+  background: radial-gradient(
+    ellipse at top,
+    #151922 0%,
+    #090b10 58%,
+    #07080c 100%
+  );
+  color: #e5e7eb;
+  color-scheme: dark;
+}
+
+.uccis-dashboard-main {
+  color: #e5e7eb;
+}
+
+.uccis-dashboard-title,
+.uccis-summary-card h2,
+.uccis-chart-header h2,
+.uccis-table-header h2,
+.uccis-loading h3,
+.uccis-zone-table td strong,
+.zone-name-cell strong {
+  color: #f9fafb;
+}
+
+.uccis-dashboard-subtitle,
+.uccis-data-source,
+.uccis-data-source span:not(.uccis-live-badge),
+.summary-card-top,
+.uccis-summary-card p,
+.uccis-chart-header p,
+.uccis-table-header p,
+.uccis-loading p,
+.uccis-dashboard-footer {
+  color: #a1a1aa;
+}
+
+.uccis-title-icon {
+  background: linear-gradient(135deg, #272b35, #111318);
+  border: 1px solid #343946;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.uccis-refresh-button {
+  background: #f3f4f6;
+  color: #111318;
+  border: 1px solid #e5e7eb;
+}
+
+.uccis-refresh-button:hover {
+  background: #d1d5db;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.uccis-loading,
+.uccis-summary-card,
+.uccis-chart-card,
+.uccis-table-card {
+  background: #12151c;
+  border-color: #292e39;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+
+.uccis-summary-card:hover {
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+}
+
+.uccis-summary-card.blue {
+  border-top-color: #60a5fa;
+}
+.uccis-summary-card.green {
+  border-top-color: #4ade80;
+}
+.uccis-summary-card.purple {
+  border-top-color: #c084fc;
+}
+.uccis-summary-card.orange {
+  border-top-color: #fbbf24;
+}
+
+.uccis-summary-card.blue .summary-icon,
+.uccis-summary-card.green .summary-icon,
+.uccis-summary-card.purple .summary-icon,
+.uccis-summary-card.orange .summary-icon {
+  background: #202530;
+}
+
+.uccis-chart-card {
+  background: linear-gradient(145deg, #141821 0%, #101319 100%);
+}
+
+.chart-number.blue {
+  color: #93c5fd;
+  background: #172b45;
+}
+.chart-number.green {
+  color: #86efac;
+  background: #163324;
+}
+.chart-number.purple {
+  color: #d8b4fe;
+  background: #2b1c3c;
+}
+.chart-number.orange {
+  color: #fcd34d;
+  background: #382b14;
+}
+
+.uccis-chart-container {
+  color: #d1d5db;
+}
+
+.uccis-chart-container .recharts-cartesian-axis-tick-value,
+.uccis-chart-container .recharts-text {
+  fill: #cbd5e1;
+}
+
+.uccis-chart-container .recharts-cartesian-grid line {
+  stroke: #303642;
+}
+
+.uccis-chart-container .recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #191e28 !important;
+  border: 1px solid #3a4150 !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.uccis-tooltip {
+  background: #191e28;
+  border-color: #3a4150;
+  color: #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.uccis-tooltip-title {
+  color: #f9fafb;
+  border-bottom-color: #343b48;
+}
+
+.uccis-tooltip-row {
+  color: #d1d5db;
+}
+
+.uccis-tooltip-value {
+  color: #9ca3af;
+}
+
+.table-record-count {
+  background: #252b36;
+  color: #d1d5db;
+}
+
+.uccis-zone-table {
+  background: transparent;
+}
+
+.uccis-zone-table th {
+  background: #1b202a;
+  border-bottom-color: #343b48;
+  color: #cbd5e1;
+}
+
+.uccis-zone-table th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.uccis-zone-table th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.uccis-zone-table td {
+  color: #cbd5e1;
+  border-bottom-color: #292e39;
+}
+
+.uccis-zone-table tbody tr:hover {
+  background: #1b202a;
+}
+
+.zone-number {
+  background: #252b36;
+  color: #d1d5db;
+}
+
+.movement-bar {
+  background: #303642;
+}
+
+.uccis-spinner {
+  border-color: #343946;
+  border-top-color: #f3f4f6;
+}
+
+.uccis-error {
+  background: #2a171a;
+  border-color: #7f1d1d;
+  color: #fecaca;
+}
+
+.uccis-error small {
+  color: #fca5a5;
+}
+
+.uccis-dashboard-footer {
+  border-top: 1px solid #222733;
+}
+
+.footer-status {
+  color: #4ade80;
+}
+
+.uccis-refresh-button:focus-visible {
+  outline-color: #60a5fa;
+}
+
+@media print {
+  .uccis-dashboard {
+    background: #ffffff;
+    color: #111827;
   }
 
   .uccis-summary-card,
