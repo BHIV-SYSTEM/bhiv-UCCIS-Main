@@ -4,11 +4,11 @@ import React from "react";
 
 export default function ReplayStoryView({ story }) {
 
-  return (
+  // return (
 
-    <div className="bg-white p-6 rounded-2xl shadow-lg">
+  //   <div className="bg-white p-6 rounded-2xl shadow-lg">
 
-      <h2 className="text-2xl font-bold mb-6">
+      {/* <h2 className="text-2xl font-bold mb-6">
         Replay Story Mode
       </h2>
 
@@ -25,14 +25,14 @@ export default function ReplayStoryView({ story }) {
               {line}
             </p>
 
-          </div>
+          </div> */}
 
-        ))}
+        {/* ))} */}
 
-      </div>
+      // </div>
 
-    </div>
+    // </div>
 
-  );
+  // );
 
 }
