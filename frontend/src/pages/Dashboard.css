@@ -1,22 +1,38 @@
 /* =========================================================
 
+
+
    UCCIS GLOBAL DASHBOARD STYLES
+
+
 
    Includes responsive layout and Task 12 navigation fixes.
 
+
+
    ========================================================= */
 
+
+
 /* GLOBAL */
+
+
 
 * {
 
   margin: 0;
 
+
+
   padding: 0;
+
+
 
   box-sizing: border-box;
 
 }
+
+
 
 html,
 
@@ -26,33 +42,53 @@ body,
 
   width: 100%;
 
+
+
   min-height: 100%;
 
 }
+
+
 
 body {
 
   background: #020617;
 
+
+
   color: #ffffff;
 
+
+
   font-family: Arial, Helvetica, sans-serif;
+
+
 
   overflow-x: hidden;
 
 }
 
+
+
 .dashboard {
 
   width: 100%;
 
+
+
   min-height: 100vh;
 
+
+
   background: #020617;
+
+
 
   color: #ffffff;
 
 }
+
+
 
 .dashboard h1,
 
@@ -86,81 +122,141 @@ body {
 
 }
 
+
+
 /* HEADER */
+
+
 
 .dashboard-header {
 
   width: 100%;
 
+
+
   padding: 25px;
+
+
 
   color: #ffffff;
 
+
+
   text-align: center;
 
+
+
   background: linear-gradient(90deg, #0f172a, #1e3a8a);
+
+
 
   box-shadow: 0 3px 12px rgb(0 0 0 / 35%);
 
 }
 
+
+
 .dashboard-header h1 {
 
   margin-bottom: 10px;
 
+
+
   color: #ffffff !important;
+
+
 
   font-size: 40px;
 
 }
 
+
+
 .dashboard-header p {
 
   margin-bottom: 25px;
 
+
+
   color: #cbd5e1 !important;
+
+
 
   font-size: 18px;
 
 }
 
+
+
 /* GENERIC NAVIGATION */
+
+
 
 .nav-buttons {
 
   display: flex;
 
+
+
   flex-wrap: wrap;
+
+
 
   justify-content: center;
 
+
+
   align-items: center;
+
+
 
   gap: 15px;
 
 }
 
+
+
 .nav-buttons button {
 
   width: 180px;
 
+
+
   min-height: 70px;
+
+
 
   padding: 12px;
 
+
+
   border: 1px solid #334155;
+
+
 
   border-radius: 10px;
 
+
+
   background: #111827;
+
+
 
   color: #ffffff !important;
 
+
+
   cursor: pointer;
+
+
 
   font-size: 15px;
 
+
+
   font-weight: 700;
+
+
 
   transition:
 
@@ -170,103 +266,179 @@ body {
 
 }
 
+
+
 .nav-buttons button:hover {
 
   background: #2563eb;
 
+
+
   color: #ffffff !important;
+
+
 
   transform: translateY(-2px);
 
 }
 
+
+
 .active-btn {
 
   background: #2563eb !important;
+
+
 
   color: #ffffff !important;
 
 }
 
+
+
 /* TASK 12 NAVIGATION — FIXED ALIGNMENT AND HORIZONTAL SCROLL */
+
+
 
 .task12-wrapper {
 
   width: 100%;
 
+
+
   min-width: 0;
+
+
 
   min-height: 100vh;
 
+
+
   overflow: hidden;
 
+
+
   background: #020617;
+
+
 
   color: #ffffff;
 
 }
+
+
 
 .task12-wrapper .top-nav {
 
   display: flex;
 
+
+
   align-items: center;
+
+
 
   gap: 16px;
 
+
+
   width: 100%;
+
+
 
   min-width: 0;
 
+
+
   min-height: 112px;
+
+
 
   padding: 12px 16px;
 
+
+
   border-top: 3px solid #06b6d4;
+
+
 
   background: #111827;
 
 }
 
+
+
 .task12-wrapper .logo {
 
   flex: 0 0 155px;
 
+
+
   color: #ffffff;
+
+
 
   font-size: 19px;
 
+
+
   font-weight: 700;
 
+
+
   line-height: 1.3;
+
+
 
   text-align: center;
 
 }
 
+
+
 .task12-wrapper .nav-links {
 
   display: flex;
 
+
+
   flex: 1 1 auto;
+
+
 
   align-items: center;
 
+
+
   gap: 10px;
+
+
 
   min-width: 0;
 
+
+
   overflow-x: auto;
+
+
 
   overflow-y: hidden;
 
+
+
   padding: 5px 3px 10px;
 
+
+
   scrollbar-width: thin;
+
+
 
   scrollbar-color: #64748b #1f2937;
 
 }
+
+
 
 .task12-wrapper .nav-links::-webkit-scrollbar {
 
@@ -274,59 +446,105 @@ body {
 
 }
 
+
+
 .task12-wrapper .nav-links::-webkit-scrollbar-track {
 
   border-radius: 10px;
+
+
 
   background: #1f2937;
 
 }
 
+
+
 .task12-wrapper .nav-links::-webkit-scrollbar-thumb {
 
   border-radius: 10px;
+
+
 
   background: #64748b;
 
 }
 
+
+
 .task12-wrapper .nav-links button {
 
   display: flex;
 
+
+
   flex: 0 0 135px;
+
+
 
   align-items: center;
 
+
+
   justify-content: center;
+
+
 
   min-height: 76px;
 
+
+
   padding: 12px 10px;
+
+
 
   border: 1px solid #3b82f6;
 
+
+
   border-radius: 11px;
+
+
 
   background: #347ff0;
 
+
+
   color: #ffffff !important;
+
+
 
   cursor: pointer;
 
+
+
   font-family: inherit;
+
+
 
   font-size: 15px;
 
+
+
   font-weight: 600;
+
+
 
   line-height: 1.35;
 
+
+
   text-align: center;
+
+
 
   white-space: normal;
 
+
+
   overflow-wrap: break-word;
+
+
 
   transition:
 
@@ -340,53 +558,83 @@ body {
 
 }
 
+
+
 .task12-wrapper .nav-links button:hover {
 
   background: #2563eb;
+
+
 
   transform: translateY(-1px);
 
 }
 
+
+
 .task12-wrapper .nav-links button.task12-nav-active {
 
   border-color: #bfdbfe;
 
+
+
   background: #1d4ed8;
+
+
 
   box-shadow: 0 0 0 2px rgb(147 197 253 / 20%);
 
 }
 
+
+
 .task12-wrapper .nav-links button:focus-visible {
 
   outline: 3px solid #67e8f9;
+
+
 
   outline-offset: 2px;
 
 }
 
+
+
 .task12-wrapper .task12-content {
 
   width: 100%;
 
+
+
   min-width: 0;
 
+
+
   padding: 20px;
+
+
 
   box-sizing: border-box;
 
 }
 
+
+
 /* SIDEBAR */
+
+
 
 .sidebar {
 
   background: #0b1220;
 
+
+
   color: #ffffff;
 
 }
+
+
 
 .sidebar h1,
 
@@ -406,17 +654,23 @@ body {
 
 }
 
+
+
 .sidebar a {
 
   text-decoration: none;
 
 }
 
+
+
 .sidebar a:hover {
 
   color: #00f5ff !important;
 
 }
+
+
 
 .sidebar-menu a,
 
@@ -432,6 +686,8 @@ body {
 
 }
 
+
+
 .sidebar-menu a:hover,
 
 .menu-item:hover,
@@ -444,113 +700,193 @@ body {
 
 }
 
+
+
 /* MAIN CONTENT */
+
+
 
 .dashboard-section {
 
   width: 95%;
 
+
+
   margin: 30px auto;
+
+
 
   padding: 25px;
 
+
+
   border-radius: 12px;
+
+
 
   background: #020617;
 
+
+
   color: #ffffff;
+
+
 
   box-shadow: 0 5px 18px rgb(0 0 0 / 25%);
 
 }
 
+
+
 .section-title {
 
   margin-bottom: 20px;
 
+
+
   padding-bottom: 10px;
+
+
 
   border-bottom: 2px solid #00e5ff;
 
+
+
   color: #ffffff !important;
+
+
 
   font-size: 28px;
 
 }
 
+
+
 .section-subtitle {
 
   margin-bottom: 20px;
 
+
+
   color: #cbd5e1 !important;
+
+
 
   font-size: 15px;
 
 }
 
+
+
 /* STATE MESSAGES */
+
+
 
 .state-box {
 
   margin-bottom: 20px;
 
+
+
   padding: 16px 20px;
+
+
 
   border-radius: 10px;
 
+
+
   font-size: 15px;
+
+
 
   font-weight: 700;
 
 }
+
+
 
 .state-loading {
 
   background: #172554;
 
+
+
   color: #ffffff !important;
 
 }
+
+
 
 .state-error {
 
   border-left: 5px solid #dc2626;
 
+
+
   background: #450a0a;
+
+
 
   color: #ffffff !important;
 
 }
+
+
 
 .state-empty {
 
   background: #111827;
 
+
+
   color: #ffffff !important;
+
+
 
   text-align: center;
 
 }
 
+
+
 /* ACTION BUTTONS */
+
+
 
 .action-btn {
 
   padding: 12px 22px;
 
+
+
   border: none;
+
+
 
   border-radius: 8px;
 
+
+
   background: #00e5e5;
+
+
 
   color: #000000 !important;
 
+
+
   cursor: pointer;
+
+
 
   font-size: 14px;
 
+
+
   font-weight: 700;
+
+
 
   transition:
 
@@ -560,35 +896,55 @@ body {
 
 }
 
+
+
 .action-btn:hover {
 
   background: #22d3ee;
 
+
+
   color: #000000 !important;
+
+
 
   transform: translateY(-1px);
 
 }
 
+
+
 .action-btn:disabled {
 
   background: #64748b;
 
+
+
   color: #ffffff !important;
 
+
+
   cursor: not-allowed;
+
+
 
   transform: none;
 
 }
 
+
+
 .action-btn.danger {
 
   background: #dc2626;
 
+
+
   color: #ffffff !important;
 
 }
+
+
 
 .action-btn.danger:hover {
 
@@ -596,19 +952,31 @@ body {
 
 }
 
+
+
 .action-row {
 
   display: flex;
 
+
+
   flex-wrap: wrap;
 
+
+
   gap: 12px;
+
+
 
   margin-bottom: 20px;
 
 }
 
+
+
 /* FORMS */
+
+
 
 .form-group {
 
@@ -616,19 +984,31 @@ body {
 
 }
 
+
+
 .form-group label {
 
   display: block;
 
+
+
   margin-bottom: 6px;
+
+
 
   color: #ffffff !important;
 
+
+
   font-size: 14px;
+
+
 
   font-weight: 700;
 
 }
+
+
 
 .form-group input,
 
@@ -638,19 +1018,33 @@ body {
 
   width: 100%;
 
+
+
   padding: 12px 14px;
+
+
 
   border: 1px solid #334155;
 
+
+
   border-radius: 8px;
+
+
 
   background: #111827;
 
+
+
   color: #ffffff !important;
+
+
 
   font-size: 14px;
 
 }
+
+
 
 .form-group input::placeholder,
 
@@ -660,6 +1054,8 @@ body {
 
 }
 
+
+
 .form-group input:focus,
 
 .form-group select:focus,
@@ -668,65 +1064,109 @@ body {
 
   outline: none;
 
+
+
   border-color: #00e5ff;
 
+
+
   background: #0f172a;
+
+
 
   color: #ffffff !important;
 
 }
 
+
+
 /* CARDS */
+
+
 
 .card-grid {
 
   display: grid;
 
+
+
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
+
+
   gap: 20px;
+
+
 
   margin-bottom: 25px;
 
 }
 
+
+
 .stat-card {
 
   padding: 24px;
 
+
+
   border: 1px solid #263244;
+
+
 
   border-radius: 18px;
 
+
+
   background: #111827;
 
+
+
   color: #ffffff;
+
+
 
   box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
 
 }
 
+
+
 .stat-card h4 {
 
   margin-bottom: 12px;
 
+
+
   color: #00f5ff !important;
 
+
+
   font-size: 18px;
+
+
 
   font-weight: 700;
 
 }
+
+
 
 .stat-card p {
 
   color: #ffffff !important;
 
+
+
   font-size: 30px;
+
+
 
   font-weight: 700;
 
 }
+
+
 
 .card,
 
@@ -738,13 +1178,21 @@ body {
 
   border: 1px solid #263244;
 
+
+
   border-radius: 16px;
 
+
+
   background: #111827;
+
+
 
   color: #ffffff;
 
 }
+
+
 
 .card p,
 
@@ -757,6 +1205,8 @@ body {
   color: #ffffff !important;
 
 }
+
+
 
 .card h2,
 
@@ -774,7 +1224,11 @@ body {
 
 }
 
+
+
 /* CHARTS */
+
+
 
 .chart-container,
 
@@ -784,13 +1238,21 @@ body {
 
   padding: 24px;
 
+
+
   border-radius: 18px;
 
+
+
   background: #111827;
+
+
 
   color: #ffffff;
 
 }
+
+
 
 .chart-container h2,
 
@@ -808,13 +1270,19 @@ body {
 
 }
 
+
+
 .chart-title {
 
   color: #ffffff !important;
 
+
+
   font-weight: 700;
 
 }
+
+
 
 .recharts-wrapper,
 
@@ -824,21 +1292,35 @@ body {
 
 }
 
+
+
 /* TABLES */
+
+
 
 .data-table {
 
   width: 100%;
 
+
+
   margin-bottom: 10px;
+
+
 
   border-collapse: collapse;
 
+
+
   background: #111827;
+
+
 
   color: #ffffff;
 
 }
+
+
 
 .data-table thead {
 
@@ -846,31 +1328,51 @@ body {
 
 }
 
+
+
 .data-table th {
 
   padding: 14px 16px;
 
+
+
   border-bottom: 2px solid #334155;
+
+
 
   color: #ffffff !important;
 
+
+
   font-size: 14px;
+
+
 
   text-align: left;
 
 }
 
+
+
 .data-table td {
 
   padding: 14px 16px;
 
+
+
   border-bottom: 1px solid #334155;
 
+
+
   color: #ffffff !important;
+
+
 
   font-size: 14px;
 
 }
+
+
 
 .data-table tbody tr {
 
@@ -878,11 +1380,15 @@ body {
 
 }
 
+
+
 .data-table tbody tr:hover {
 
   background: #1e293b;
 
 }
+
+
 
 table {
 
@@ -890,27 +1396,47 @@ table {
 
 }
 
+
+
 /* STATUS BADGES */
+
+
 
 .badge {
 
   display: inline-block;
 
+
+
   padding: 5px 14px;
+
+
 
   border-radius: 20px;
 
+
+
   color: #ffffff !important;
+
+
 
   font-size: 12px;
 
+
+
   font-weight: 700;
 
+
+
   letter-spacing: 0.4px;
+
+
 
   text-transform: uppercase;
 
 }
+
+
 
 .badge-red,
 
@@ -922,6 +1448,8 @@ table {
 
 }
 
+
+
 .badge-yellow,
 
 .badge-medium,
@@ -931,6 +1459,8 @@ table {
   background: #f59e0b;
 
 }
+
+
 
 .badge-green,
 
@@ -942,25 +1472,39 @@ table {
 
 }
 
+
+
 .badge-neutral {
 
   background: #6b7280;
 
 }
 
+
+
 /* GOVERNANCE FEED */
+
+
 
 .governance-feed {
 
   padding: 20px;
 
+
+
   border-radius: 16px;
 
+
+
   background: #111827;
+
+
 
   color: #ffffff;
 
 }
+
+
 
 .governance-feed h1,
 
@@ -982,6 +1526,8 @@ table {
 
 }
 
+
+
 .feed,
 
 .feed-container,
@@ -993,6 +1539,8 @@ table {
   color: #ffffff !important;
 
 }
+
+
 
 .feed *,
 
@@ -1006,7 +1554,11 @@ table {
 
 }
 
+
+
 /* REPLAY / EXECUTION / ESCALATION */
+
+
 
 .replay-card,
 
@@ -1022,13 +1574,21 @@ table {
 
   border: 1px solid #263244;
 
+
+
   border-radius: 12px;
 
+
+
   background: #111827;
+
+
 
   color: #ffffff;
 
 }
+
+
 
 .replay-card *,
 
@@ -1046,31 +1606,55 @@ table {
 
 }
 
+
+
 /* JSON / RAW API OUTPUT */
+
+
 
 .json-output {
 
   padding: 20px;
 
+
+
   overflow-x: auto;
+
+
 
   border: 1px solid #334155;
 
+
+
   border-radius: 10px;
+
+
 
   background: #0f172a;
 
+
+
   color: #ffffff !important;
+
+
 
   font-size: 13px;
 
+
+
   line-height: 1.6;
 
+
+
   white-space: pre-wrap;
+
+
 
   overflow-wrap: anywhere;
 
 }
+
+
 
 pre,
 
@@ -1080,21 +1664,35 @@ code {
 
 }
 
+
+
 /* FOOTER */
+
+
 
 .dashboard-footer {
 
   margin-top: 40px;
 
+
+
   padding: 20px;
+
+
 
   background: #0b1220;
 
+
+
   color: #ffffff !important;
+
+
 
   text-align: center;
 
 }
+
+
 
 .dashboard-footer h3,
 
@@ -1104,51 +1702,87 @@ code {
 
 }
 
+
+
 .dashboard-footer h3 {
 
   margin-bottom: 10px;
 
 }
 
+
+
 /* APP LAYOUT */
+
+
 
 .app {
 
   display: flex;
 
+
+
   width: 100%;
 
+
+
   min-height: 100vh;
+
+
 
   background: #020617;
 
 }
 
+
+
 .app .sidebar {
 
   position: fixed;
 
+
+
   z-index: 1000;
+
+
 
   top: 0;
 
+
+
   left: 0;
+
+
 
   width: 280px;
 
+
+
   min-width: 280px;
+
+
 
   height: 100vh;
 
+
+
   overflow-x: hidden;
+
+
 
   overflow-y: auto;
 
+
+
   border-right: 1px solid #1e293b;
+
+
 
   background: #0f172a;
 
 }
+
+
 
 .app .sidebar::-webkit-scrollbar {
 
@@ -1156,13 +1790,19 @@ code {
 
 }
 
+
+
 .app .sidebar::-webkit-scrollbar-thumb {
 
   border-radius: 10px;
 
+
+
   background: #2563eb;
 
 }
+
+
 
 .app .sidebar h1,
 
@@ -1184,15 +1824,23 @@ code {
 
 }
 
+
+
 .app .sidebar ul {
 
   margin: 0;
 
+
+
   padding: 0;
+
+
 
   list-style: none;
 
 }
+
+
 
 .app .sidebar li {
 
@@ -1200,21 +1848,35 @@ code {
 
 }
 
+
+
 .app .sidebar a {
 
   display: block;
 
+
+
   padding: 12px 20px;
+
+
 
   border-radius: 8px;
 
+
+
   color: #ffffff;
 
+
+
   text-decoration: none;
+
+
 
   transition: background 0.2s ease;
 
 }
+
+
 
 .app .sidebar a:hover {
 
@@ -1222,21 +1884,35 @@ code {
 
 }
 
+
+
 .app .content {
 
   width: calc(100% - 280px);
 
+
+
   min-height: 100vh;
+
+
 
   margin-left: 280px;
 
+
+
   padding: 25px;
 
+
+
   overflow-x: hidden;
+
+
 
   background: #020617;
 
 }
+
+
 
 .app .dashboard,
 
@@ -1246,25 +1922,39 @@ code {
 
 }
 
+
+
 .app .card {
 
   width: 100%;
+
+
 
   margin-bottom: 25px;
 
 }
 
+
+
 .app .card-grid {
 
   display: grid;
 
+
+
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
 
   gap: 20px;
 
 }
 
+
+
 /* RESPONSIVE */
+
+
 
 @media (max-width: 1200px) {
 
@@ -1272,29 +1962,43 @@ code {
 
     width: 160px;
 
+
+
     min-height: 60px;
+
+
 
     font-size: 14px;
 
   }
 
+
+
   .task12-wrapper .logo {
 
     flex-basis: 135px;
+
+
 
     font-size: 17px;
 
   }
 
+
+
   .task12-wrapper .nav-links button {
 
     flex-basis: 125px;
+
+
 
     font-size: 14px;
 
   }
 
 }
+
+
 
 @media (max-width: 992px) {
 
@@ -1304,15 +2008,23 @@ code {
 
   }
 
+
+
   .nav-buttons button {
 
     width: 150px;
 
+
+
     min-height: 55px;
+
+
 
     font-size: 13px;
 
   }
+
+
 
   .card-grid {
 
@@ -1320,21 +2032,31 @@ code {
 
   }
 
+
+
   .task12-wrapper .top-nav {
 
     gap: 10px;
+
+
 
     padding: 10px;
 
   }
 
+
+
   .task12-wrapper .logo {
 
     flex-basis: 120px;
 
+
+
     font-size: 16px;
 
   }
+
+
 
   .task12-wrapper .nav-links {
 
@@ -1342,19 +2064,29 @@ code {
 
   }
 
+
+
   .task12-wrapper .nav-links button {
 
     flex-basis: 118px;
 
+
+
     min-height: 70px;
 
+
+
     padding: 10px 8px;
+
+
 
     font-size: 13px;
 
   }
 
 }
+
+
 
 @media (max-width: 768px) {
 
@@ -1364,11 +2096,15 @@ code {
 
   }
 
+
+
   .dashboard-header p {
 
     font-size: 16px;
 
   }
+
+
 
   .nav-buttons {
 
@@ -1376,19 +2112,27 @@ code {
 
   }
 
+
+
   .nav-buttons button {
 
     width: 90%;
 
   }
 
+
+
   .dashboard-section {
 
     width: 98%;
 
+
+
     padding: 15px;
 
   }
+
+
 
   .section-title {
 
@@ -1396,11 +2140,15 @@ code {
 
   }
 
+
+
   .card-grid {
 
     grid-template-columns: 1fr;
 
   }
+
+
 
   .action-row {
 
@@ -1408,53 +2156,83 @@ code {
 
   }
 
+
+
   .action-btn {
 
     width: 100%;
 
   }
 
+
+
   .task12-wrapper .top-nav {
 
     align-items: stretch;
 
+
+
     flex-direction: column;
+
+
 
     gap: 12px;
 
+
+
     min-height: auto;
+
+
 
     padding: 14px;
 
   }
 
+
+
   .task12-wrapper .logo {
 
     flex: 0 0 auto;
 
+
+
     width: 100%;
+
+
 
     text-align: left;
 
   }
 
+
+
   .task12-wrapper .nav-links {
 
     width: 100%;
+
+
 
     flex: 0 0 auto;
 
   }
 
+
+
   .task12-wrapper .nav-links button {
 
     flex-basis: 120px;
 
+
+
     min-height: 66px;
+
+
 
     font-size: 13px;
 
   }
+
+
 
   .task12-wrapper .task12-content {
 
@@ -1462,35 +2240,53 @@ code {
 
   }
 
+
+
   .app {
 
     flex-direction: column;
 
   }
 
+
+
   .app .sidebar {
 
     position: relative;
 
+
+
     width: 100%;
 
+
+
     min-width: 0;
+
+
 
     height: auto;
 
   }
 
+
+
   .app .content {
 
     width: 100%;
 
+
+
     margin-left: 0;
+
+
 
     padding: 16px;
 
   }
 
 }
+
+
 
 @media (max-width: 480px) {
 
@@ -1500,11 +2296,15 @@ code {
 
   }
 
+
+
   .dashboard-header h1 {
 
     font-size: 24px;
 
   }
+
+
 
   .task12-wrapper .logo {
 
@@ -1512,17 +2312,27 @@ code {
 
   }
 
+
+
   .task12-wrapper .nav-links button {
 
     flex-basis: 112px;
 
+
+
     min-height: 62px;
 
+
+
     padding: 9px 7px;
+
+
 
     font-size: 12px;
 
   }
+
+
 
   .task12-wrapper .task12-content {
 
@@ -1530,180 +2340,537 @@ code {
 
   }
 
+
+
   .data-table th,
 
   .data-table td {
 
     padding: 10px;
 
+
+
     font-size: 12px;
 
   }
 
 }
+
 /* =========================================================
+
    TASK 17 — EXECUTIVE OVERVIEW NAVIGATION
+
    Consistent button sizing, readable labels, horizontal scroll.
+
    ========================================================= */
 
+
+
 .task17-wrapper {
+
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #020617;
+
+  color: #ffffff;
+
+}
+
+
+
+.task17-wrapper .top-nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 112px;
+
+  padding: 14px 18px;
+
+  border-top: 3px solid #06b6d4;
+
+  background: #111827;
+
+}
+
+
+
+.task17-wrapper .logo {
+
+  flex: 0 0 145px;
+
+  color: #ffffff !important;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  text-align: center;
+
+  overflow-wrap: break-word;
+
+}
+
+
+
+.task17-wrapper .task17-nav {
+
+  display: flex;
+
+  flex: 1 1 auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  padding: 5px 3px 10px;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  scrollbar-width: thin;
+
+  scrollbar-color: #64748b #1f2937;
+
+}
+
+
+
+.task17-wrapper .task17-nav::-webkit-scrollbar {
+
+  height: 7px;
+
+}
+
+
+
+.task17-wrapper .task17-nav::-webkit-scrollbar-track {
+
+  border-radius: 10px;
+
+  background: #1f2937;
+
+}
+
+
+
+.task17-wrapper .task17-nav::-webkit-scrollbar-thumb {
+
+  border-radius: 10px;
+
+  background: #64748b;
+
+}
+
+
+
+.task17-wrapper .task17-nav button {
+
+  display: flex;
+
+  flex: 0 0 170px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 58px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #3b82f6;
+
+  border-radius: 10px;
+
+  background: #347ff0;
+
+  color: #ffffff !important;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  text-align: center;
+
+  white-space: normal;
+
+  overflow-wrap: anywhere;
+
+  transition:
+
+    background 0.2s ease,
+
+    border-color 0.2s ease,
+
+    box-shadow 0.2s ease,
+
+    transform 0.2s ease;
+
+}
+
+
+
+.task17-wrapper .task17-nav button:hover {
+
+  background: #2563eb;
+
+  transform: translateY(-1px);
+
+}
+
+
+
+.task17-wrapper .task17-nav button.task17-active {
+
+  background: #1d4ed8;
+
+  border-color: #93c5fd;
+
+  box-shadow: 0 0 0 2px rgb(147 197 253 / 20%);
+
+}
+
+
+
+.task17-wrapper .task17-nav button:focus-visible {
+
+  outline: 3px solid #67e8f9;
+
+  outline-offset: 2px;
+
+}
+
+
+
+.task17-wrapper .task17-content {
+
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .task17-wrapper .logo {
+
+    flex-basis: 130px;
+
+    font-size: 17px;
+
+  }
+
+
+
+  .task17-wrapper .task17-nav button {
+
+    flex-basis: 150px;
+
+    font-size: 13px;
+
+  }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+  .task17-wrapper .top-nav {
+
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+  }
+
+
+
+  .task17-wrapper .logo {
+
+    flex: 0 0 auto;
+
+    width: 100%;
+
+    text-align: left;
+
+  }
+
+
+
+  .task17-wrapper .task17-nav {
+
+    width: 100%;
+
+    flex: 0 0 auto;
+
+  }
+
+
+
+  .task17-wrapper .task17-nav button {
+
+    flex-basis: 150px;
+
+    min-height: 54px;
+
+    font-size: 13px;
+
+  }
+
+
+
+  .task17-wrapper .task17-content {
+
+    padding: 12px;
+
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  .task17-wrapper .top-nav {
+
+    padding: 12px;
+
+  }
+
+
+
+  .task17-wrapper .task17-nav button {
+
+    flex-basis: 132px;
+
+    min-height: 52px;
+
+    padding: 9px;
+
+    font-size: 12px;
+
+  }
+
+
+
+  .task17-wrapper .task17-content {
+
+    padding: 10px;
+
+  }
+
+}
+
+/* =========================================================
+   CRITICAL GOVERNANCE NAVIGATION — RESPONSIVE FIX
+   Apply these classes to the Critical Governance page:
+   .critical-governance-wrapper, .critical-governance-nav
+   ========================================================= */
+
+.critical-governance-wrapper {
   width: 100%;
   min-width: 0;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background: #020617;
   color: #ffffff;
 }
 
-.task17-wrapper .top-nav {
+.critical-governance-wrapper .critical-governance-header,
+.critical-governance-wrapper .top-nav {
   display: flex;
   align-items: center;
   gap: 14px;
   width: 100%;
   min-width: 0;
-  min-height: 112px;
-  padding: 14px 18px;
+  min-height: 106px;
+  padding: 12px 18px;
   border-top: 3px solid #06b6d4;
-  background: #111827;
+  border-bottom: 1px solid #263244;
+  background: #0f1b2d;
 }
 
-.task17-wrapper .logo {
-  flex: 0 0 145px;
+.critical-governance-wrapper .logo,
+.critical-governance-wrapper .critical-governance-title {
+  flex: 0 0 155px;
+  min-width: 0;
+  margin: 0;
   color: #ffffff !important;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   text-align: center;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
-.task17-wrapper .task17-nav {
+.critical-governance-wrapper .critical-governance-nav,
+.critical-governance-wrapper .nav-links,
+.critical-governance-wrapper .nav-links.critical-governance-nav {
   display: flex;
   flex: 1 1 auto;
   align-items: center;
   gap: 10px;
   min-width: 0;
-  padding: 5px 3px 10px;
+  padding: 5px 3px 9px;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
-  scrollbar-color: #64748b #1f2937;
+  scrollbar-color: #64748b #1e293b;
 }
 
-.task17-wrapper .task17-nav::-webkit-scrollbar {
+.critical-governance-wrapper .critical-governance-nav::-webkit-scrollbar,
+.critical-governance-wrapper .nav-links::-webkit-scrollbar {
   height: 7px;
 }
 
-.task17-wrapper .task17-nav::-webkit-scrollbar-track {
+.critical-governance-wrapper .critical-governance-nav::-webkit-scrollbar-track,
+.critical-governance-wrapper .nav-links::-webkit-scrollbar-track {
+  background: #1e293b;
   border-radius: 10px;
-  background: #1f2937;
 }
 
-.task17-wrapper .task17-nav::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+.critical-governance-wrapper .critical-governance-nav::-webkit-scrollbar-thumb,
+.critical-governance-wrapper .nav-links::-webkit-scrollbar-thumb {
   background: #64748b;
+  border-radius: 10px;
 }
 
-.task17-wrapper .task17-nav button {
+.critical-governance-wrapper .critical-governance-nav a,
+.critical-governance-wrapper .critical-governance-nav button,
+.critical-governance-wrapper .nav-links a,
+.critical-governance-wrapper .nav-links button {
   display: flex;
-  flex: 0 0 170px;
+  flex: 0 0 130px;
   align-items: center;
   justify-content: center;
-  min-height: 58px;
+  min-width: 0;
+  min-height: 54px;
+  margin: 0;
   padding: 10px 12px;
   border: 1px solid #3b82f6;
   border-radius: 10px;
   background: #347ff0;
   color: #ffffff !important;
-  cursor: pointer;
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
   text-align: center;
+  text-decoration: none;
   white-space: normal;
   overflow-wrap: anywhere;
+  cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease,
     box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.task17-wrapper .task17-nav button:hover {
+.critical-governance-wrapper .critical-governance-nav a:hover,
+.critical-governance-wrapper .critical-governance-nav button:hover,
+.critical-governance-wrapper .nav-links a:hover,
+.critical-governance-wrapper .nav-links button:hover {
   background: #2563eb;
-  transform: translateY(-1px);
 }
 
-.task17-wrapper .task17-nav button.task17-active {
+.critical-governance-wrapper .critical-governance-nav .active,
+.critical-governance-wrapper .critical-governance-nav .active-btn,
+.critical-governance-wrapper .critical-governance-nav .active-link,
+.critical-governance-wrapper .critical-governance-nav [aria-current="page"],
+.critical-governance-wrapper .nav-links .active,
+.critical-governance-wrapper .nav-links .active-btn,
+.critical-governance-wrapper .nav-links .active-link,
+.critical-governance-wrapper .nav-links [aria-current="page"] {
+  border-color: #bfdbfe;
   background: #1d4ed8;
-  border-color: #93c5fd;
   box-shadow: 0 0 0 2px rgb(147 197 253 / 20%);
 }
 
-.task17-wrapper .task17-nav button:focus-visible {
+.critical-governance-wrapper .critical-governance-nav a:focus-visible,
+.critical-governance-wrapper .critical-governance-nav button:focus-visible,
+.critical-governance-wrapper .nav-links a:focus-visible,
+.critical-governance-wrapper .nav-links button:focus-visible {
   outline: 3px solid #67e8f9;
   outline-offset: 2px;
 }
 
-.task17-wrapper .task17-content {
+.critical-governance-wrapper .critical-governance-content {
   width: 100%;
   min-width: 0;
   padding: 20px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 1200px) {
-  .task17-wrapper .logo {
-    flex-basis: 130px;
-    font-size: 17px;
-  }
-
-  .task17-wrapper .task17-nav button {
-    flex-basis: 150px;
-    font-size: 13px;
-  }
 }
 
 @media (max-width: 900px) {
-  .task17-wrapper .top-nav {
+  .critical-governance-wrapper .critical-governance-header,
+  .critical-governance-wrapper .top-nav {
     align-items: stretch;
     flex-direction: column;
     gap: 12px;
+    min-height: auto;
+    padding: 14px;
   }
 
-  .task17-wrapper .logo {
+  .critical-governance-wrapper .logo,
+  .critical-governance-wrapper .critical-governance-title {
     flex: 0 0 auto;
     width: 100%;
     text-align: left;
   }
 
-  .task17-wrapper .task17-nav {
+  .critical-governance-wrapper .critical-governance-nav,
+  .critical-governance-wrapper .nav-links {
     width: 100%;
     flex: 0 0 auto;
   }
 
-  .task17-wrapper .task17-nav button {
-    flex-basis: 150px;
-    min-height: 54px;
-    font-size: 13px;
-  }
-
-  .task17-wrapper .task17-content {
+  .critical-governance-wrapper .critical-governance-content {
     padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .task17-wrapper .top-nav {
-    padding: 12px;
-  }
-
-  .task17-wrapper .task17-nav button {
-    flex-basis: 132px;
-    min-height: 52px;
-    padding: 9px;
+  .critical-governance-wrapper .critical-governance-nav a,
+  .critical-governance-wrapper .critical-governance-nav button,
+  .critical-governance-wrapper .nav-links a,
+  .critical-governance-wrapper .nav-links button {
+    flex-basis: 115px;
+    min-height: 50px;
+    padding: 8px;
     font-size: 12px;
   }
 
-  .task17-wrapper .task17-content {
+  .critical-governance-wrapper .critical-governance-content {
     padding: 10px;
   }
 }
