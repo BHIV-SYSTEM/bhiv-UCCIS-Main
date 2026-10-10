@@ -1226,7 +1226,15 @@ const ZoneIntelligenceDashboard = () => {
 
                     </Pie>
 
-                    <Tooltip />
+                    <Tooltip
+                      contentStyle={{
+    backgroundColor: "#000000",
+    border: "1px solid #333333",
+    color: "#ffffff",
+  }}
+  labelStyle={{ color: "#ffffff" }}
+  itemStyle={{ color: "#ffffff" }}
+                      />
 
                     <Legend
                       verticalAlign="bottom"
