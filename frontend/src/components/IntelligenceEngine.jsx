@@ -1,28 +1,6 @@
 import React, { useMemo, useState } from "react";
 import axios from "axios";
 
-/*
-=========================================================
-TASK 8 - AIS INTELLIGENCE ENGINE
-=========================================================
-
-AIS dataset:
-- 10,000 records
-- 6,728 unique vessels
-- Observation window: 00:00:00 - 00:04:40
-- 4,276 moving records
-- 5,724 stationary records
-- Average valid SOG: 2.51 kn
-- Maximum SOG: 37.4 kn
-- 938 records with SOG ≥ 10 kn
-- 23 unavailable SOG records (102.3 sentinel)
-- 57 vessel types
-
-The Task 8 visualizations are AIS-derived.
-No Zone 4 / complaint / urban mock data is used.
-=========================================================
-*/
-
 const API_BASE_URL =
   process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
@@ -333,77 +311,125 @@ function BarGraph({
 
 function LineGraph({ data, title }) {
   const width = 720;
-  const height = 270;
-  const left = 48;
+  const height = 300;
+  const left = 65;
   const right = 18;
   const top = 25;
-  const bottom = 42;
+  const bottom = 65;
+
   const chartWidth = width - left - right;
   const chartHeight = height - top - bottom;
-  const max = Math.max(...data.map((d) => d.records), 1);
+
+  const max = Math.max(
+    ...data.map((item) => item.records),
+    1
+  );
 
   const points = data
     .map((item, index) => {
       const x =
         left +
-        (index / Math.max(data.length - 1, 1)) * chartWidth;
+        (index / Math.max(data.length - 1, 1)) *
+          chartWidth;
+
       const y =
-        top + chartHeight - (item.records / max) * chartHeight;
+        top +
+        chartHeight -
+        (item.records / max) * chartHeight;
+
       return `${x},${y}`;
     })
     .join(" ");
 
   return (
-    <Card style={{ minWidth: 0 }}>
-      <SectionTitle
-        title={title}
-        subtitle="AIS records observed per minute"
-      />
+    <Card
+      style={{
+        minWidth: 0,
+        background: "#ffffff",
+        border: "1px solid #e5e7eb",
+      }}
+    >
+      <SectionTitle title={title} />
 
       <div style={{ overflowX: "auto" }}>
         <svg
           viewBox={`0 0 ${width} ${height}`}
-          style={{ width: "100%", minWidth: 520, height: 270 }}
+          style={{
+            width: "100%",
+            minWidth: 520,
+            height: 300,
+            display: "block",
+          }}
         >
-          {[0, 0.25, 0.5, 0.75, 1].map((fraction) => {
-            const y = top + chartHeight - fraction * chartHeight;
-            const value = Math.round(max * fraction);
+          {/* Y-axis grid lines and values */}
+          {[0, 0.25, 0.5, 0.75, 1].map(
+            (fraction) => {
+              const y =
+                top + chartHeight - fraction * chartHeight;
 
-            return (
-              <g key={fraction}>
-                <line
-                  x1={left}
-                  y1={y}
-                  x2={width - right}
-                  y2={y}
-                  stroke="#e5e7eb"
-                />
-                <text
-                  x={left - 8}
-                  y={y + 4}
-                  textAnchor="end"
-                  fontSize="10"
-                  fill="#6b7280"
-                >
-                  {formatNumber(value)}
-                </text>
-              </g>
-            );
-          })}
+              const value = Math.round(max * fraction);
 
+              return (
+                <g key={fraction}>
+                  <line
+                    x1={left}
+                    y1={y}
+                    x2={width - right}
+                    y2={y}
+                    stroke="#d1d5db"
+                    strokeDasharray="4 4"
+                  />
+
+                  <text
+                    x={left - 10}
+                    y={y + 4}
+                    textAnchor="end"
+                    fontSize="11"
+                    fill="#111827"
+                  >
+                    {formatNumber(value)}
+                  </text>
+                </g>
+              );
+            }
+          )}
+
+          {/* X-axis and Y-axis lines */}
+          <line
+            x1={left}
+            y1={top}
+            x2={left}
+            y2={top + chartHeight}
+            stroke="#374151"
+            strokeWidth="1.5"
+          />
+
+          <line
+            x1={left}
+            y1={top + chartHeight}
+            x2={width - right}
+            y2={top + chartHeight}
+            stroke="#374151"
+            strokeWidth="1.5"
+          />
+
+          {/* Activity line */}
           <polyline
             points={points}
             fill="none"
             stroke="#2563eb"
-            strokeWidth="4"
+            strokeWidth="3"
             strokeLinejoin="round"
             strokeLinecap="round"
           />
 
+          {/* Data points and time labels */}
           {data.map((item, index) => {
             const x =
               left +
-              (index / Math.max(data.length - 1, 1)) * chartWidth;
+              (index / Math.max(data.length - 1, 1)) *
+                chartWidth;
+
             const y =
               top +
               chartHeight -
@@ -411,25 +437,59 @@ function LineGraph({ data, title }) {
 
             return (
               <g key={item.minute}>
-                <circle cx={x} cy={y} r="5" fill="#1d4ed8" />
+                <circle
+                  cx={x}
+                  cy={y}
+                  r="5"
+                  fill="#2563eb"
+                  stroke="#ffffff"
+                  strokeWidth="1.5"
+                />
+
                 <text
                   x={x}
-                  y={height - 18}
+                  y={top + chartHeight + 20}
                   textAnchor="middle"
                   fontSize="11"
-                  fill="#374151"
+                  fill="#111827"
                 >
                   {item.minute}
                 </text>
               </g>
             );
           })}
+
+          {/* X-axis name */}
+          <text
+            x={left + chartWidth / 2}
+            y={height - 12}
+            textAnchor="middle"
+            fontSize="13"
+            fontWeight="700"
+            fill="#111827"
+          >
+            Time (Minute)
+          </text>
+
+          {/* Y-axis name */}
+          <text
+            x="17"
+            y={top + chartHeight / 2}
+            textAnchor="middle"
+            fontSize="13"
+            fontWeight="700"
+            fill="#111827"
+            transform={`rotate(-90, 17, ${
+              top + chartHeight / 2
+            })`}
+          >
+            Number of AIS Records
+          </text>
         </svg>
       </div>
     </Card>
   );
 }
-
 function DonutGraph({ moving, stationary }) {
   const total = moving + stationary;
   const movingPct = (moving / total) * 100;
