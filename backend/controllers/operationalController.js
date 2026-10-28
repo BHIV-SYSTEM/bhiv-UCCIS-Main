@@ -1,45 +1,38 @@
-const {
-  runOperationalSimulation
-} = require(
-  "../services/operationalSimulationService"
-);
 
 const {
-  validateAuditTrail
-} = require(
-  "../services/auditValidationService"
-);
+  runOperationalSimulation,
+} = require("../services/operationalSimulationService");
 
 const {
-  getUptimeStatus
-} = require(
-  "../services/uptimeService"
-);
+  validateAuditTrail,
+} = require("../services/auditValidationService");
+
+const {
+  getUptimeStatus,
+} = require("../services/uptimeService");
 
 function runSimulation(req, res) {
+  try {
+    const simulation = runOperationalSimulation();
+    const audit = validateAuditTrail(simulation);
+    const uptime = getUptimeStatus();
 
-  const simulation =
-    runOperationalSimulation();
+    return res.json({
+      success: true,
+      simulation,
+      audit,
+      uptime,
+    });
+  } catch (error) {
+    console.error("Operational simulation failed:", error);
 
-  const audit =
-    validateAuditTrail(
-      simulation
-    );
-
-  const uptime =
-    getUptimeStatus();
-
-  res.json({
-    success: true,
-
-    simulation,
-
-    audit,
-
-    uptime
-  });
+    return res.status(500).json({
+      success: false,
+      message: "Operational simulation failed",
+    });
+  }
 }
 
 module.exports = {
-  runSimulation
+  runSimulation,
 };
